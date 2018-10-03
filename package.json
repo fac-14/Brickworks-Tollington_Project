@@ -1,0 +1,46 @@
+{
+  "name": "octopus---tollington-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "start": "node server.js",
+    "parcel:dev": "./node_modules/.bin/parcel index.html",
+    "parcel:watch": "./node_modules/.bin/parcel watch index.html",
+    "parcel:build": "./node_modules/.bin/parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-14/Octopus---Tollington-Project.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fac-14/Octopus---Tollington-Project.git"
+  },
+  "homepage": "https://github.com/fac-14/Octopus---Tollington-Project#readme",
+  "keywords": [],
+  "dependencies": {
+    "env2": "^2.2.2",
+    "express": "^4.16.3",
+    "parcel-bundler": "^1.10.1",
+    "path": "^0.12.7",
+    "pg": "^7.4.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "serve-static": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.6.1",
+    "eslint-config-recommended": "^4.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0"
+  }
+}
