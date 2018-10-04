@@ -1,9 +1,12 @@
 import React from 'react';
+// import { render } from 'react-dom';
+
+import Home from './home';
 
 const App = () => {
   return (
     <div>
-      <p className="subtitle">Blazing fast, zero configuration web application bundler</p>
+      <Home />
     </div>
   );
 };
