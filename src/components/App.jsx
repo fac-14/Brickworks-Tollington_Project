@@ -3,7 +3,7 @@ import React from 'react';
 const App = () => {
   return (
     <div>
-      <p class="subtitle">Blazing fast, zero configuration web application bundler</p>
+      <p className="subtitle">Blazing fast, zero configuration web application bundler</p>
     </div>
   );
 };

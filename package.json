@@ -2,13 +2,13 @@
   "name": "octopus---tollington-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest --watch",
-    "start": "nodemon server.js",
-    "parcel:dev": "./node_modules/.bin/parcel index.html",
-    "parcel:watch": "./node_modules/.bin/parcel watch index.html",
-    "parcel:build": "./node_modules/.bin/parcel build index.html"
+    "start": "nodemon src/server.js",
+    "parcel:dev": "./node_modules/.bin/parcel public/index.html",
+    "parcel:watch": "./node_modules/.bin/parcel watch public/index.html",
+    "parcel:build": "./node_modules/.bin/parcel build public/index.html"
   },
   "repository": {
     "type": "git",
