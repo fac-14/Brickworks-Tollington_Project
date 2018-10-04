@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "parcel:dev": "./node_modules/.bin/parcel index.html",
     "parcel:watch": "./node_modules/.bin/parcel watch index.html",
     "parcel:build": "./node_modules/.bin/parcel build index.html"
@@ -41,6 +41,7 @@
     "eslint": "^5.6.1",
     "eslint-config-recommended": "^4.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.4"
   }
 }
