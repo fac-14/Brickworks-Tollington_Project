@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from './mainPageComponents/index';
 
 class Home extends React.Component {
     
@@ -7,7 +6,6 @@ class Home extends React.Component {
     return( 
       <div>
     <h2> this is home</h2> 
-    <Nav />
     </div>
   )
     }
