@@ -1,5 +1,5 @@
 import React from 'react'
-import menuImg from '../../../public/assets/images/menu.svg';
+import menuImg from '../../../public/images/menu.svg';
 import './style.css';
 
 const Nav = () => (
