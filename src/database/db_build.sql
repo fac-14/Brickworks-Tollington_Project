@@ -11,7 +11,8 @@ event_id SERIAL PRIMARY KEY,
 event_name TEXT NOT NULL,
 event_description TEXT NOT NULL,
 date_time TIMESTAMP,
-event_location TEXT NOT NULL
+event_location TEXT NOT NULL,
+posting_date DATE NOT NULL DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE topics (
