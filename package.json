@@ -8,7 +8,8 @@
     "start": "nodemon src/server.js",
     "parcel:dev": "./node_modules/.bin/parcel public/index.html",
     "parcel:watch": "./node_modules/.bin/parcel watch public/index.html",
-    "parcel:build": "./node_modules/.bin/parcel build public/index.html"
+    "parcel:build": "./node_modules/.bin/parcel build public/index.html",
+    "dev": "concurrently --kill-others \"nodemon src/server.js\" \"./node_modules/.bin/parcel public/index.html\""
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/fac-14/Octopus---Tollington-Project#readme",
   "keywords": [],
   "dependencies": {
+    "concurrently": "^4.0.1",
     "env2": "^2.2.2",
     "express": "^4.16.3",
     "parcel-bundler": "^1.10.1",
@@ -45,5 +47,6 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
     "nodemon": "^1.18.4"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
