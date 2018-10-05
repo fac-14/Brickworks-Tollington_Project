@@ -3,27 +3,40 @@ import createEvents from './createEvents';
 
 class Events extends React.Component {
     
-  state = { input:null };
+  state = { 
+    name: ''
+};
 
   handleChange = event => {
     const value = event.target.value;
-    this.setState( { input: value});
+    this.setState( { name: value});
+    console.log(this.state.name)
   }
   handleSubmit = event => {
-    event.preventDefault();
-    const data = JSON.stringify(this.state);
-    fetch('/createEvent', {
+    
+    
+    const data = JSON.stringify(this.state.name);
+    
+    
+    fetch('/api/create-event', {
+      
       method: 'post',
+      headers: {
+        "Content-Type": "application/json; charset=utf-8"
+      },
       body: data
     });
-    this.setState({ name: ''} )
+    this.setState({ name: ''})
+    event.preventDefault();
+    
+    
   }
   render() {
     return ( 
-      <form onSubmit = {this.handleSubmit} >
+      <form>
         <label htmlFor="name"> event title</label>
-        <input type="text" id="name" value={this.state.input} onChange= {this.handleChange}/>
-        <button type="submit">Submit</button>
+        <input type="text" id="name" value={this.state.name} onChange= {this.handleChange}/>
+        <button type="submit" onClick={this.handleSubmit}>Submit</button>
       </form>
     )
   }
