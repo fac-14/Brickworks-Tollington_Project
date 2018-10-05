@@ -6,12 +6,15 @@ import Events from './pages/events';
 import Nav from './mainPageComponents/header';
 
 const App = () => {
+
+   
   return (
     <div>
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />
         <Route path='/events' component= { Events } />
+        {/* <Route path='/createEvents' components = { createEvents} /> */}
       </Switch>
     </div>
   );
