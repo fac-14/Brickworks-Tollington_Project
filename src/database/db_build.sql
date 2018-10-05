@@ -2,6 +2,7 @@ BEGIN;
 
 DROP TABLE IF EXISTS events CASCADE;
 DROP TABLE IF EXISTS topics CASCADE;
+DROP TABLE IF EXISTS link_events_topics CASCADE;
 
 /*DROP TABLE IF EXISTS resource CASCADE;*/
 
@@ -20,6 +21,7 @@ theme_description TEXT NOT NULL
 );
 
 CREATE TABLE link_events_topics (
+link_id SERIAL PRIMARY KEY,
 link_event_id INTEGER REFERENCES events(event_id) NOT NULL,
 link_topic_id INTEGER REFERENCES topics(topic_id) NOT NULL
 );
