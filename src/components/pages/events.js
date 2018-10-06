@@ -13,31 +13,31 @@ class Events extends React.Component {
     console.log(this.state.name)
   }
   handleSubmit = event => {
-    
-    
-    const data = JSON.stringify(this.state.name);
-    
-    
-    fetch('/api/create-event', {
-      
-      method: 'post',
-      headers: {
-        "Content-Type": "application/json; charset=utf-8"
-      },
-      body: data
-    });
-    this.setState({ name: ''})
-    event.preventDefault();
-    
-    
+    event.preventDefault()
+    console.log(this.state.name)
+
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "/api/create-event", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState=== 4 && xhr.status === 200){
+      console.log(this.responseText)
+    }
   }
+   
+    
+    xhr.send(this.state.name);
+  
+  }
+
+  
   render() {
     return ( 
-      <form>
+      <div>
         <label htmlFor="name"> event title</label>
         <input type="text" id="name" value={this.state.name} onChange= {this.handleChange}/>
         <button type="submit" onClick={this.handleSubmit}>Submit</button>
-      </form>
+      </div>
     )
   }
 }

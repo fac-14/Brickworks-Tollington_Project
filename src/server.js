@@ -16,9 +16,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/api/create-event', (req, res) => {
-    console.log('hello art');
     console.log(req.body);
-    res.send('hello harry');
 })
 // app.post('/api/createEvents', createEvents);
 
