@@ -1,3 +1,35 @@
 body {
   background-color: red;
+  margin: 0;
+  padding: 0;
 }
+
+.nav {
+  display: flex;
+}
+
+.image-closed {
+  position: absolute;
+  width: 5vw;
+  height: 5vh;
+  /* left: 53vw; */
+}
+
+.image-open {
+  position: absolute;
+  width: 5vw;
+  height: 5vh;
+  left: 53vw;
+}
+
+.menu-closed {
+  position: absolute;
+  left: -60vw;
+}
+
+.menu-open {
+  height: 100vh;
+  width: 60vw;
+  background-color: blueviolet;
+}
+
