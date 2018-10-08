@@ -1,20 +1,22 @@
 import React from 'react';
 // import { render } from 'react-dom';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom';
 import Home from './pages/home';
-import Events from './pages/events';
+import Categories from './pages/categories';
+import CreateEvent from './pages/create-event';
 import Nav from './mainPageComponents/header';
+import AllEvents from './pages/all-events';
 
 const App = () => {
 
-   
   return (
     <div>
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />
-        <Route path='/events' component= { Events } />
-        {/* <Route path='/createEvents' components = { createEvents} /> */}
+        <Route exact path='/categories' component= { Categories } />
+        <Route exact path='/all-events' component= { AllEvents} />
+        <Route path='/create-event' component= { CreateEvent } />
       </Switch>
     </div>
   );

@@ -16,11 +16,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/api/create-event', (req, res) => {
-    console.log('hello art');
-    console.log(req.body);
-    res.send('hello harry');
+    var eventData = Object.keys(req.body)[0];
+    console.log(Object.keys(req.body)[0]);
 })
-// app.post('/api/createEvents', createEvents);
 
 var port = process.env.PORT || 5000;
 app.listen(port);
