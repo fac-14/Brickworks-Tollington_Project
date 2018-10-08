@@ -2,6 +2,7 @@ BEGIN;
 
 DROP TABLE IF EXISTS events CASCADE;
 DROP TABLE IF EXISTS topics CASCADE;
+DROP TABLE IF EXISTS link_events_topics CASCADE;
 
 /*DROP TABLE IF EXISTS resource CASCADE;*/
 
@@ -10,7 +11,8 @@ event_id SERIAL PRIMARY KEY,
 event_name TEXT NOT NULL,
 event_description TEXT NOT NULL,
 date_time TIMESTAMP,
-event_location TEXT NOT NULL
+event_location TEXT NOT NULL,
+posting_date DATE NOT NULL DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE topics (
@@ -20,6 +22,7 @@ theme_description TEXT NOT NULL
 );
 
 CREATE TABLE link_events_topics (
+link_id SERIAL PRIMARY KEY,
 link_event_id INTEGER REFERENCES events(event_id) NOT NULL,
 link_topic_id INTEGER REFERENCES topics(topic_id) NOT NULL
 );
@@ -42,6 +45,7 @@ INSERT INTO topics (theme, theme_description) VALUES
 INSERT INTO link_events_topics (link_event_id, link_topic_id) VALUES
 (1, 1),
 (2, 3),
+(2, 6),
 (3, 6);
 
 COMMIT;
