@@ -2,11 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class AllEvents extends React.Component {
-
+  constructor(props){
+    super(props)
+  }
+  addEvent = () => {
+    this.props.history.push('/create-event');
+  }
   render() {
     return ( 
       <div>
-        <Link to='/create-event'>Add an Event</Link>
+        <button onClick={this.addEvent}>Add Event</button>
       </div>
     )
   }
