@@ -15,7 +15,6 @@ const App = () => {
         <Route exact path='/' component= { Home } />
         <Route exact path='/all-events' component= { AllEvents} />
         <Route path='/create-event' component= { CreateEvent } />
-        {/* <Route path='/createEvents' components = { createEvents} /> */}
       </Switch>
     </div>
   );

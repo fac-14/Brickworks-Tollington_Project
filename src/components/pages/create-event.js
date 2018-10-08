@@ -2,16 +2,18 @@ import React from 'react';
 // import createEvents from './createEvents';
 
 class CreateEvent extends React.Component {
-    
-  state = { 
-    eventTitle: '',
-    eventCategory: '',
-    date: '',
-    time: '',
-    venue: '',
-    contact: '',
-    eventDetails: ''
-};
+    constructor(props) {
+      super(props),
+      this.state = { 
+      eventTitle: '',
+      eventCategory: '',
+      date: '',
+      time: '',
+      venue: '',
+      contact: '',
+      eventDetails: ''
+      }
+     };
 
   handleChange = event => {
     let newState = {};
@@ -33,11 +35,12 @@ class CreateEvent extends React.Component {
   }
     var string = JSON.stringify(this.state);
     xhr.send(string);
+    this.props.history.push('/all-events');
   }
 
   render() {
     return ( 
-      <div>
+      <form>
         <label htmlFor="eventTitle">Event Title</label>
         <input type="text" id="eventTitle" value={this.state.name} onChange= {this.handleChange}/>
         <label htmlFor="eventCategory">Event Category</label>
@@ -53,7 +56,7 @@ class CreateEvent extends React.Component {
         <label htmlFor="eventDetails">Event Details</label>
         <input type="text" id="eventDetails" value={this.state.name} onChange= {this.handleChange}/>
         <button type="submit" onClick={this.handleSubmit}>Submit</button>
-      </div>
+      </form>
     )
   }
 }
