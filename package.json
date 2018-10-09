@@ -10,7 +10,7 @@
     "parcel:dev": "./node_modules/.bin/parcel public/index.html",
     "parcel:watch": "./node_modules/.bin/parcel watch public/index.html",
     "parcel:build": "./node_modules/.bin/parcel build public/index.html",
-    "dev": "concurrently --kill-others \"nodemon src/server.js\" \"./node_modules/.bin/parcel public/index.html\""
+    "dev": "concurrently --kill-others \"./node_modules/.bin/parcel public/index.html\" \"nodemon src/server.js\""    
   },
   "repository": {
     "type": "git",

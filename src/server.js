@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use(bodyParser.json());
-app.get('/', (req, res) => {
-  res.send('hello world');
-})
+// app.get('/', (req, res) => {
+//   res.send('hello world');
+// })
 
 app.post('/api/create-event', (req, res) => {
     var eventData = Object.keys(req.body)[0];
