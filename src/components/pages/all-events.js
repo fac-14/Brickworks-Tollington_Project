@@ -19,7 +19,7 @@ class AllEvents extends React.Component {
       console.log('I M HERE');
       console.log(response)
       this.setState( { allEvents: response});
-      console.log('changed');
+      console.log('CHANGED');
 console.log(this.state.allEvents);
     })
     .catch(err => console.log(err));
