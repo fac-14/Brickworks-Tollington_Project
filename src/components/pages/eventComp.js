@@ -5,7 +5,7 @@ export const EventComp = ( { id, event_name, string_agg}) => {
     <li>
        {event_name} 
        
-      {string_agg[0]} 
+      {string_agg} 
 
       </li>
   )

@@ -1,26 +1,31 @@
 const db = require('../database/db_connection');
 
-exports.get = (req, res) => {
- console.log(allEventsData() ) 
-return allEventsData();
+exports.get = (request, response) => {
+ console.log('hleaohoa' );
+ var dataQuery = `SELECT events.event_name, string_agg(topics.theme, ', ')
+ FROM events, topics, link_events_topics WHERE events.event_id = link_events_topics.link_event_id
+ AND topics.topic_id = link_events_topics.link_topic_id
+ GROUP BY events.event_name`;
+
+  new Promise( (resolve, reject) => {
+   db.query(dataQuery) 
+   
+   .then((res)=> {
+    response.send(JSON.stringify(res.rows))
+  }) //means return res on this success
+   .catch(err => reject(err)); //means return err on error
+   
+ });
+ 
 }
 
-const allEventsData = () => {
+// const allEventsData = () => {
 
-  console.log('Inside GetallEvent');
+//   console.log('Inside GetallEvent');
 
-  var dataQuery = `SELECT events.event_name, string_agg(topics.theme, ', ')
-  FROM events, topics, link_events_topics WHERE events.event_id = link_events_topics.link_event_id
-  AND topics.topic_id = link_events_topics.link_topic_id
-  GROUP BY events.event_name`;
+  
 
-  return new Promise( (resolve, reject) => {
-    db.query(dataQuery)
-    .then(res => resolve(res)) //means return res on this success
-    .catch(err => reject(err)); //means return err on error
-  });
-
-}
+// }
 //module.exports = getAllEvent;
 
 // exports.get = (req, res) => {
