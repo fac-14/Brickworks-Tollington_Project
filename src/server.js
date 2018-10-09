@@ -3,6 +3,8 @@ var path = require('path');
 var serveStatic = require('serve-static');
 var bodyParser = require('body-parser');
 
+var getAllEvents = require('./queryHandlers/getAllEvents');
+
 var app = express();
 app.use(serveStatic(path.join(__dirname, '..', 'dist')));
 
@@ -19,6 +21,8 @@ app.post('/api/create-event', (req, res) => {
     var eventData = Object.keys(req.body)[0];
     console.log(Object.keys(req.body)[0]);
 })
+
+app.get('/api/getAllEvents', getAllEvents.get);
 
 var port = process.env.PORT || 5000;
 app.listen(port);
