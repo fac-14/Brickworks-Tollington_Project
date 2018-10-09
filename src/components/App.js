@@ -6,6 +6,8 @@ import Categories from './pages/categories';
 import CreateEvent from './pages/create-event';
 import Nav from './mainPageComponents/header';
 import AllEvents from './pages/all-events';
+import {About} from './pages/about';
+import DisplayEvents from './pages/displayEvents';
 
 const App = () => {
 
@@ -17,6 +19,9 @@ const App = () => {
         <Route exact path='/categories' component= { Categories } />
         <Route exact path='/all-events' component= { AllEvents} />
         <Route path='/create-event' component= { CreateEvent } />
+        <Route path='/about' component = {About} /> 
+        <Route path='./displayEvents' component = {DisplayEvents} />
+
       </Switch>
     </div>
   );
