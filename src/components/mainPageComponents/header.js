@@ -29,6 +29,7 @@ class Nav extends React.Component {
       <Link to='/categories'>All Events</Link>
       <Link to='/create-event'>Create Event</Link>
       <Link to='/categories'>Categories</Link>
+      <Link to='/eventsByTheme'>Events By Theme</Link>
       <Link to='/about'>About</Link>
       <Link to='./displayEvents'> display Events </Link>
     </div>
