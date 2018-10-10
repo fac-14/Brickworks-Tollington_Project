@@ -19,8 +19,7 @@ class AllEvents extends React.Component {
       console.log('I M HERE');
       console.log(response)
       this.setState( { allEvents: response});
-      console.log('CHANGED');
-console.log(this.state.allEvents);
+console.log('this.state.allEvents', this.state.allEvents);
     })
     .catch(err => console.log(err));
   }
@@ -36,7 +35,7 @@ console.log(this.state.allEvents);
       <div>
       <ul>
       {allEvents.map( event => (
-        <EventComp key={event.id} {...event} /> 
+        <EventComp key={event.event_id} {...event} /> 
       )
         
       )}
