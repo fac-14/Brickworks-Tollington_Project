@@ -33,6 +33,8 @@ class CreateEvent extends React.Component {
   }
     var string = JSON.stringify(this.state);
     xhr.send(string);
+    console.log(this.props.history);
+    console.log(this.props.location.pathname);
     this.props.history.push('/all-events');
   }
 
