@@ -11,13 +11,15 @@ import React from "react";
       </li>
   )
 }
-
-const EventByThemeComp = ( { theme, string_agg }) => {
+const EventByThemeComp = ( { event_id, event_description, date_time, event_location, theme }) => {
   return (
     <li>
       
+      {event_id}
+      {event_description}
+      {date_time}
+      {event_location}
       {theme}
-      {string_agg}
 
     </li>
   )

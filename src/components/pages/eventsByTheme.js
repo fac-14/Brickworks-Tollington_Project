@@ -1,6 +1,7 @@
 import React from 'react';
 //import more stuff later
 import getEventsByTheme from '../utils/utilsGetEventsByTheme';
+import {EventByThemeComp} from './eventComp';
 
 class EventsByTheme extends React.Component {
 
@@ -13,7 +14,7 @@ class EventsByTheme extends React.Component {
 componentDidMount() {
     getEventsByTheme()
     .then(response => {
-        console.log('Getting events by theme');
+        console.log('Frontend Getting events by theme', response);
         this.setState( { eventsByTheme: response });
     })
     .catch(err => console.log(err));
@@ -25,7 +26,7 @@ render() {
             <ul>
                 {eventsByTheme.map(
                     event => (
-                        <EventComp key={index} {...event} />
+                        <EventByThemeComp key={event.event_id} {...event} />
                     )
                 )}
             </ul>
