@@ -2,7 +2,7 @@ const db = require('../database/db_connection');
 
 exports.get = (request, response) => {
     const dataQuery = `
-    SELECT events.event_id, events.event_description, events.date_time,events.event_location, topics.theme
+    SELECT events.event_id, events.event_name, events.event_description, events.date_time,events.event_location, topics.theme
     FROM events
     INNER JOIN link_events_topics ON events.event_id = link_events_topics.link_event_id
     INNER JOIN topics ON topics.topic_id = link_events_topics.link_topic_id
