@@ -32,7 +32,8 @@ link_topic_id INTEGER REFERENCES topics(topic_id) NOT NULL
 INSERT INTO events (event_name, event_description, date_time, event_location) VALUES
 ('Poverty Action', 'Get together to fight poverty', '2018-10-21 17:00:00', 'Caxton House'),
 ('Youth Action', 'Help youth get skills', '2018-10-11 16:30:00', 'Tollington House'),
-('Get Green', 'Let''s plant a tree', '2018-02-01 14:00:00', 'Town Hall');
+('Get Green', 'Let''s plant a tree', '2018-02-01 14:00:00', 'Town Hall'),
+('Write a great CV', 'Learn how to write a punchy CV to help you get a job', '2018-10-20 12:00:00', 'Brickworks');
 
 INSERT INTO topics (theme, theme_description) VALUES
 ('poverty', 'Poverty'),
@@ -45,8 +46,9 @@ INSERT INTO topics (theme, theme_description) VALUES
 INSERT INTO link_events_topics (link_event_id, link_topic_id) VALUES
 (1, 1),
 (2, 3),
-(2, 6),
-(3, 6);
+(2, 5),
+(3, 6),
+(4, 5);
 
 COMMIT;
 

@@ -2,7 +2,7 @@ const db = require('../database/db_connection');
 
 exports.get = (request, response) => {
  console.log('hleaohoa' );
- const dataQuery = `SELECT events.event_id, events.event_name, string_agg(topics.theme, ', ')
+ const dataQuery = `SELECT events.event_id, events.event_name, events.event_description, events.date_time, events.event_location, string_agg(topics.theme, ', ')
  FROM events, topics, link_events_topics WHERE events.event_id = link_events_topics.link_event_id
  AND topics.topic_id = link_events_topics.link_topic_id
  GROUP BY events.event_id`;
