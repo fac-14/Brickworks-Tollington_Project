@@ -1,22 +1,30 @@
 import React from "react";
-//{ id:3 ,event_name : 'Get Green', string_agg : ['environment']}
+import { Link } from "react-router-dom";
 
- const EventComp = ( { id, event_name, event_description, date_time, event_location, string_agg}) => {
+const EventComp = ({ event_id, event_name, event_description, date_time, event_location, string_agg }) => {
   return (
-    <li>
-      {event_name} 
-      {event_description}
-      {date_time}
-      {event_location}
-      {string_agg} 
 
+    //   <Link key={index} to={caseLink}>
+    //     <div key={index}>{element.title}</div>
+    //   </Link>
+    // );
+    // <Link to='/eventsByTheme'>Events By Theme</Link>
+
+    <Link key={event_id} to={'/event-detailed/' + event_id} >
+      <li>
+        {event_name}
+        {event_description}
+        {date_time}
+        {event_location}
+        {string_agg}
       </li>
+    </Link >
   )
 }
-const EventByThemeComp = ( { event_id, event_name, event_description, date_time, event_location, theme }) => {
+const EventByThemeComp = ({ event_id, event_name, event_description, date_time, event_location, theme }) => {
   return (
     <li>
-      
+
       {event_id}
       {event_name}
       {event_description}
@@ -28,4 +36,4 @@ const EventByThemeComp = ( { event_id, event_name, event_description, date_time,
   )
 }
 
-export {EventComp, EventByThemeComp};
+export { EventComp, EventByThemeComp };
