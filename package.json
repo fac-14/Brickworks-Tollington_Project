@@ -24,6 +24,7 @@
   "homepage": "https://github.com/fac-14/Octopus---Tollington-Project#readme",
   "keywords": [],
   "dependencies": {
+    "airtable": "^0.5.7",
     "concurrently": "^4.0.1",
     "env2": "^2.2.2",
     "express": "^4.16.3",
