@@ -29,20 +29,6 @@ console.log('this.state.allEvents', this.state.allEvents);
   
   render() {
     const {allEvents} = this.state ;
-{/* <Btn
-                  zombiesAlive={this.state.zombiesAlive}
-                  increment={this.increment}
-                  decrement={this.decrement}
-                  firstZombieAppeared={this.setFirstZombieAppeared}
-                />
-                <Btn
-                    // React uses the 'key' property to give things stability: https://reactjs.org/docs/lists-and-keys.html
-                    key={`button-${index}`}
-                    zombiesAlive={this.state.zombiesAlive}
-                    increment={this.increment}
-                    decrement={this.decrement}
-                    firstZombieAppeared={this.setFirstZombieAppeared}
-                /> */}
 
     return (
       
