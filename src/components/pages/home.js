@@ -7,8 +7,8 @@ class Home extends React.Component {
 
   render() {
     return( 
-      <div>
-        <h2> this is home {this.state.name} </h2> 
+      <div data-testid="home-page">
+        <h2>Home</h2> 
       </div>
   )}
 }

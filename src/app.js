@@ -24,7 +24,8 @@ app.post('/api/create-event', (req, res) => {
 
 //handles getData request to load events page (now requires getData function from getAllEvents)
 app.get('/api/getAllEvents', (request,response) => {
-    getData(response);
+    
+    getData(request, response, cb);
 });
 
 //enables testing of 500 route

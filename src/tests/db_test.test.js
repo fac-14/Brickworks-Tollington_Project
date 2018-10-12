@@ -1,10 +1,20 @@
-// const supertest = require('supertest');
+
 // const getData = require('../queryHandlers/getAllEvents');
 // const runDbBuild = require('../database/db_build.js')
 
+
 // describe("Test the getAllEvents GET route", () => {
-//     test("Returns with status code 200", done => {
+//     it('testing promise', () => {
 //         runDbBuild( (err, response)=> {
-//             set process.env.NODE_ENV to 'db_test';
-//                 expect(getData(response)).toBe('event');
-//                      done();})})});
+//             returnData = () => {
+//                 on = true;
+//             }
+//             //asynchronous request
+            
+//                 expect.assertions(1)
+//                 return getData.getData(req,res,returnData).then(data => expect(data).toEqual(2));
+//             } )
+           
+//             });
+        
+//     });

@@ -10,7 +10,7 @@ class Nav extends React.Component {
     menu: 'menu-closed',
     image: 'image-closed'
   }
-
+  
   navBar = () => {
     if (this.state.menu === 'menu-closed') {
       this.setState({menu: 'menu-open'});
@@ -25,15 +25,26 @@ class Nav extends React.Component {
     return (
     <nav className="nav">
     <div className={this.state.menu}>
-      <Link to='/'>Home</Link>
-      <Link to='/categories'>All Events</Link>
-      <Link to='/create-event'>Create Event</Link>
-      <Link to='/categories'>Categories</Link>
-      <Link to='/about'>About</Link>
+      <label htmlFor="home"> 
+        <Link data-testid="home" onClick={this.navBar} to='/'>Home</Link>
+      </label>
+      <label htmlFor="all-events">
+        <Link data-testid="all-events" onClick={this.navBar} to='/categories'>All Events</Link>
+      </label>
+      <label htmlFor="create-event">
+        <Link data-testid="create-event" onClick={this.navBar} to='/create-event'>Create Event</Link>
+      </label>
+      <label htmlFor="categories">
+        <Link data-testid="categories" onClick={this.navBar} to='/categories'>Categories</Link>
+      </label>
+      <label htmlFor="about">
+      <Link data-testid="about" onClick={this.navBar} to='/about'>About</Link>
+      </label>
       {/*testing error route */}
-      <Link to='./displayEvents'> display Events </Link>
+      
+     
     </div>
-    <img className={this.state.image} onClick={this.navBar} src={ menuImg }/>
+    <img alt="menu-icon" className={this.state.image} onClick={this.navBar} src={ menuImg }/>
   </nav>
   )}
 }
