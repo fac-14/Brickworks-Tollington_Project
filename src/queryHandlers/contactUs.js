@@ -5,6 +5,7 @@ require("env2")("./config.env");
 let GPASS = process.env.GPASS;
 
 exports.post = (req, res) => {
+  console.log('REQ VALUES ARE', req.body)
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -19,7 +20,7 @@ exports.post = (req, res) => {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
     to: `sangitasunuwar@gmail.com`,
     subject: 'New message from contact form at Start a social action at Brickworks app',
-    text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+    text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
