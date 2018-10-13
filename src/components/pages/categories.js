@@ -1,9 +1,9 @@
 import React from 'react';
 
 class Categories extends React.Component {
-  constructor(props){
-    super(props)
-  }
+  // constructor(props){
+  //   super(props)
+  // }
   allEvents = () => {
     this.props.history.push('/all-events');
   }

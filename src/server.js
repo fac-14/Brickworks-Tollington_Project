@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 
 var getAllEvents = require('./queryHandlers/getAllEvents');
 var getEventsByTheme = require('./queryHandlers/getEventsByTheme');
+var contactUs = require('./queryHandlers/contactUs');
 
 var app = express();
 app.use(serveStatic(path.join(__dirname, '..', 'dist')));
@@ -25,6 +26,9 @@ app.post('/api/create-event', (req, res) => {
 
 app.get('/api/getAllEvents', getAllEvents.get);
 app.get('/api/getEventsByTheme', getEventsByTheme.get);
+
+// POST route from contact form
+app.post('/api/contactUs', contactUs.post);
 
 var port = process.env.PORT || 5000;
 app.listen(port);

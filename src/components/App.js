@@ -9,6 +9,7 @@ import AllEvents from './pages/all-events';
 import EventsByTheme from './pages/eventsByTheme';
 import {About} from './pages/about';
 import EventDetailed from './pages/event_detailed';
+import ContactUs from './pages/contactUs';
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/eventsByTheme' component= { EventsByTheme } />
         <Route path='/about' component = {About} /> 
         <Route path='/event-detailed' component = {EventDetailed} />
+        <Route path='/contactUs' component = {ContactUs} />
         
       </Switch>
     </div>
