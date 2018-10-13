@@ -68,7 +68,7 @@ h3 {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 1.8rem;
-  color: #3587b0;
+  color: #585858;
 }
 
 /*MAIN CONTENT*/
@@ -87,8 +87,18 @@ ul {
   padding: 1rem;
 }
 
+li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+}
 
-
+footer {
+  grid-column: col-start / -1;
+  grid-row: 6 / span 2;
+  height: 3rem; 
+  text-align: center;
+  }
 
 /*MEDIA QUERIES*/
 
@@ -117,7 +127,11 @@ ul {
 footer {
 grid-column: col-start / -1;
 grid-row: 6 / span 2;
-background-color: #FAFAFA;
+background-color: #7e7e7e;
+color: #FAFAFA;
+height: 3rem;
+line-height: 3rem;
+text-align: center;
 }
 
 ul {
