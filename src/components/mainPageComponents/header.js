@@ -1,6 +1,6 @@
 import React from 'react'
 import menuImg from '../../../public/images/menu.svg';
-import './style.css';
+import '../../../public/style.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
@@ -24,13 +24,13 @@ class Nav extends React.Component {
   render() {
     return (
     <nav className="nav">
-    <div className={this.state.menu}>
+    <div id='navDiv' className={this.state.menu}>
       <Link to='/'>Home</Link>
-      <Link to='/categories'>All Events</Link>
+      <Link to='/categories'>Social Actions</Link>
       <Link to='/create-event'>Create Event</Link>
       <Link to='/categories'>Categories</Link>
       <Link to='/eventsByTheme'>Events By Theme</Link>
-      <Link to='/about'>About</Link>
+      <Link to='/Faq'>FAQs</Link>
       <Link to='./displayEvents'> display Events </Link>
     </div>
     <img className={this.state.image} onClick={this.navBar} src={ menuImg }/>

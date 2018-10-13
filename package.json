@@ -14,20 +14,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fac-14/Octopus---Tollington-Project.git"
+    "url": "git+https://github.com/fac-14/Brickworks-Tollington_Project.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fac-14/Octopus---Tollington-Project.git"
+    "url": "https://github.com/fac-14/Brickworks-Tollington_Project.git"
   },
-  "homepage": "https://github.com/fac-14/Octopus---Tollington-Project#readme",
+  "homepage": "https://github.com/fac-14/Brickworks-Tollington_Project.git#readme",
   "keywords": [],
   "dependencies": {
     "airtable": "^0.5.7",
+    "audit": "0.0.6",
     "concurrently": "^4.0.1",
     "env2": "^2.2.2",
     "express": "^4.16.3",
+    "fix": "0.0.6",
     "node-fetch": "^2.2.0",
     "parcel-bundler": "^1.10.1",
     "path": "^0.12.7",
