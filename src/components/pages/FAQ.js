@@ -28,6 +28,6 @@ const Faq = () => (
     </footer>
        </div>
        </div>
-)
+);
 
 export {Faq};

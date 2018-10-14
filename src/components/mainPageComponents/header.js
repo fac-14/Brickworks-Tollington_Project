@@ -31,6 +31,7 @@ class Nav extends React.Component {
       <Link to='/categories'>Categories</Link>
       <Link to='/eventsByTheme'>Events By Theme</Link>
       <Link to='/Faq'>FAQs</Link>
+      <Link to='/inspirations'>Inspirational Stories</Link>
       <Link to='./displayEvents'> display Events </Link>
     </div>
     <img className={this.state.image} onClick={this.navBar} src={ menuImg }/>

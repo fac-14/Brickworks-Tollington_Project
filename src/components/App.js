@@ -7,8 +7,10 @@ import CreateEvent from './pages/create-event';
 import Nav from './mainPageComponents/header';
 import AllEvents from './pages/all-events';
 import EventsByTheme from './pages/eventsByTheme';
-import { Faq } from './pages/FAQ';
 import EventDetailed from './pages/event_detailed';
+import { Faq } from './pages/FAQ';
+import { Inspiration } from './pages/inspirations';
+
 
 
 const App = () => {
@@ -23,8 +25,8 @@ const App = () => {
         <Route path='/create-event' component= { CreateEvent } />
         <Route path='/eventsByTheme' component= { EventsByTheme } />
         <Route path='/FAQ' component = { Faq } /> 
-        <Route path='/event-detailed' component = {EventDetailed} />
-        
+        <Route path='/event-detailed' component = {EventDetailed} />  
+        <Route path='/inspirations' component = {Inspiration} />   
       </Switch>
     </div>
   );
