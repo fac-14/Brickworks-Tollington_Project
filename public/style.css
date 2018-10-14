@@ -19,34 +19,43 @@ body {
 
  /*NAVBAR*/
 .nav {
-  grid-column: col-start / -1;
-  grid-row: 1 / 2;
   display: flex;
+  position: fixed;
   background-color: #6cb7e2;
-  margin-top: 5vh;
+}
+
+.image {
+  position: absolute;
+  width: 6vw;
+  height: 6vh;
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
 }
 
 .image-closed {
-  width: 6vw;
-  height: 6vh;
- }
+  transform: translate3d(0vw, 0, 0);
+}
  
 .image-open {
   position: absolute;
-  width: 6vw;
-  height: 6vh;
-  left: 53vw;
+  transform: translate3d(53vw, 0, 0);
+}
+
+.menu {
+  position: absolute;
+  height: 100vh;
+  width: 60vw;
+  background-color: aquamarine;
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
+  overflow-y: auto;
+  /* z-index: 200000000; */
 }
 
 .menu-closed {
-  position: absolute;
-  left: -60vw;
+  transform: translate3d(-60vw, 0, 0);
 }
 
 .menu-open {
-  height: 100vh;
-  width: 60vw;
-  background-color: aquamarine; 
+  transform: translate3d(0vw, 0, 0)
  } 
 
  /*HEADINGS*/
