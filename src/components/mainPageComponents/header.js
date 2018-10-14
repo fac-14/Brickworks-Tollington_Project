@@ -6,17 +6,17 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Nav extends React.Component {
 
   state = {
-    menu: 'menu-closed',
-    image: 'image-closed'
+    menu: 'menu menu-closed',
+    image: 'image image-closed'
   }
 
   navBar = () => {
-    if (this.state.menu === 'menu-closed') {
-      this.setState({menu: 'menu-open'});
-      this.setState({image: 'image-open'});
-    } else if (this.state.menu === 'menu-open') {
-      this.setState({menu: 'menu-closed'});
-      this.setState({image: 'image-closed'});
+    if (this.state.menu === 'menu menu-closed') {
+      this.setState({menu: 'menu menu-open'});
+      this.setState({image: 'image image-open'});
+    } else if (this.state.menu === 'menu menu-open') {
+      this.setState({menu: 'menu menu-closed'});
+      this.setState({image: 'image image-closed'});
     }
   }
   
