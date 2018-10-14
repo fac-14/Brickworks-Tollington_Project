@@ -12,7 +12,7 @@ exports.get = (request, response) => {
    
    .then((res)=> {
     response.send(JSON.stringify(res.rows))
-  }) //means return res on this success
+  }) //means return res on success
    .catch(err => reject(err)); //means return err on error
    
  });

@@ -15,9 +15,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use(bodyParser.json());
-// app.get('/', (req, res) => {
-//   res.send('hello world');
-// })
+
 
 app.post('/api/create-event', (req, res) => {
     var eventData = Object.keys(req.body)[0];
@@ -33,20 +31,18 @@ const nodemailer = require('nodemailer');
 require("env2")("./config.env");
 
 let GPASS = process.env.GPASS;
+
 app.post('/api/contactUs', (req, res) => {
-    console.log('REQ VALUES ARE', req)
-    let mailOpts, smtpTrans;
-    smtpTrans = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
+    console.log('REQ VALUES ARE', req.body)
+    const smtpTrans = nodemailer.createTransport({
+      service: 'Gmail',
       auth: {
         user: `sangitasunuwar@gmail.com`,
         pass: GPASS
       }
     });
-    mailOpts = {
-      from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+    const mailOpts = {
+      from: `sangitasunuwar@gmail.com`,
       to: `sangitasunuwar@gmail.com`,
       subject: 'New message from contact form at Start a social action at Brickworks app',
       text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
@@ -64,6 +60,7 @@ app.post('/api/contactUs', (req, res) => {
     });
   }
 )
+
 
 var port = process.env.PORT || 5000;
 app.listen(port);

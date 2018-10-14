@@ -4,11 +4,11 @@ let allRecords = [];
 base('categories').select({
   fields: [
     'id',
-    'name'
+    'category_name'
   ]
 }).eachPage((records, fetchNextPage) => {
 
-  allRecords = [...allRecords, ...records] //fill records in allrecords?
+  allRecords = [...allRecords, ...records] //fill records in allrecords
   allRecords.forEach((record) => console.log(record.fields))
   fetchNextPage();
 
@@ -33,7 +33,7 @@ base('categories').select({
 //     // If there are more records, `page` will get called again.
 //     // If there are no more records, `done` will get called.
 //     fetchNextPage();
-
+// so
 // }, function done(err) {
 //     if (err) { console.error(err); return; }
 // });
