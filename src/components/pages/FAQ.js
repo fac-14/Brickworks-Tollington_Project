@@ -5,7 +5,7 @@ class Faq extends React.Component {
     render() {
         return(
     <div>
-        <div className='wrapper'>
+        <div data-testid = "faq-page" className='wrapper'>
         <h1 className='pageHeadings'>FAQs</h1>
         <div className='sidebar'></div>
         <main>
@@ -26,8 +26,10 @@ class Faq extends React.Component {
         </main>
         </div>
     </div>
-
-        );}
+  );}
 }
+//     <footer>
+//         &copy; Brickworks Social Action Community 2018. 
+//     </footer>     
 
 export {Faq};

@@ -1,20 +1,20 @@
-const base = require('../database/db_connection')
+// const base = require('../database/db_connection')
 
-let allRecords = [];
-base('categories').select({
-  fields: [
-    'id',
-    'name'
-  ]
-}).eachPage((records, fetchNextPage) => {
+// let allRecords = [];
+// base('categories').select({
+//   fields: [
+//     'id',
+//     'name'
+//   ]
+// }).eachPage((records, fetchNextPage) => {
 
-  allRecords = [...allRecords, ...records] //fill records in allrecords?
-  allRecords.forEach((record) => console.log(record.fields))
-  fetchNextPage();
+//   allRecords = [...allRecords, ...records] //fill records in allrecords?
+//   allRecords.forEach((record) => console.log(record.fields))
+//   fetchNextPage();
 
-}, (err) => {
-  if (err) { console.error(err); return; }
-});
+// }, (err) => {
+//   if (err) { console.error(err); return; }
+// });
 
 ///////////
 

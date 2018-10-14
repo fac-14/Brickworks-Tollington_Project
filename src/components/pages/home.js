@@ -9,9 +9,8 @@ class Home extends React.Component {
   render() {
     return( 
       <div>
-        
         <div className='wrapper'>
-          <h1 className='pageHeadings'>Brickworks - Home</h1>
+          <h1 data-testid="home-page" className='pageHeadings'>Brickworks - Home</h1>
           <div className='sidebar'></div>
           <main>
             <div id='logo'>
@@ -23,7 +22,6 @@ class Home extends React.Component {
             </p>
             <button className='button-large'>Next</button>
           </main>
-        
         </div>
         {/* <h2> this is home {this.state.name} </h2>  */}
       </div>

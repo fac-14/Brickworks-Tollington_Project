@@ -1,4 +1,3 @@
-
 body {
   height: 100vh;
   background-image: url('./images/Brickworks-bacgkround.jpeg');
@@ -31,34 +30,83 @@ body {
 
  /*NAVBAR*/
 .nav {
-  grid-column: col-start / -1;
-  grid-row: 1 / 2;
   display: flex;
+  position: fixed;
   background-color: #6cb7e2;
-  margin-top: 5vh;
+  height: 50px;
+}
+.image {
+    position: absolute;
+    width: 6vw;
+    height: 6vh;
+    margin: 10px;
+}
+.image span {
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+}
+.image span:before, .image span:after {
+    position: absolute;
+    content: '';
+}
+.image span, .image span:before, .image span:after {
+    width: 30px;
+    height: 6px;
+    background-color: #000;
+    display: block;
+}
+.image span {
+  transition: transform 1s ease;
+}
+.image span:before {
+  margin-top: -12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
+}
+.image span:after {
+  margin-top: 12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
 }
 
-.image-closed {
-  width: 6vw;
-  height: 6vh;
- }
- 
-.image-open {
+.image-closed span {
+
+}
+.image-open span {
+    transform: scaleX(1.5);
+    transform: scaleY(0.7);
+}
+.image-closed span:after {
+
+}
+.image-open span:after {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+.image-closed span:before {
+
+}
+.image-open span:before {
+    transform: translateX(-2px) rotate(-45deg);
+}
+
+.menu {
   position: absolute;
-  width: 6vw;
-  height: 6vh;
-  left: 53vw;
+  height: 100vh;
+  width: 60vw;
+  background-color: aquamarine;
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
+  overflow-y: auto;
+  /* z-index: 200000000; */
 }
 
 .menu-closed {
-  position: absolute;
-  left: -60vw;
+  transform: translate3d(-60vw, 0, 0);
 }
 
 .menu-open {
-  height: 100vh;
-  width: 60vw;
-  background-color: aquamarine; 
+  transform: translate3d(0vw, 0, 0)
  } 
 
  /*HEADINGS*/
@@ -289,6 +337,10 @@ height: 3rem;
 line-height: 3rem;
 }
 
+h2 {
+  font-size: 200px;
+}
+
 ul {
   display: flex;
   flex-direction: column;
@@ -297,141 +349,7 @@ ul {
 }
 }
 
+@media (min-width: 768px) {
+  /* For everything bigger than 768px */ 
+}
 
-
-/* @media (min-width: 768px) {
- 
-  } */
-
-
-
-  /*
-  /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-HTML5 display-role reset for older browsers
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-  */
-  
