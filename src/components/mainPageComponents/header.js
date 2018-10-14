@@ -23,6 +23,8 @@ class Nav extends React.Component {
   render() {
     return (
     <nav className="nav">
+    //     below is arts id for styling
+    //  <div id='navDiv' className={this.state.menu}>
     <div data-testid="actual-menu" className={this.state.menu}>
      
     <label htmlFor="home"> 
@@ -41,7 +43,7 @@ class Nav extends React.Component {
         <Link data-testid="faq" onClick={this.navBar} to='/faq'>FAQs</Link>
       </label>
       <label htmlFor="recent-projects">
-        <Link data-testid="recent-projects" onClick={this.navBar} to='/recent-projects'>Local Inspirational Stories</Link>
+        <Link data-testid="recent-projects" onClick={this.navBar} to='/inspirations'>Local Inspirational Stories</Link>
       </label>
       <label htmlFor="resources">
         <Link data-testid="resources" onClick={this.navBar} to='/resources'>Resources & Tips</Link>
