@@ -1,6 +1,7 @@
 body {
   height: 100%;
   background-image: url('./images/Brickworks-bacgkround.jpeg');
+  background-size: cover; 	
   /* background-color: red; */
 
   padding: 0;
