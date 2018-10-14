@@ -29,25 +29,22 @@ class Nav extends React.Component {
         <Link data-testid="home" onClick={this.navBar} to='/'>Home</Link>
       </label>
       <label htmlFor="all-events">
-        <Link data-testid="all-events" onClick={this.navBar} to='/categories'>All Events</Link>
+        <Link data-testid="all-events" onClick={this.navBar} to='/all-events'>Social Action in Your Community</Link>
       </label>
-      <label htmlFor="create-event">
-        <Link data-testid="create-event" onClick={this.navBar} to='/create-event'>Create Event</Link>
-      </label>
-      <label htmlFor="categories">
-        <Link data-testid="categories" onClick={this.navBar} to='/categories'>Categories</Link>
+      <label htmlFor="form">
+        <Link data-testid="form" onClick={this.navBar} to='/topten'>Start a Social Action</Link>
       </label>
       <label htmlFor="about">
         <Link data-testid="about" onClick={this.navBar} to='/about'>About</Link>
       </label>
-      <label htmlFor="brickworks">
-        <Link data-testid="brickworks" onClick={this.navBar} to='/brickworks'>Brickworks</Link>
-      </label>
       <label htmlFor="faq">
-        <Link data-testid="faq" onClick={this.navBar} to='/faq'>FAQ</Link>
+        <Link data-testid="faq" onClick={this.navBar} to='/faq'>FAQs</Link>
       </label>
       <label htmlFor="recent-projects">
-        <Link data-testid="recent-projects" onClick={this.navBar} to='/recent-projects'>Recent Projects</Link>
+        <Link data-testid="recent-projects" onClick={this.navBar} to='/recent-projects'>Local Inspirational Stories</Link>
+      </label>
+      <label htmlFor="resources">
+        <Link data-testid="resources" onClick={this.navBar} to='/resources'>Resources & Tips</Link>
       </label>
     </div>
     {/* <Menu data-testid="menu" className={this.state.image} onClick={this.navBar}/> */}
