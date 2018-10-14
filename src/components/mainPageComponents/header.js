@@ -50,7 +50,9 @@ class Nav extends React.Component {
         <Link data-testid="recent-projects" onClick={this.navBar} to='/recent-projects'>Recent Projects</Link>
       </label>
     </div>
-    <Menu data-testid="menu" className={this.state.image} onClick={this.navBar}/>
+    {/* <Menu data-testid="menu" className={this.state.image} onClick={this.navBar}/> */}
+
+    <div data-testid="menu" className={this.state.image} onClick={this.navBar}><span></span></div>
     {/* <img className={this.state.image} onClick={this.navBar} src={ menuImg }/> */}
   </nav>
   )}
