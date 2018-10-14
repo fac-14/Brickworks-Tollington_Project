@@ -1,14 +1,14 @@
 
 body {
   height: 100vh;
-  background-image: url('./images/Brickworks-bacgkround.jpeg');
+  background-image: url('./images/Brickworks-bacgkround.jpg');
   background-size: cover; 
   background-color: #FAFAFA;
   padding: 0;
 }
 
 #logo {
-  justify-self: center;
+  margin: 0 auto;
   display: flex;
   background-color: #FAFAFA;
 }
@@ -63,7 +63,7 @@ body {
 
  /*HEADINGS*/
 
- .pageHeadings {
+ h1, .pageHeadings {
   grid-column: col-start / -1;
   grid-row: 1 / 2;
   height: 5rem;
@@ -72,24 +72,34 @@ body {
   text-align: center;
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 5rem;
   margin-top: 0.5rem;
   }
 
-h3 {
+h2 {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 1.8rem;
   color: #585858; 
 }
 
+h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #585858; 
+}
+
 /*MAIN CONTENT*/
 
 main {
+  display: flex;
+  flex-direction: column;
   grid-column: col-start / -1;
   grid-row: 2 / span 3;
-  align-items: start;
+  align-items: center;
+  justify-items: center;
   }
 
   /*TEXT CONTAINERS*/
@@ -115,6 +125,7 @@ li {
   font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
   color: #2a2a2a;
+  margin-left: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -171,8 +182,12 @@ li {
   line-height: 1.5;
 }
 
-acc-list-arrow:hover {
+.acc-list-arrow:hover {
   background-color: #6CB7E2;
+}
+
+.acc-list-arrow:active {
+  color: #6CB7E2;
 }
 
 acc-h3 {
@@ -204,12 +219,40 @@ acc-h3 {
   left: -9999px;
 }
 
+/*BUTTONS*/
+
+.button-large {
+  margin: 0 auto;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 0.08rem;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #2a2a2a;
+  background-color: #67bdec;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  }
+
+.button-large:hover {
+  background-color: #FF9F67;
+}
+
+.button-large:active {
+  background-color: #ff6f1b;
+}
+
+
 /* FOOTER */
 footer {
   grid-column: col-start / -1;
   grid-row: 6 / span 2;
   height: 4vh; 
   text-align: center;
+  color: white;
   }
 
 /*----------------------------------------------*/
@@ -242,10 +285,8 @@ footer {
 grid-column: col-start / -1;
 grid-row: 6 / span 2;
 background-color: #7e7e7e;
-color: #FAFAFA;
 height: 3rem;
 line-height: 3rem;
-text-align: center;
 }
 
 ul {
@@ -255,6 +296,7 @@ ul {
   width: 70vw;
 }
 }
+
 
 
 /* @media (min-width: 768px) {
