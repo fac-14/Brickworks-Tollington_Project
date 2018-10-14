@@ -1,8 +1,8 @@
 body {
   height: 100%;
-  background-image: url('./images/Brickworks-bacgkround.jpeg');
-  background-size: cover; 	
-  /* background-color: red; */
+  /* background-image: url('./images/Brickworks-bacgkround.jpeg');
+  background-size: cover; 	 */
+  background-color: red;
 
   padding: 0;
 }
@@ -22,6 +22,7 @@ body {
   display: flex;
   position: fixed;
   background-color: #6cb7e2;
+  height: 50px;
 }
 .image {
     position: absolute;

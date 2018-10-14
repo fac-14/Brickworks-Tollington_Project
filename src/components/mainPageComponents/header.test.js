@@ -11,11 +11,11 @@ test('testing menu opens and closes', () => {
    
     const menu = getByTestId('menu')
     const actualMenu = getByTestId('actual-menu')
-    expect(actualMenu.className).toBe('menu-closed')
+    expect(actualMenu.className).toBe('menu menu-closed')
    //open menu
     fireEvent.click(menu);
-    expect(actualMenu.className).toBe('menu-open')
+    expect(actualMenu.className).toBe('menu menu-open')
     //close menu
     fireEvent.click(menu)
-    expect(actualMenu.className).toBe('menu-closed')
+    expect(actualMenu.className).toBe('menu menu-closed')
   })
