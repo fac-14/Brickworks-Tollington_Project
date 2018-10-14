@@ -10,6 +10,10 @@ Emily Rever
 Harry Mead
 Artemis Gause
 
+### Graphics credits
+Menu and back-arrow credits: https://www.flaticon.com/
+Brickworks logo: https://hanleycrouch.wordpress.com/
+
 
 ### Deployed on Netlify
 https://vigorous-swirles-227d32.netlify.com/
@@ -45,3 +49,5 @@ Branch deploys
 
 ## Technical commands
 npm run parcel:watch
+npm run parcel: build
+npm run dev

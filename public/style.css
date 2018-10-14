@@ -1,24 +1,40 @@
+
 body {
-  background-color: lightblue;
-  margin: 0;
+  height: 100%;
+  background-image: url('./images/Brickworks-bacgkround.jpeg');
+  background-size: cover; 
+  background-color: #FAFAFA;
   padding: 0;
 }
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 12px;
+  grid-column: col-start / span 12;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #FAFAFA;
+  }
 
+
+ /*NAVBAR*/
 .nav {
+  grid-column: col-start / -1;
+  grid-row: 1 / 2;
   display: flex;
+  background-color: #6cb7e2;
+  margin-top: 5vh;
 }
 
 .image-closed {
-  position: absolute;
-  width: 5vw;
-  height: 5vh;
-  /* left: 53vw; */
-}
-
+  width: 6vw;
+  height: 6vh;
+ }
+ 
 .image-open {
   position: absolute;
-  width: 5vw;
-  height: 5vh;
+  width: 6vw;
+  height: 6vh;
   left: 53vw;
 }
 
@@ -30,10 +46,108 @@ body {
 .menu-open {
   height: 100vh;
   width: 60vw;
-  background-color: aquamarine;
+  background-color: aquamarine; 
+ } 
+
+ /*HEADINGS*/
+
+ .pageHeadings {
+  grid-column: col-start / -1;
+  grid-row: 1 / 2;
+  background-color: #7e7e7e;
+  color: #fafafa;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 5rem;
+  margin-top: 0.5rem;
+  }
+
+h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #585858;
+}
+
+/*MAIN CONTENT*/
+
+main {
+  grid-column: col-start / -1;
+  grid-row: 2 / span 3;
+  align-items: start;
+  }
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 70vw;
+  padding: 1rem;
+}
+
+li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+}
+
+footer {
+  grid-column: col-start / -1;
+  grid-row: 6 / span 2;
+  height: 3rem; 
+  text-align: center;
+  }
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 500px) {
+
+/*HEADINGS*/
+
+.pageHeadings {
+  grid-column: col-start 3 / -1;
+  grid-row: 1 / 2;
+  }
+
+  main {
+    grid-column: col-start 3 / -1;
+    grid-row: 2 / span 3;
+    align-items: start;
+    }
+
+.sidebar {
+  grid-column: col-start / span 2;
+  grid-row: 1 / 7;
+  background-color: #f5f5f5;
+  margin-top: 0.5rem;
+}
+
+footer {
+grid-column: col-start / -1;
+grid-row: 6 / span 2;
+background-color: #7e7e7e;
+color: #FAFAFA;
+height: 3rem;
+line-height: 3rem;
+text-align: center;
 }
 
 h2 {
   font-size: 200px;
 }
 
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 70vw;
+}
+}
+
+
+@media (min-width: 768px) {
+  /* For everything bigger than 768px */
+  
+  }

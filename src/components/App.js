@@ -7,7 +7,6 @@ import CreateEvent from './pages/create-event';
 import Nav from './mainPageComponents/header';
 
 import AllEvents from './pages/all-events';
-
 import EventDetailed from './pages/event_detailed';
 import {Error} from './pages/error';
 import {Faq} from './pages/FAQ'
@@ -16,6 +15,7 @@ import  {Projects} from './pages/projects'
 import {Brickworks} from './pages/brickworks'
 import {About} from './pages/about';
 import {TopTen} from './pages/topten';
+
 
 const App = () => {
 

@@ -8,7 +8,7 @@ test('testing menu opens and closes', () => {
     const {getByTestId, getByText} = render(<Router>
         <Nav />
         </Router>)
-    console.log(this.props.location.pathname)
+   
     const menu = getByTestId('menu')
     const actualMenu = getByTestId('actual-menu')
     expect(actualMenu.className).toBe('menu-closed')
