@@ -1,11 +1,11 @@
 import React from 'react';
-import aboutImg from '../../../public/images/OctopusImage.jpg';
+// import aboutImg from '../../../public/images/OctopusImage.jpg';
  
 
 const About = () => (
-    <div>
+    <div data-testid="about-page">
     <h2>About</h2>
-    <img src= {aboutImg} />
+    {/* <img src= {aboutImg} /> */}
     </div>
 
 )

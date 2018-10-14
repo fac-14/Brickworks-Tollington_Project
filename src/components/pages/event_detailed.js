@@ -2,9 +2,7 @@ import React from 'react';
 
 
 class EventDetailed extends React.Component {
-  // state = {
-  //   event : [],
-  // }
+
   constructor(props){
     super(props)
     this.state = {

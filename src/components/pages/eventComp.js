@@ -10,7 +10,7 @@ const EventComp = ({ event_id, event_name, event_description, date_time, event_l
     // );
     // <Link to='/eventsByTheme'>Events By Theme</Link>
 
-    <Link key={event_id} to={'/event-detailed/' + event_id} >
+    <Link key={event_id} to={'/event-detailed/' + event_name} >
       <li>
         {event_name}
         {event_description}
