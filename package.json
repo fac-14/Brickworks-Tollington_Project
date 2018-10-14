@@ -2,15 +2,15 @@
   "name": "octopus---tollington-project",
   "version": "1.0.0",
   "description": "",
-  "main": "public/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --detectOpenHandles",
     "start": "node src/server.js",
     "report-coverage": "codecov",
-    "parcel:dev": "./node_modules/.bin/parcel public/index.html",
-    "parcel:watch": "./node_modules/.bin/parcel watch public/index.html",
-    "parcel:build": "./node_modules/.bin/parcel build public/index.html",
-    "dev": "concurrently --kill-others \"./node_modules/.bin/parcel watch public/index.html\" \"nodemon src/server.js\""
+    "parcel:dev": "./node_modules/.bin/parcel client/public/index.html",
+    "parcel:watch": "./node_modules/.bin/parcel watch client/public/index.html",
+    "parcel:build": "./node_modules/.bin/parcel build client/public/index.html",
+    "dev": "concurrently --kill-others \"./node_modules/.bin/parcel watch client/public/index.html\" \"nodemon src/server.js\""
   },
   "repository": {
     "type": "git",
