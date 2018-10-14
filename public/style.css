@@ -1,9 +1,8 @@
-
 body {
   height: 100%;
   background-image: url('./images/Brickworks-bacgkround.jpeg');
-  background-size: cover; 
-  background-color: #FAFAFA;
+  /* background-color: red; */
+
   padding: 0;
 }
 .wrapper {
@@ -23,21 +22,60 @@ body {
   position: fixed;
   background-color: #6cb7e2;
 }
-
 .image {
-  position: absolute;
-  width: 6vw;
-  height: 6vh;
-  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
+    position: absolute;
+    width: 6vw;
+    height: 6vh;
+    margin: 10px;
+}
+.image span {
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+}
+.image span:before, .image span:after {
+    position: absolute;
+    content: '';
+}
+.image span, .image span:before, .image span:after {
+    width: 30px;
+    height: 6px;
+    background-color: #000;
+    display: block;
+}
+.image span {
+  transition: transform 1s ease;
+}
+.image span:before {
+  margin-top: -12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
+}
+.image span:after {
+  margin-top: 12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
 }
 
-.image-closed {
-  transform: translate3d(0vw, 0, 0);
+.image-closed span {
+
 }
- 
-.image-open {
-  position: absolute;
-  transform: translate3d(53vw, 0, 0);
+.image-open span {
+    transform: scaleX(1.5);
+    transform: scaleY(0.7);
+}
+.image-closed span:after {
+
+}
+.image-open span:after {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+.image-closed span:before {
+
+}
+.image-open span:before {
+    transform: translateX(-2px) rotate(-45deg);
 }
 
 .menu {
