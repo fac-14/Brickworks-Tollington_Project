@@ -7,9 +7,9 @@ import Nav from './mainPageComponents/header';
 import AllEvents from './pages/all-events';
 import EventDetailed from './pages/event_detailed';
 import {Error} from './pages/error';
-import {Faq} from './pages/FAQ'
-import {Resources} from './pages/resources'
-import {Inspiration} from './pages/inspirations'
+import {Faq} from './pages/faq';
+import {Resources} from './pages/resources';
+import {Inspiration} from './pages/inspirations';
 import {About} from './pages/about';
 import {TopTen} from './pages/topten';
 
