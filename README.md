@@ -1,5 +1,5 @@
 # Title
- Octopus - Tollington project
+Brickworks - Tollington project
 
 # Licence
 MIT https://opensource.org/licenses/MIT
