@@ -1,12 +1,5 @@
 import React from 'react';
 
-// render() {
-//     return( 
-//       <div>
-//         <h2> this is home {this.state.name} </h2> 
-//       </div>
-//   )}
-// }
 
 class Faq extends React.Component {
     render() {

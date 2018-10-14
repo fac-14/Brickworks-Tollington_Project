@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../../../public/images/Brickworks-logo1.png'; 
 
 class Home extends React.Component {
   state= {
@@ -8,7 +9,19 @@ class Home extends React.Component {
   render() {
     return( 
       <div>
-        <h2> this is home {this.state.name} </h2> 
+        
+        <div className='wrapper'>
+          <h2 className='pageHeadings'>Brickworks - Home</h2>
+          <div className='sidebar'></div>
+          <main>
+            <div id='logo'>
+              <img id='logo-img' src={logoImg} alt='Brickworks logo'/>
+            </div> 
+            <p id='hub-description'>Brickworks is a social-action hub rooted in Tollington that actively fosters grass-roots action. Brickworks supports local people to contribute to collective action, build the community and create a better, more democratic society.</p>
+          </main>
+        
+        </div>
+        {/* <h2> this is home {this.state.name} </h2>  */}
       </div>
   )}
 }

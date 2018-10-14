@@ -6,6 +6,17 @@ body {
   background-color: #FAFAFA;
   padding: 0;
 }
+
+#logo {
+  justify-self: center;
+  display: flex;
+  background-color: #FAFAFA;
+}
+
+#logo-img {
+  margin: 0 auto;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
@@ -55,6 +66,7 @@ body {
  .pageHeadings {
   grid-column: col-start / -1;
   grid-row: 1 / 2;
+  height: 5rem;
   background-color: #7e7e7e;
   color: #fafafa;
   text-align: center;
@@ -79,6 +91,17 @@ main {
   grid-row: 2 / span 3;
   align-items: start;
   }
+
+  /*TEXT CONTAINERS*/
+
+  #hub-description {
+    margin: 3rem 9rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    color: #2a2a2a;
+  }
+
+  /*LISTS*/
 
 ul {
   display: flex;
@@ -180,6 +203,7 @@ acc-h3 {
   left: -9999px;
 }
 
+/* FOOTER */
 footer {
   grid-column: col-start / -1;
   grid-row: 6 / span 2;
