@@ -1,11 +1,11 @@
-require("env2")("./config.env");
-const Airtable = require('airtable');
+// require("env2")("./config.env");
+// const Airtable = require('airtable');
 
-Airtable.configure({
-    endpointUrl: 'https://api.airtable.com',
-    apiKey: process.env.AIRTABLE_API_KEY,
-})
+// Airtable.configure({
+//     endpointUrl: 'https://api.airtable.com',
+//     apiKey: process.env.AIRTABLE_API_KEY,
+// })
 
-const base = Airtable.base(process.env.AIRTABLE_BASE)
+// const base = Airtable.base(process.env.AIRTABLE_BASE)
 
-module.exports = base;
+// module.exports = base;

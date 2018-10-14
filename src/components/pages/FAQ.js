@@ -4,7 +4,7 @@ import React from 'react';
 
 const Faq = () => (
     <div>
-    <div className='wrapper'>
+    <div data-testid = "faq-page" className='wrapper'>
     <h2 className='pageHeadings'>FAQs</h2>
     <div className='sidebar'></div>
     <main>
