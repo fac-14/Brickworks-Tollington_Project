@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import getAllEvents from '../utils/utilsgetAllEvent';
 import {EventComp} from './eventComp';
 
-class AllEvents extends React.Component {
+class SocialActions extends React.Component {
   
   constructor(props){
     super(props)
@@ -48,4 +48,4 @@ console.log('this.state.allEvents', this.state.allEvents);
   }
 }
 
-export default AllEvents;
+export default SocialActions;
