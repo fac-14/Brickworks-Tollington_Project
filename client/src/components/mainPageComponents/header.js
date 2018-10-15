@@ -9,7 +9,7 @@ class Nav extends React.Component {
     
   }
 
-toggleMenu = (event) => {
+toggleMenu = () => {
     const icon= document.getElementById('icon');
     const menu = document.getElementById('menu');
     this.setState((prevState) => ({
@@ -19,8 +19,8 @@ toggleMenu = (event) => {
       icon.className='image image-open';
       menu.className='menu menu-open';
     } else if (menu.className === 'menu menu-open') {
-      icon.className='image image-open';
-      menu.className='menu menu-open';
+      icon.className='image image-closed';
+      menu.className='menu menu-closed';
     }
 
 }
@@ -34,8 +34,8 @@ toggleMenu = (event) => {
     <label htmlFor="home"> 
         <Link data-testid="home" onClick={this.toggleMenu} to='/'>Home</Link>
       </label>
-      <label htmlFor="all-events">
-        <Link data-testid="all-events" onClick={this.toggleMenu} to='/social-actions'>Social Actions</Link>
+      <label htmlFor="social-actions">
+        <Link data-testid="social-actions" onClick={this.toggleMenu} to='/social-actions'>Social Actions</Link>
       </label>
       {/* <label htmlFor="create-event">
         <Link data-testid="create-event" onClick={this.toggleMenu} to='/create-event'>Create Event</Link>
@@ -44,14 +44,14 @@ toggleMenu = (event) => {
         {/* <Link data-testid="form" onClick={this.navBar} to='/contactUs'>Start a Social Action</Link> */}
         <Link data-testid="form" onClick={this.toggleMenu} to='/topten'>Start a Social Action</Link>
       </label>
-      {/* <label htmlFor="about">
+      <label htmlFor="about">
         <Link data-testid="about" onClick={this.toggleMenu} to='/about'>About</Link>
-      </label> */}
+      </label>
       <label htmlFor="faq">
         <Link data-testid="faq" onClick={this.toggleMenu} to='/faq'>FAQ</Link>
       </label>
-      <label htmlFor="recent-projects">
-        <Link data-testid="recent-projects" onClick={this.toggleMenu} to='/inspirations'>Local Inspirational Stories</Link>
+      <label htmlFor="inspirations">
+        <Link data-testid="inspirations" onClick={this.toggleMenu} to='/inspirations'>Local Inspirational Stories</Link>
       </label>
       <label htmlFor="resources">
         <Link data-testid="resources" onClick={this.toggleMenu} to='/resources'>Resources & Tips</Link>

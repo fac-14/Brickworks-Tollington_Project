@@ -9,7 +9,7 @@ class Inspiration extends React.Component {
     <main>
         <ul>
              <li>
-                <label for='item1'>
+                <label htmlFor='item1'>
                 <h2> Building a community: The story of Brickworks<span></span></h2>
                 </label>
                 <p>
@@ -27,7 +27,7 @@ class Inspiration extends React.Component {
              </li>
 
              <li>
-                <label for='item2'>
+                <label htmlFor='item2'>
                 <h3>The 'locality' initiative in Tollington<span></span></h3>
                 </label>
                 <p>

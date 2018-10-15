@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../../../public/images/Brickworks-logo1.png'; 
+// import logoImg from '../../../public/images/Brickworks-logo1.png'; 
 
 class Home extends React.Component {
   state= {
@@ -22,7 +22,7 @@ class Home extends React.Component {
             <button className='button-large'>Next</button>
           </main>
         </div>
-        {/* <h2> this is home {this.state.name} </h2>  */}
+         {/* <h2> this is home {this.state.name} </h2>  */}
       </div>
   )}
 }

@@ -33,15 +33,15 @@ console.log('this.state.allEvents', this.state.allEvents);
     return (
       
       <div className='wrapper'>
-        <h1 data-testid="all-events">Social Action In Your Community</h1>
+        <h1 data-testid="social-actions-page">Social Action In Your Community</h1>
       <ul>
       {allEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
       )
         
-      )}
+          )}
 
-      </ul>
+        </ul>
         
       <button className='add-event-button' onClick={this.addEvent}>Express Interest</button>
       </div>
