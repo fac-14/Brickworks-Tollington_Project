@@ -35,7 +35,7 @@ class Nav extends React.Component {
         <Link data-testid="create-event" onClick={this.navBar} to='/create-event'>Create Event</Link>
       </label> */}
       <label htmlFor="form">
-        <Link data-testid="form" onClick={this.navBar} to='/topten'>Start a Social Action</Link>
+        <Link data-testid="form" onClick={this.navBar} to='/contactUs'>Start a Social Action</Link>
       </label>
       {/* <label htmlFor="about">
         <Link data-testid="about" onClick={this.navBar} to='/about'>About</Link>
@@ -49,6 +49,7 @@ class Nav extends React.Component {
       <label htmlFor="resources">
         <Link data-testid="resources" onClick={this.navBar} to='/resources'>Resources & Tips</Link>
       </label>
+
     </div>
     
 

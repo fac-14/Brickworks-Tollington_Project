@@ -35,7 +35,7 @@ console.log('this.state.allEvents', this.state.allEvents);
       <div>
       <ul>
       {allEvents.map( event => (
-        <EventComp key={event.event_id} {...event} /> 
+        <EventComp key={event.fields.event_id} {...event.fields} /> 
       )
         
       )}

@@ -8,9 +8,10 @@ exports.post = (req, res) => {
   console.log('REQ VALUES ARE', req.body)
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    // host: 'smtp.gmail.com',
+    // port: 465,
+    // secure: true,
+    service: 'Gmail',
     auth: {
       user: `sangitasunuwar@gmail.com`,
       pass: GPASS
@@ -20,8 +21,8 @@ exports.post = (req, res) => {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
     to: `sangitasunuwar@gmail.com`,
     subject: 'New message from contact form at Start a social action at Brickworks app',
-    // text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
-    text:`hello how are you`
+    text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
+    // text:`hello how are you`
   };
   console.log('mailOpts',mailOpts);
   

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const EventComp = ({ event_id, event_name, event_description, date_time, event_location, string_agg }) => {
+const EventComp = ({ event_id, event_name, event_description, event_date_time, event_location, fullname_event_organiser, 
+  email_event_organiser, telephone_event_organiser}) => {
   return (
 
     //   <Link key={index} to={caseLink}>
@@ -14,9 +15,11 @@ const EventComp = ({ event_id, event_name, event_description, date_time, event_l
       <li>
         {event_name}
         {event_description}
-        {date_time}
+        {event_date_time}
         {event_location}
-        {string_agg}
+        {fullname_event_organiser}
+        {email_event_organiser}
+        {telephone_event_organiser}
       </li>
     </Link >
   )
