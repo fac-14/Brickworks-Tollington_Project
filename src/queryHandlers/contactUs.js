@@ -2,7 +2,9 @@ const nodemailer = require('nodemailer');
 // import {GPASS} from '../../config.env';
 require("env2")("./config.env");
 
-let GPASS = process.env.GPASS;
+const GPASS = process.env.GPASS;
+const EMAIL = process.env.EMAIL
+
 
 exports.post = (req, res) => {
   console.log('REQ VALUES ARE', req.body)
