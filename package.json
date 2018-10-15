@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
+    "test": "jest",
     "start": "node src/server.js",
     "report-coverage": "codecov",
     "parcel:dev": "./node_modules/.bin/parcel client/public/index.html",
