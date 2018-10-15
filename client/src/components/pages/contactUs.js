@@ -4,7 +4,8 @@ class ContactUs extends React.Component {
   state = {
     name: '',
     email: '',
-    description: ''
+    description: '',
+    number: ''
   }
   handleChange = event => {
     //   const target = event.target;
@@ -33,23 +34,29 @@ class ContactUs extends React.Component {
         console.log('ERROR IS', err);
         throw new Error(`fetch /api/contactUs failed ${err}`);
       });
-    this.setState({ name: '', email: '', description: '' });
+    this.setState({ name: '', email: '', description: '', number: '' });
   }
 
   render() {
     return (
+    <div className='wrapper'>
+    <h1>Contact Us</h1>
+    <main>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
-        <label htmlFor="email">'Email':</label>
+        <label htmlFor="email">Email:</label>
         <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
         <label htmlFor="description">Description:</label>
         <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} />
+        <label htmlFor="number">Number:</label>
+        <input type="text" id="number" name="number" value={this.state.number} onChange={this.handleChange} />
         <button type="submit">Submit</button>
       </form>
+    </main>
+    </div>
     );
   }
-
 }
 
 export default ContactUs;

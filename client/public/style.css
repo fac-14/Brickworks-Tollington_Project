@@ -116,7 +116,6 @@ body {
   background-color: #525252;
   color: #fafafa;
   text-align: center;
-  font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 2.5rem;
   line-height: 5rem;
@@ -126,7 +125,9 @@ body {
 h2 {
   font-weight: 600;
   font-size: 1.8rem;
-  color: #585858; 
+  color: #585858;
+  margin: 2rem 4rem;
+  text-decoration: none; 
 }
 
 h3 {
@@ -142,25 +143,22 @@ h3 {
 main {
   display: flex;
   flex-direction: column;
-  grid-column: col-start / -1;
-  grid-row: 2 / span 3;
   align-items: center;
   justify-items: center;
-  }
+}
 
   /*TEXT CONTAINERS*/
 
 .hub-description {
-  margin: 2rem 7rem;
+  margin: 1rem 5rem;
   font-size: 1.6rem;
   text-align: center;
   color: #2a2a2a;
 }
 
 .hub-description-two {
-  margin: 2rem 7rem;
+  margin: 2rem 5rem;
   font-size: 1.6rem;
-  /* text-align: center; */
   color: #2a2a2a;
 }
 
@@ -170,15 +168,16 @@ ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  background-color: #eeeeee;
   width: 70vw;
   padding: 1rem;
   margin: auto;
-  margin-top: 4rem;
 }
 
 li {
   font-size: 1.5rem;
   color: #2a2a2a;
+  padding: 1rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
@@ -195,8 +194,9 @@ li {
   padding: 15px 40px;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition-duration: 0.1.5s;
-  transition-duration: 0.1.5s;
+  box-shadow: 1px 1px 1px 1px #888888;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .button-large:hover {
@@ -208,25 +208,29 @@ li {
 }
 
 .add-event-button {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  display: flex;
+  height: 70px;
+  width: 120px;
   color: #2a2a2a;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-left: 2rem;
   background-color: #4AAFE7;
   /* text-transform: uppercase; */
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   border: 2px solid #2a2a2a;
   cursor: pointer;
   box-shadow: 1px 1px 1px 1px #888888;
-  -webkit-transition-duration: 0.1.5s;
-  transition-duration: 0.1.5s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .add-event-button:hover {
   background-color: #84E1FF;
 }
 
+/* FOOTER */
 footer {
   width: 75%;
   margin: auto;
@@ -237,16 +241,6 @@ footer {
   line-height: 3rem;
 }
 
-/* FOOTER */
-/* footer {
-  width: 75%;
-  background-colour: #525252;
-  margin: auto;
-  height: 4vh; 
-  text-align: center;
-  color: white;
-} */
-
 /*----------------------------------------------*/
 
 /*MEDIA QUERIES*/
@@ -255,7 +249,7 @@ footer {
 
 /*HEADINGS*/
 
-.pageHeadings {
+/* .pageHeadings {
   grid-column: col-start 3 / -1;
   grid-row: 1 / 2;
   }
@@ -264,7 +258,7 @@ main {
   grid-column: col-start 3 / -1;
   grid-row: 2 / span 3;
   align-items: start;
-}
+} */
 
 
 }
