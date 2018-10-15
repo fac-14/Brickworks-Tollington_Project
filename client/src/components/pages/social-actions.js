@@ -36,7 +36,7 @@ console.log('this.state.allEvents', this.state.allEvents);
         <h1 data-testid="all-events">Social Action In Your Community</h1>
       <ul>
       {allEvents.map( event => (
-        <EventComp key={event.event_id} {...event} /> 
+        <EventComp key={event.fields.event_id} {...event.fields} /> 
       )
         
       )}

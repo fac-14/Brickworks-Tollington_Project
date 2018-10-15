@@ -12,6 +12,7 @@ import {Resources} from './pages/resources';
 import {Inspiration} from './pages/inspirations';
 import {About} from './pages/about';
 import {TopTen} from './pages/topten';
+import ContactUs from './pages/contactUs';
 
 const App = () => {
 
@@ -27,6 +28,8 @@ const App = () => {
         <Route path='/faq' component = {Faq} />
         <Route path='/resources' component = {Resources} />
         <Route path ='/inspirations' component = {Inspiration} />
+        {/* <Route path ='/things-to-think-about' component = {TopTen} /> */}
+        <Route path ='/contactUs' component = {ContactUs} />
         <Route path ='/topten' component = {TopTen} />
         <Route component= { Error } />
       </Switch>

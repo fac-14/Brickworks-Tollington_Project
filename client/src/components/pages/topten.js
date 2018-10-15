@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 
 const TopTen= () => (
     <div data-testid="topten-page" className='wrapper'>
@@ -28,6 +30,10 @@ const TopTen= () => (
             10. Don't give up, have patience and be committed
             </p>
         </main>
+            <label htmlFor="all-events">
+            <Link  to='/contactUs'><h2>Register an interest to start a social action</h2></Link>
+            </label>
+        
     </div>
 
 )
