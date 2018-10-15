@@ -1,4 +1,4 @@
-const base = require('../database/db_connection');
+const base = require('../controllers/database/db_connection');
 
  console.log('getAllEventsAirTable' );
  

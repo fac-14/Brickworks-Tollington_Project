@@ -1,4 +1,4 @@
-const db = require('../database/db_connection');
+const db = require('../controllers/database/db_connection');
 
 exports.get = (request, response) => {
  console.log('hleaohoa' );
