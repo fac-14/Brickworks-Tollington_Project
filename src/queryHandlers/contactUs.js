@@ -20,8 +20,11 @@ exports.post = (req, res) => {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
     to: `sangitasunuwar@gmail.com`,
     subject: 'New message from contact form at Start a social action at Brickworks app',
-    text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
+    // text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
+    text:`hello how are you`
   };
+  console.log('mailOpts',mailOpts);
+  
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
       console.log(error)
@@ -34,3 +37,13 @@ exports.post = (req, res) => {
     }
   });
 };
+//////////////
+// transporter.sendMail(mailOptions, function(error, info){
+//   if(error){
+//       console.log(error);
+//       res.json({yo: 'error'});
+//   }else{
+//       console.log('Message sent: ' + info.response);
+//       res.json({yo: info.response});
+//   };
+// });

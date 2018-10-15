@@ -11,15 +11,15 @@ var app = express();
 app.use(serveStatic(path.join(__dirname, '..', 'dist')));
 
 app.use(bodyParser.urlencoded({
-    extended: true,
+  extended: true,
 }))
 
 app.use(bodyParser.json());
 
 
 app.post('/api/create-event', (req, res) => {
-    var eventData = Object.keys(req.body)[0];
-    console.log(Object.keys(req.body)[0]);
+  var eventData = Object.keys(req.body)[0];
+  console.log(Object.keys(req.body)[0]);
 })
 
 app.get('/api/getAllEvents', getAllEvents.get);
@@ -33,32 +33,35 @@ require("env2")("./config.env");
 let GPASS = process.env.GPASS;
 
 app.post('/api/contactUs', (req, res) => {
-    console.log('REQ VALUES ARE', req.body)
-    const smtpTrans = nodemailer.createTransport({
-      service: 'Gmail',
-      auth: {
-        user: `sangitasunuwar@gmail.com`,
-        pass: GPASS
-      }
-    });
-    const mailOpts = {
-      from: `sangitasunuwar@gmail.com`,
-      to: `sangitasunuwar@gmail.com`,
-      subject: 'New message from contact form at Start a social action at Brickworks app',
-      text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
-    };
-    smtpTrans.sendMail(mailOpts, function (error, response) {
-      if (error) {
-        console.log(error)
-        res.send(error);
-      }
-      else {
-        // res.render('contact-success');
-        console.log(response)
-        res.send(response);
-      }
-    });
-  }
+  console.log('REQ VALUES ARE', req.body)
+  const smtpTrans = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: `sangitasunuwar@gmail.com`,
+      pass: GPASS
+    }
+  });
+  const mailOpts = {
+    from: `sangitasunuwar@gmail.com`,
+    to: `sangitasunuwar@gmail.com`,
+    subject: 'New message from contact form at Start a social action at Brickworks app',
+    text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
+    // text: `hello how are you today`
+  };
+  console.log('mailOpts', mailOpts);
+
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+    if (error) {
+      console.log(error)
+      res.send(error);
+    }
+    else {
+      // res.render('contact-success');
+      console.log(response)
+      res.send(response);
+    }
+  });
+}
 )
 
 

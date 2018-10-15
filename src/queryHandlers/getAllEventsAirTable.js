@@ -6,7 +6,7 @@ const base = require('../database/db_connection');
  let allRecords = [];
  base('social_action_events').select({
    fields: [
-     'event_id', 'event_name', 'event_description', 'event_location', 'recurrent_event_description', 'categories', 'event_date_time'
+     'event_id', 'event_name', 'event_description', 'event_location', 'recurrent_event_description', 'categories', 'event_date_time', 'Photo'
    ]   //photos left
  }).eachPage( (records, fetchNextPage) => {
    allRecords = [...allRecords, ...records];
