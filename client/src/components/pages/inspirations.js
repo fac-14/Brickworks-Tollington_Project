@@ -6,16 +6,14 @@ class Inspiration extends React.Component {
     <div>
     <div className='wrapper'>
     <h1 className='pageHeadings'>Local inspirational stories</h1>
-    <div className='sidebar'></div>
     <main>
-        <ul className='acc-list'>
-             <li className='acc-item'>
-                <input className='acc-item-input' type='checkbox' name='accordion' id='item1'/>
-                <label for='item1' className='acc-item-input-heading'>
-                <h3 className='acc-h3'> Building a community: The story of Brickworks<span className='acc-list-arrow'>&#9650;
+        <ul>
+             <li>
+                <label for='item1'>
+                <h3> Building a community: The story of Brickworks<span>
                 </span></h3>
                 </label>
-                <p className='acc-list-content'>
+                <p>
                     The Hanley Crouch Community Association (HCCA) has strong roots in social action and this culture of 'making a difference through social change' remains at our core - stimulating connectivity across our local community and feeding our sustainability. 
                     <br></br>
                     <br></br>
@@ -29,13 +27,12 @@ class Inspiration extends React.Component {
                 </p>
              </li>
 
-             <li className='acc-item'>
-                <input className='acc-item-input' type='checkbox' name='accordion' id='item2'/>
-                <label for='item2' className='acc-item-input-heading'>
-                <h3 className='acc-h3'>The 'locality' initiative in Tollington<span className='acc-list-arrow'>&#9650;
+             <li>
+                <label for='item2'>
+                <h3>The 'locality' initiative in Tollington<span>
                 </span></h3>
                 </label>
-                <p className='acc-list-content'>
+                <p>
                 Islington Council has chosen the ward of Tollington to explore and develop a 'Locality' initiative that aims to develop, define, and test the 'community' aspect of the Homes and Communities offer. A team of 11 staff from Homes and Communities and key local partner are engaging and collaborating to ensure that Homes and Communities are connected to and knowledgeable about the communities that they work in.
                 <br/>
                 <br/>

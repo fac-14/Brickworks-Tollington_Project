@@ -1,5 +1,4 @@
 import React from 'react';
- 
 
 const TopTen= () => (
     <div data-testid="topten-page" className='wrapper'>
