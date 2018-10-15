@@ -1,7 +1,4 @@
-var express = require('express');
-var path = require('path');
-var serveStatic = require('serve-static');
-var bodyParser = require('body-parser');
+const app = require('./app')
 
 var getAllEvents = require('./queryHandlers/getAllEvents');
 var getEventsByTheme = require('./queryHandlers/getEventsByTheme');
@@ -68,3 +65,8 @@ app.post('/api/contactUs', (req, res) => {
 var port = process.env.PORT || 5000;
 app.listen(port);
 console.log('server started at port: ' + port);
+// all requests which begin with /api will go through to apiRoutes
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+});

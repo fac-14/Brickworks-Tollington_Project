@@ -1,0 +1,355 @@
+body {
+  height: 100vh;
+  background-image: url('./images/Brickworks-bacgkround.jpeg');
+  background-size: cover; 
+  background-color: #FAFAFA;
+  padding: 0;
+}
+
+#logo {
+  margin: 0 auto;
+  display: flex;
+  background-color: #FAFAFA;
+}
+
+#logo-img {
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 12px;
+  grid-column: col-start / span 12;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #FAFAFA;
+  min-height: 85vh;
+  }
+
+
+ /*NAVBAR*/
+.nav {
+  display: flex;
+  position: fixed;
+  background-color: #6cb7e2;
+  height: 50px;
+}
+.image {
+    position: absolute;
+    width: 6vw;
+    height: 6vh;
+    margin: 10px;
+}
+.image span {
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+}
+.image span:before, .image span:after {
+    position: absolute;
+    content: '';
+}
+.image span, .image span:before, .image span:after {
+    width: 30px;
+    height: 6px;
+    background-color: #000;
+    display: block;
+}
+.image span {
+  transition: transform 1s ease;
+}
+.image span:before {
+  margin-top: -12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
+}
+.image span:after {
+  margin-top: 12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
+}
+
+.image-closed span {
+
+}
+.image-open span {
+    transform: scaleX(1.5);
+    transform: scaleY(0.7);
+}
+.image-closed span:after {
+
+}
+.image-open span:after {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+.image-closed span:before {
+
+}
+.image-open span:before {
+    transform: translateX(-2px) rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  height: 100vh;
+  width: 60vw;
+  background-color: aquamarine;
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
+  overflow-y: auto;
+  /* z-index: 200000000; */
+}
+
+.menu-closed {
+  transform: translate3d(-60vw, 0, 0);
+}
+
+.menu-open {
+  transform: translate3d(0vw, 0, 0)
+ } 
+
+ /*HEADINGS*/
+
+ h1, .pageHeadings {
+  grid-column: col-start / -1;
+  grid-row: 1 / 2;
+  height: 5rem;
+  background-color: #7e7e7e;
+  color: #fafafa;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  margin-top: 0.5rem;
+  }
+
+h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #585858; 
+}
+
+h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #585858; 
+}
+
+/*MAIN CONTENT*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  grid-column: col-start / -1;
+  grid-row: 2 / span 3;
+  align-items: center;
+  justify-items: center;
+  }
+
+  /*TEXT CONTAINERS*/
+
+  #hub-description {
+    margin: 3rem 9rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    color: #2a2a2a;
+  }
+
+  /*LISTS*/
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 70vw;
+  padding: 1rem;
+}
+
+li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+/*ACCORDION LIST*/
+
+.accordion {
+  padding: 0 10px;
+  margin: 0 auto;
+  list-style: none outside;
+}
+
+.acc-item-input-heading {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #585858;
+}
+
+.acc-item-input:checked ~ .acc-list-content {
+  max-height: 1000px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  -webkit-transition: max-height 1s ease-in, margin .2s ease-in, padding .2s ease-in;
+  transition: max-height 1s ease-in, margin .2s ease-in, padding .2s ease-in;
+}
+
+.acc-item-input:checked ~ .acc-item-input-heading > .acc-list-arrow {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.acc-item-input:checked ~ .acc-item-input-heading > .acc-list-span:hover {
+  color: #6cb7e2;
+}
+
+.acc-list-arrow {
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 6px );
+  right: 0;
+  pointer-events: none;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.acc-list-arrow:hover {
+  background-color: #6CB7E2;
+}
+
+.acc-list-arrow:active {
+  color: #6CB7E2;
+}
+
+acc-h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #585858;
+  margin-bottom: 0;
+}
+
+
+.acc-list-content {
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .1s ease-out, margin-bottom .2s ease-out, padding .2s ease-out;
+  transition: max-height .1s ease-out, margin-bottom .2s ease-out, padding .2s ease-out;
+}
+
+.acc-item-input {
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  overflow: hidden;
+  position: absolute;
+  left: -9999px;
+}
+
+/*BUTTONS*/
+
+.button-large {
+  margin: 0 auto;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 0.08rem;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #2a2a2a;
+  background-color: #67bdec;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  }
+
+.button-large:hover {
+  background-color: #FF9F67;
+}
+
+.button-large:active {
+  background-color: #ff6f1b;
+}
+
+
+/* FOOTER */
+footer {
+  grid-column: col-start / -1;
+  grid-row: 6 / span 2;
+  height: 4vh; 
+  text-align: center;
+  color: white;
+  }
+
+/*----------------------------------------------*/
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 500px) {
+
+/*HEADINGS*/
+
+.pageHeadings {
+  grid-column: col-start 3 / -1;
+  grid-row: 1 / 2;
+  }
+
+  main {
+    grid-column: col-start 3 / -1;
+    grid-row: 2 / span 3;
+    align-items: start;
+    }
+
+.sidebar {
+  grid-column: col-start / span 2;
+  grid-row: 1 / 7;
+  background-color: #f5f5f5;
+  margin-top: 0.5rem;
+}
+
+footer {
+grid-column: col-start / -1;
+grid-row: 6 / span 2;
+background-color: #7e7e7e;
+height: 3rem;
+line-height: 3rem;
+}
+
+h2 {
+  font-size: 200px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 70vw;
+}
+}
+
+@media (min-width: 768px) {
+  /* For everything bigger than 768px */ 
+}
+
