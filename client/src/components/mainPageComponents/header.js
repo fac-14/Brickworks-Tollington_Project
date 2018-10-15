@@ -5,54 +5,60 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Nav extends React.Component {
 
   state = {
-    menu: 'menu menu-closed',
-    image: 'image image-closed'
+    menuOpen: false,
+    
   }
 
-  navBar = () => {
-    if (this.state.menu === 'menu menu-closed') {
-      this.setState({menu: 'menu menu-open'});
-      this.setState({image: 'image image-open'});
-    } else if (this.state.menu === 'menu menu-open') {
-      this.setState({menu: 'menu menu-closed'});
-      this.setState({image: 'image image-closed'});
+toggleMenu = (event) => {
+    const icon= document.getElementById('icon');
+    const menu = document.getElementById('menu');
+    this.setState((prevState) => ({
+        menuOpen: !prevState.menuOpen
+    }))
+    if (menu.className === 'menu menu-closed') {
+      icon.className='image image-open';
+      menu.className='menu menu-open';
+    } else if (menu.className === 'menu menu-open') {
+      icon.className='image image-open';
+      menu.className='menu menu-open';
     }
-  }
+
+}
   
   render() {
     return (
     <nav className="nav">
     {/* <div id='navDiv' className={this.state.menu}> */}
-    <div data-testid="actual-menu" className={this.state.menu}>
+    <div id="menu" data-testid="actual-menu" className="menu menu-closed">
      
     <label htmlFor="home"> 
-        <Link data-testid="home" onClick={this.navBar} to='/'>Home</Link>
+        <Link data-testid="home" onClick={this.toggleMenu} to='/'>Home</Link>
       </label>
       <label htmlFor="all-events">
-        <Link data-testid="all-events" onClick={this.navBar} to='/social-actions'>Social Actions</Link>
+        <Link data-testid="all-events" onClick={this.toggleMenu} to='/social-actions'>Social Actions</Link>
       </label>
       {/* <label htmlFor="create-event">
-        <Link data-testid="create-event" onClick={this.navBar} to='/create-event'>Create Event</Link>
+        <Link data-testid="create-event" onClick={this.toggleMenu} to='/create-event'>Create Event</Link>
       </label> */}
       <label htmlFor="form">
-        <Link data-testid="form" onClick={this.navBar} to='/topten'>Start a Social Action</Link>
+        <Link data-testid="form" onClick={this.toggleMenu} to='/topten'>Start a Social Action</Link>
       </label>
       {/* <label htmlFor="about">
-        <Link data-testid="about" onClick={this.navBar} to='/about'>About</Link>
+        <Link data-testid="about" onClick={this.toggleMenu} to='/about'>About</Link>
       </label> */}
       <label htmlFor="faq">
-        <Link data-testid="faq" onClick={this.navBar} to='/faq'>FAQ</Link>
+        <Link data-testid="faq" onClick={this.toggleMenu} to='/faq'>FAQ</Link>
       </label>
       <label htmlFor="recent-projects">
-        <Link data-testid="recent-projects" onClick={this.navBar} to='/inspirations'>Local Inspirational Stories</Link>
+        <Link data-testid="recent-projects" onClick={this.toggleMenu} to='/inspirations'>Local Inspirational Stories</Link>
       </label>
       <label htmlFor="resources">
-        <Link data-testid="resources" onClick={this.navBar} to='/resources'>Resources & Tips</Link>
+        <Link data-testid="resources" onClick={this.toggleMenu} to='/resources'>Resources & Tips</Link>
       </label>
     </div>
     
 
-    <div data-testid="menu" className={this.state.image} onClick={this.navBar}><span></span></div>
+    <div id="icon" data-testid="menu" className="image image-closed" onClick={this.toggleMenu}><span></span></div>
   </nav>
   )}
 }
