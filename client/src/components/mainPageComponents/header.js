@@ -1,5 +1,4 @@
 import React from 'react';
-import Menu from './menu';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
