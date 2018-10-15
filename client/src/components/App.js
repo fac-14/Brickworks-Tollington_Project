@@ -28,8 +28,9 @@ const App = () => {
         <Route path='/faq' component = {Faq} />
         <Route path='/resources' component = {Resources} />
         <Route path ='/inspirations' component = {Inspiration} />
-        <Route path ='/things-to-think-about' component = {TopTen} />
+        {/* <Route path ='/things-to-think-about' component = {TopTen} /> */}
         <Route path ='/contactUs' component = {ContactUs} />
+        <Route path ='/topten' component = {TopTen} />
         <Route component= { Error } />
       </Switch>
     </div>
