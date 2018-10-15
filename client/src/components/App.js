@@ -2,9 +2,9 @@ import React from 'react';
 // import { render } from 'react-dom';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/home';
-import CreateEvent from './pages/create-event';
+// import CreateEvent from './pages/create-event';
 import Nav from './mainPageComponents/header';
-import AllEvents from './pages/all-events';
+import SocialActions from './pages/social-actions';
 import EventDetailed from './pages/event_detailed';
 import {Error} from './pages/error';
 import {Faq} from './pages/faq';
@@ -20,8 +20,8 @@ const App = () => {
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />
-        <Route exact path='/all-events' component= { AllEvents} />
-        <Route path='/create-event' component= { CreateEvent } />
+        <Route exact path='/social-actions' component= { SocialActions} />
+        {/* <Route path='/create-event' component= { CreateEvent } /> */}
         <Route path='/about' component = {About} /> 
         <Route path='/event-detailed' component = {EventDetailed} />
         <Route path='/faq' component = {Faq} />
