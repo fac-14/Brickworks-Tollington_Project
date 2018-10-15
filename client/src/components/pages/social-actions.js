@@ -24,7 +24,7 @@ console.log('this.state.allEvents', this.state.allEvents);
     .catch(err => console.log(err));
   }
   addEvent = () => {
-    this.props.history.push('/create-event');
+    this.props.history.push('/topten');
   }
   
   render() {
@@ -32,18 +32,18 @@ console.log('this.state.allEvents', this.state.allEvents);
 
     return (
       
-      <div data-testid="social-actions-page">
-        <h2>Social Actions</h2>
-        <ul>
-          {allEvents.map( event => (
-            <EventComp key={event.event_id} {...event} /> 
-          )
+      <div className='wrapper'>
+        <h1 data-testid="social-actions-page">Social Action In Your Community</h1>
+      <ul>
+      {allEvents.map( event => (
+        <EventComp key={event.fields.event_id} {...event.fields} /> 
+      )
         
           )}
 
         </ul>
         
-        <button onClick={this.addEvent}>Add Event</button>
+      <button className='add-event-button' onClick={this.addEvent}>Express Interest</button>
       </div>
     )
   }

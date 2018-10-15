@@ -41,7 +41,8 @@ toggleMenu = () => {
         <Link data-testid="create-event" onClick={this.toggleMenu} to='/create-event'>Create Event</Link>
       </label> */}
       <label htmlFor="form">
-        <Link data-testid="form" onClick={this.toggleMenu} to='/things-to-think-about'>Start a Social Action</Link>
+        {/* <Link data-testid="form" onClick={this.navBar} to='/contactUs'>Start a Social Action</Link> */}
+        <Link data-testid="form" onClick={this.toggleMenu} to='/topten'>Start a Social Action</Link>
       </label>
       <label htmlFor="about">
         <Link data-testid="about" onClick={this.toggleMenu} to='/about'>About</Link>
@@ -55,6 +56,7 @@ toggleMenu = () => {
       <label htmlFor="resources">
         <Link data-testid="resources" onClick={this.toggleMenu} to='/resources'>Resources & Tips</Link>
       </label>
+
     </div>
     
 
