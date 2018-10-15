@@ -74,8 +74,8 @@ body {
 
 }
 .image-open span {
-    transform: scaleX(1.5);
-    transform: scaleY(0.7);
+  transform: scaleX(1.5);
+  transform: scaleY(0.7);
 }
 .image-closed span:after {
 
@@ -85,10 +85,10 @@ body {
 }
 
 .image-closed span:before {
-
+  
 }
 .image-open span:before {
-    transform: translateX(-2px) rotate(-45deg);
+  transform: translateX(-2px) rotate(-45deg);
 }
 
 .menu {

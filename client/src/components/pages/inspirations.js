@@ -4,14 +4,14 @@ class Inspiration extends React.Component {
     render(){
         return(
     <div>
-    <div className='wrapper'>
+    <div data-testid="inspirations-page" className='wrapper'>
     <h1 className='pageHeadings'>Local inspirational stories</h1>
     <div className='sidebar'></div>
     <main>
         <ul className='acc-list'>
              <li className='acc-item'>
                 <input className='acc-item-input' type='checkbox' name='accordion' id='item1'/>
-                <label for='item1' className='acc-item-input-heading'>
+                <label htmlFor='item1' className='acc-item-input-heading'>
                 <h3 className='acc-h3'> Building a community: The story of Brickworks<span className='acc-list-arrow'>&#9650;
                 </span></h3>
                 </label>
@@ -31,7 +31,7 @@ class Inspiration extends React.Component {
 
              <li className='acc-item'>
                 <input className='acc-item-input' type='checkbox' name='accordion' id='item2'/>
-                <label for='item2' className='acc-item-input-heading'>
+                <label htmlFor='item2' className='acc-item-input-heading'>
                 <h3 className='acc-h3'>The 'locality' initiative in Tollington<span className='acc-list-arrow'>&#9650;
                 </span></h3>
                 </label>

@@ -32,15 +32,16 @@ console.log('this.state.allEvents', this.state.allEvents);
 
     return (
       
-      <div>
-      <ul>
-      {allEvents.map( event => (
-        <EventComp key={event.event_id} {...event} /> 
-      )
+      <div data-testid="social-actions-page">
+        <h2>Social Actions</h2>
+        <ul>
+          {allEvents.map( event => (
+            <EventComp key={event.event_id} {...event} /> 
+          )
         
-      )}
+          )}
 
-      </ul>
+        </ul>
         
         <button onClick={this.addEvent}>Add Event</button>
       </div>
