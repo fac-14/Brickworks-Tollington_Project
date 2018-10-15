@@ -5,13 +5,12 @@ class Inspiration extends React.Component {
         return(
     <div>
     <div className='wrapper'>
-    <h1 className='pageHeadings'>Local inspirational stories</h1>
+    <h1>Local Inspirational Stories</h1>
     <main>
         <ul>
              <li>
                 <label for='item1'>
-                <h3> Building a community: The story of Brickworks<span>
-                </span></h3>
+                <h2> Building a community: The story of Brickworks<span></span></h2>
                 </label>
                 <p>
                     The Hanley Crouch Community Association (HCCA) has strong roots in social action and this culture of 'making a difference through social change' remains at our core - stimulating connectivity across our local community and feeding our sustainability. 
@@ -29,8 +28,7 @@ class Inspiration extends React.Component {
 
              <li>
                 <label for='item2'>
-                <h3>The 'locality' initiative in Tollington<span>
-                </span></h3>
+                <h3>The 'locality' initiative in Tollington<span></span></h3>
                 </label>
                 <p>
                 Islington Council has chosen the ward of Tollington to explore and develop a 'Locality' initiative that aims to develop, define, and test the 'community' aspect of the Homes and Communities offer. A team of 11 staff from Homes and Communities and key local partner are engaging and collaborating to ensure that Homes and Communities are connected to and knowledgeable about the communities that they work in.

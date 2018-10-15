@@ -11,7 +11,6 @@ class Home extends React.Component {
       <div>
         <div className='wrapper'>
           <h1 data-testid="home-page"></h1>
-          <div className='sidebar'></div>
           <main>
             <div id='logo'>
               <img id='logo-img' src={logoImg} alt='Brickworks logo'/>

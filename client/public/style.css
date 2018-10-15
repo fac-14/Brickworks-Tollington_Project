@@ -3,7 +3,7 @@
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   background-image: url('./images/Brickworks-bacgkround.jpeg');
   background-size: cover; 
   background-color: #FAFAFA;
@@ -129,10 +129,12 @@ h2 {
   color: #585858; 
 }
 
-h2 {
+h3 {
   font-weight: 600;
   font-size: 1.6rem;
-  color: #585858; 
+  color: #585858;
+  text-align: center;
+  margin: 30px 40px;;
 }
 
 /*MAIN CONTENT*/
@@ -155,6 +157,13 @@ main {
   color: #2a2a2a;
 }
 
+.hub-description-two {
+  margin: 2rem 7rem;
+  font-size: 1.6rem;
+  /* text-align: center; */
+  color: #2a2a2a;
+}
+
   /*LISTS*/
 
 ul {
@@ -163,6 +172,8 @@ ul {
   list-style-type: none;
   width: 70vw;
   padding: 1rem;
+  margin: auto;
+  margin-top: 4rem;
 }
 
 li {
@@ -186,7 +197,7 @@ li {
   cursor: pointer;
   -webkit-transition-duration: 0.1.5s;
   transition-duration: 0.1.5s;
-  }
+}
 
 .button-large:hover {
   background-color: #84E1FF;
@@ -196,15 +207,45 @@ li {
   background-color: #4AAFE7;
 }
 
+.add-event-button {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  color: #2a2a2a;
+  background-color: #4AAFE7;
+  /* text-transform: uppercase; */
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #2a2a2a;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #888888;
+  -webkit-transition-duration: 0.1.5s;
+  transition-duration: 0.1.5s;
+}
 
-/* FOOTER */
+.add-event-button:hover {
+  background-color: #84E1FF;
+}
+
 footer {
   width: 75%;
+  margin: auto;
+  background-color: #525252;
+  color: white;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+/* FOOTER */
+/* footer {
+  width: 75%;
+  background-colour: #525252;
   margin: auto;
   height: 4vh; 
   text-align: center;
   color: white;
-}
+} */
 
 /*----------------------------------------------*/
 
@@ -225,29 +266,7 @@ main {
   align-items: start;
 }
 
-.sidebar {
-  grid-column: col-start / span 2;
-  grid-row: 1 / 7;
-  background-color: #f5f5f5;
-  margin-top: 0.5rem;
-}
 
-footer {
-background-color: #525252;
-height: 3rem;
-line-height: 3rem;
-}
-
-/* h2 {
-  font-size: 200px;
-} */
-
-ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  width: 70vw;
-}
 }
 
 @media (min-width: 768px) {

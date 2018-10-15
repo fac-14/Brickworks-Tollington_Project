@@ -7,9 +7,8 @@ class Faq extends React.Component {
     <div>
         <div data-testid = "faq-page" className='wrapper'>
         <h1 className='pageHeadings'>FAQs</h1>
-        <div className='sidebar'></div>
         <main>
-                <ul>
+            <ul>
                 <li><h2>&#x25C7; &ensp; How does Brickworks connect me with others who can help me develop my idea for a social action?</h2>
                     [Answer here]</li>
                 <li><h2>&#x25C7; &ensp; I am really concerned about changes to benefits. What can I do?</h2>
