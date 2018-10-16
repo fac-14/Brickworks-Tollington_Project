@@ -21,7 +21,7 @@ app.get('/api/getAllEventsAirTable', getAllEventsAirTable.get);
 
 // POST route from contact form
 app.post('/api/contactUs', contactUs.post);
-
+app.post('/api/event-proposal', contactUs.post);
 if(process.env.NODE_ENV === 'test'){
     app.get("/test500",(req, res, next) => {
         try {

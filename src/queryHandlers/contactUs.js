@@ -7,7 +7,7 @@ const EMAIL = process.env.EMAIL
 
 
 exports.post = (req, res) => {
-  console.log('REQ VALUES ARE', req.body)
+ 
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     // host: 'smtp.gmail.com',
@@ -19,26 +19,33 @@ exports.post = (req, res) => {
       pass: GPASS
     }
   });
+  if(req.body.startSocialAction){
+    
+    
+  }
+  else if(req.body.eventProposal){
+    const data = req.body.eventProposal;
   mailOpts = {
-    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+    from: data.name + ' &lt;' + data.email + '&gt;',
     to: `sangitasunuwar@gmail.com`,
     subject: 'New message from contact form at Start a social action at Brickworks app',
     text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
-    // text:`hello how are you`
-  };
+  }
+    }
+    else if(req.body.con)
   console.log('mailOpts',mailOpts);
   
-  smtpTrans.sendMail(mailOpts, function (error, response) {
-    if (error) {
-      console.log(error)
-      res.send(error);
-    }
-    else {
-      // res.render('contact-success');
-      console.log(response)
-      res.send(response);
-    }
-  });
+  // smtpTrans.sendMail(mailOpts, function (error, response) {
+  //   if (error) {
+  //     console.log(error)
+  //     res.send(error);
+  //   }
+  //   else {
+  //     // res.render('contact-success');
+  //     console.log(response)
+  //     res.send(response);
+  //   }
+  // });
 };
 //////////////
 // transporter.sendMail(mailOptions, function(error, info){
