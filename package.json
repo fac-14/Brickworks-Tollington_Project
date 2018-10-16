@@ -10,7 +10,7 @@
     "parcel:dev": "parcel client/public/index.html",
     "parcel:watch": "parcel watch client/public/index.html",
     "parcel:build": "parcel build client/public/index.html",
-    "dev": "concurrently --kill-others \"npm run parcel:watch\" \"nodemon src/server.js\""
+    "dev": "concurrently --killall node \"npm run parcel:watch\" \"nodemon src/server.js\""
   },
   "repository": {
     "type": "git",

@@ -18,12 +18,12 @@ class Home extends React.Component {
     return( 
       <div>
         <div className='wrapper'>
-          <h1 data-testid="home-page"></h1>
-          <main>
+          <h1 ></h1>
+          <main data-testid="home-page">
             <div id='logo'>
               <img id='logo-img' src={logoImg} alt='Brickworks logo'/>
             </div> 
-            <p className='hub-description-four'>Brickworks is a social-action hub rooted in Tollington that actively fosters grass-roots action. Brickworks supports local people to contribute to collective action, build the community and create a better, more democratic society.
+            <p className='hub-description'>Brickworks is a social-action hub rooted in Tollington that actively fosters grass-roots action. Brickworks supports local people to contribute to collective action, build the community and create a better, more democratic society.
             <br/>
             Find out more and get involved!
             </p>
