@@ -44,40 +44,51 @@ class ContactUs extends React.Component {
   render() {
     return (
     <div className='wrapper'>
-    <h1>Register an interest to a social action</h1>
+    <h1 className='pageHeadings'>Register an interest to a social action</h1>
+    <div className='sidebar'></div>
     <main>
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
-        <label htmlFor="email">Email:</label>
-        <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label htmlFor="phone">Contact number:</label>
-        <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
-        <label htmlFor="description">Description of social action:</label>
-        <textarea name="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
+      <form id='main-form' onSubmit={this.handleSubmit}>
+        <label className="form-label" htmlFor="name">Name</label>
+        <input type="text" className="form-input" id="name"  name="name" value={this.state.name} onChange={this.handleChange} />
+        <label className="form-label"  htmlFor="email">Email</label>
+        <input type="text" className="form-input" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
+        <label className="form-label"  htmlFor="phone">Contact number</label>
+        <input type="text" className="form-input" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
+        <label className="form-label" htmlFor="description">Description of social action</label>
+        <textarea name="form-description" id="form-desccription" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
-        <h3>please check the options applicable to you</h3>
-        <label htmlFor="cntWithCommunityAdviser">I want to connect with a local Community Organiser</label>
-        <input
-          type="checkbox"
-          id="cntWithCommunityAdviser"
-          name="cntWithCommunityAdviser"
-          checked={this.state.cntWithCommunityAdviser}
-          onChange={this.handleChange}
-        />
+        <h3>Please select the options that interest you</h3>
 
-        <label htmlFor="trainCommunityAdviser">I am interested in Community Organisers training</label>
-        <input
-          type="checkbox"
-          id="trainCommunityAdviser"
-          name="trainCommunityAdviser"
-          checked={this.state.trainCommunityAdviser}
-          onChange={this.handleChange}
-        />
+        <div className="choices">
+          <span className="choices-text">I want to connect with a local Community Organiser</span>
+          <label className="label-checkbox" htmlFor="cntWithCommunityAdviser">
+              <input
+                type="checkbox"
+                id="cntWithCommunityAdviser"
+                name="cntWithCommunityAdviser"
+                checked={this.state.cntWithCommunityAdviser}
+                onChange={this.handleChange}
+              />
+              <span className="custom-checkbox"></span>
+            </label>
+            </div>
 
-
-
-        <button type="submit">Submit</button>
+      <div className="choices">
+        <span className="choices-text"> I am interested in training as a Community Organiser
+        </span>
+          <label className="label-checkbox" htmlFor="trainCommunityAdviser">
+            <input
+              type="checkbox"
+              id="trainCommunityAdviser"
+              name="trainCommunityAdviser"
+              checked={this.state.trainCommunityAdviser}
+              onChange={this.handleChange}
+            />
+            <div className="custom-checkbox"></div>
+          </label>
+       </div>
+        
+       <button id="form-button" class="button-large" type="submit">Submit</button>
       </form>
     </main>
     </div>
