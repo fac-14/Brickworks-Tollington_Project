@@ -13,11 +13,13 @@ import {Inspiration} from './pages/inspirations';
 import {About} from './pages/about';
 import {TopTen} from './pages/topten';
 import ContactUs from './pages/contactUs';
+import {Projects} from './pages/projects';
+import {Footer} from './mainPageComponents/footer';
 
 const App = () => {
 
   return (
-    <div>
+    <div className='background-img'>
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />
@@ -31,8 +33,10 @@ const App = () => {
         {/* <Route path ='/things-to-think-about' component = {TopTen} /> */}
         <Route path ='/contactUs' component = {ContactUs} />
         <Route path ='/topten' component = {TopTen} />
+        <Route path ='/projects' component = {Projects} />
         <Route component= { Error } />
       </Switch>
+      <Footer />
     </div>
   );
 };
