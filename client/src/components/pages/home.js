@@ -20,9 +20,9 @@ class Home extends React.Component {
         <div className='wrapper'>
           <h1 data-testid="home-page"></h1>
           <main>
-            {/* <div id='logo'>
+            <div id='logo'>
               <img id='logo-img' src={logoImg} alt='Brickworks logo'/>
-            </div>  */}
+            </div> 
             <p className='hub-description'>Brickworks is a social-action hub rooted in Tollington that actively fosters grass-roots action. Brickworks supports local people to contribute to collective action, build the community and create a better, more democratic society.
             <br/>
             Find out more and get involved!
