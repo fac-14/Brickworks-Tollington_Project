@@ -47,11 +47,11 @@ class ContactUs extends React.Component {
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
         <label htmlFor="email">Email:</label>
         <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label htmlFor="description">Description:</label>
-        <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} />
         <label htmlFor="number">Number:</label>
         <input type="text" id="number" name="number" value={this.state.number} onChange={this.handleChange} />
-        <button type="submit">Submit</button>
+        <label htmlFor="description">Description:</label>
+        <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} />
+        <button className='form-button' type="submit">Submit</button>
       </form>
     </main>
     </div>

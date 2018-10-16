@@ -2,9 +2,17 @@ import React from 'react';
 import logoImg from '../../../public/images/Brickworks-logo1.png';
 
 class Home extends React.Component {
-  state= {
+  
+  constructor(props){
+  super(props)
+  this.state= {
     name: null
-  }  
+  }
+  }
+  
+  addEvent = () => {
+    this.props.history.push('/social-actions');
+  }
 
   render() {
     return( 
@@ -19,7 +27,7 @@ class Home extends React.Component {
             <br/>
             Find out more and get involved!
             </p>
-            <button className='button-large'>Next</button>
+            <button className='button-large' onClick={this.addEvent}>Next</button>
           </main>
         </div>
       </div>

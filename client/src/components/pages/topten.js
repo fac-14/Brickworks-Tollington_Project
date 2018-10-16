@@ -31,7 +31,7 @@ const TopTen= () => (
             </p>
             <br></br>
             <label htmlFor="all-events">
-            <Link  to='/contactUs'><h2>Register an interest to start a social action</h2></Link>
+            <Link to='/contactUs'><h2 className='link'>Click here to register an interest to start a social action</h2></Link>
             </label>
         </main>
     </div>

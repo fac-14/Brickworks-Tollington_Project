@@ -25,8 +25,7 @@ body {
   margin: auto;
   background-color: #ffffff;
   min-height: 95vh;
-  }
-
+}
 
  /*NAVBAR*/
 .nav {
@@ -112,6 +111,7 @@ body {
  /*HEADINGS*/
 
  h1 {
+  font-family: 'Source Sans Pro', sans-serif;
   height: 5rem;
   background-color: #525252;
   color: #fafafa;
@@ -123,14 +123,17 @@ body {
   }
 
 h2 {
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 1.8rem;
   color: #585858;
   margin: 2rem 4rem;
+  text-align: left;
   text-decoration: none; 
 }
 
 h3 {
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 1.6rem;
   color: #585858;
@@ -168,18 +171,54 @@ ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  background-color: #eeeeee;
   width: 70vw;
   padding: 1rem;
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5rem;
   color: #2a2a2a;
   padding: 1rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
+}
+
+.link {
+  color: #4AAFE7;
+}
+
+.resource-links {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4AAFE7;
+}
+
+.resource-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 2rem;
+}
+
+form {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 2rem;
+}
+
+form > input {
+  height: 2rem;
+  width: 15rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background-color: #eeeeee;
 }
 
 /*BUTTONS*/
@@ -208,15 +247,12 @@ li {
 }
 
 .add-event-button {
-  display: flex;
   height: 70px;
   width: 120px;
   color: #2a2a2a;
   border-radius: 5px;
-  margin-top: 1rem;
   margin-left: 2rem;
   background-color: #4AAFE7;
-  /* text-transform: uppercase; */
   font-size: 1.4rem;
   font-weight: 600;
   border: 2px solid #2a2a2a;
@@ -228,6 +264,21 @@ li {
 
 .add-event-button:hover {
   background-color: #84E1FF;
+}
+
+.form-button {
+  margin: auto;
+  border-radius: 5px;
+  height: 50px;
+  width: 90px;
+  color: #2a2a2a;
+  background-color: #4AAFE7;
+  font-size: 1.4rem;
+  border: 2px solid #2a2a2a;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #888888;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 /* FOOTER */
