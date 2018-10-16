@@ -40,4 +40,21 @@ const EventByThemeComp = ({ event_id, event_name, event_description, date_time, 
   )
 }
 
+  const FormErrors = ({formErrors}) => {
+    
+      {Object.keys(formErrors).map( (fieldName, i) => {
+        if(formErrors[fieldName].length > 0) {
+          return (
+            <p key={i} > {fieldName} {formErrors[fieldName]} </p>
+          )
+        } else {
+          return '';
+        }
+      })}
+    
+  }
+
+
+
+
 export { EventComp, EventByThemeComp };

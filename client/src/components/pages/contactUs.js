@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormErrors} from './eventComp';
 
 class ContactUs extends React.Component {
   state = {
@@ -8,7 +9,11 @@ class ContactUs extends React.Component {
     description: '',
     cntWithCommunityAdviser: false,
     trainCommunityAdviser: false,
-    // startSocialAction: true
+    formErrors: {name: '', email: '', description: '' },
+    nameValid: false,
+    emailValid: false,
+    descriptionValid: false,
+    formValid: false
   }
   handleChange = event => {
     // this.setState({ [event.target.name]: event.target.value });
@@ -17,6 +22,37 @@ class ContactUs extends React.Component {
     this.setState({ [target.name]: value });
  
   };
+  validateField = (e) => {
+    const fieldName = e.target.name;
+    const value = e.target.value;
+    let fieldValidationErrors = this.state.formErrors;
+    let nameValid = this.state.nameValid;
+    let emailValid = this.state.emailValid;
+    let descriptionValid = this.state.descriptionValid;
+
+    switch(fieldName) {
+      case 'name':
+      nameValid = (value != '') //value is not ''
+      break;
+      case 'email':
+      emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+      fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+      break;
+      case 'description':
+      descriptionValid = (value != '');
+      break;
+
+    }
+    this.setState( {formErrors: fieldValidationErrors,
+                    nameValid : nameValid,
+                    emailValid: emailValid,
+                    descriptionValid: descriptionValid
+                  }, this.validateForm );
+  }
+
+  validateForm() {
+    this.setState( {formValid: this.state.nameValid && this.state.emailValid && this.state.descriptionValid});
+  }
 
   handleSubmit = event => {
     event.preventDefault();
@@ -48,7 +84,7 @@ class ContactUs extends React.Component {
     <main>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
+        <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} onBlur={this.validateField}/>
         <label htmlFor="email">Email:</label>
         <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
         <label htmlFor="phone">Contact number:</label>
@@ -77,10 +113,17 @@ class ContactUs extends React.Component {
 
 
 
-        <button type="submit">Submit</button>
+        <button type="submit" disabled= { !this.state.formValid}>Submit</button>
       </form>
     </main>
+
+    {/* <div>
+      <FormErrors formErrors = {this.state.formErrors} />
+    </div> */}
+
     </div>
+
+    
     );
   }
 }
