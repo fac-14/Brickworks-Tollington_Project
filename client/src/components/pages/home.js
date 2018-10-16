@@ -1,16 +1,18 @@
 import React from 'react';
-// import logoImg from '../../../public/images/Brickworks-logo1.png'; 
+import logoImg from '../../../public/images/Brickworks-logo1.png';
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props)
+  
+  constructor(props){
+  super(props)
   this.state= {
     name: null
-  }  
-}
-handleNext = () => {
-  this.props.history.push('/social-actions');
-}
+  }
+  }
+  
+  addEvent = () => {
+    this.props.history.push('/social-actions');
+  }
 
   render() {
     return( 
@@ -25,12 +27,11 @@ handleNext = () => {
             <br/>
             Find out more and get involved!
             </p>
-            <button className='button-large' onClick={this.handleNext}>Next</button>
+            <button className='button-large' onClick={this.addEvent}>Next</button>
           </main>
         </div>
-         {/* <h2> this is home {this.state.name} </h2>  */}
       </div>
-  )}
+    )}
 }
 
 export default Home;

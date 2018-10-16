@@ -15,45 +15,56 @@ exports.post = (req, res) => {
     // secure: true,
     service: 'Gmail',
     auth: {
-      user: `sangitasunuwar@gmail.com`,
+      user: EMAIL,
       pass: GPASS
     }
   });
-  if(req.body.startSocialAction){
+  if(req.body.startSocialAction)
+  {
+  const formData = req.body.startSocialAction;
+  mailOpts = {
+    from: formData.name + ' &lt;' + formData.email + '&gt;',
+    // to: `sangitasunuwar@gmail.com`,
+    to: EMAIL,
+    // `${result['color 5'] ? 'color 5 exists!' : 'color 5 does not exist!'}`
+    subject: 'New message from contact form at Start a social action at Brickworks app',
+    text: `name: ${formData.name} 
+           email: ${formData.email} 
+           description of social action: ${formData.description}
+           connect with a local Community Organiser:  ${formData.cntWithCommunityAdviser} ? 'yes': 'no'
+           interested in Community Organisers training: ${formData.trainCommunityAdviser}
+           `
+    // text:`hello how are you`
+  };
+  console.log('mailOpts',mailOpts);
+  
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+    if (error) {
+      console.log(error)
+      res.send(error);
+    }
+    else {
+      // res.render('contact-success');
+      console.log(response)
+      res.send(response);
+    }
+  });
+}
     
-    
-  }
+  
   else if(req.body.eventProposal){
     const data = req.body.eventProposal;
   mailOpts = {
     from: data.name + ' &lt;' + data.email + '&gt;',
     to: `sangitasunuwar@gmail.com`,
     subject: 'New message from contact form at Start a social action at Brickworks app',
-    text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
+    text: `${data.name} (${data.email}) says: ${data.description}`
   }
     }
-    else if(req.body.con)
-  console.log('mailOpts',mailOpts);
+    else if(req.body.contactSupport) {
+
+    }
+    console.log('mailOpts',mailOpts);
+  }
+ 
   
-  // smtpTrans.sendMail(mailOpts, function (error, response) {
-  //   if (error) {
-  //     console.log(error)
-  //     res.send(error);
-  //   }
-  //   else {
-  //     // res.render('contact-success');
-  //     console.log(response)
-  //     res.send(response);
-  //   }
-  // });
-};
-//////////////
-// transporter.sendMail(mailOptions, function(error, info){
-//   if(error){
-//       console.log(error);
-//       res.json({yo: 'error'});
-//   }else{
-//       console.log('Message sent: ' + info.response);
-//       res.json({yo: info.response});
-//   };
-// });

@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 const app = express();
 var getAllEventsAirTable = require('./queryHandlers/getAllEventsAirTable');
 var contactUs = require('./queryHandlers/contactUs');
-
+var getPastEventsAirTable = require('./queryHandlers/getPastEventsAirTable');
 
 app.use(bodyParser.urlencoded({
     extended: true,
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 
 app.get('/api/getAllEventsAirTable', getAllEventsAirTable.get);
-
+app.get('/api/getPastEventsAirTable', getPastEventsAirTable.get)
 // POST route from contact form
 app.post('/api/contactUs', contactUs.post);
 app.post('/api/event-proposal', contactUs.post);

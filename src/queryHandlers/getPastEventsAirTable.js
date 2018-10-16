@@ -1,23 +1,16 @@
 const base = require('../controllers/database/db_connection');
 
-console.log('getAllEventsAirTable');
 
 exports.get = (request, response) => {
   let allRecords = [];
-  // const getAllEventsAirTable = new Promise( (resolve, reject) => {
   base('social_action_events').select({
-    filterByFormula:' IS_AFTER({event_date_time}, TODAY())',
-    sort:[{field:'event_date_time', direction:'asc'}],
+    filterByFormula:' IS_BEFORE({event_date_time}, TODAY())',
+    sort:[{field:'event_date_time', direction:'desc'}],
     fields: [
       'event_id', 'event_name', 'event_description', 'event_location', 'event_date_time', 'recurring_event_description', 'categories', 'Photo', 'fullname_event_organiser', 'email_event_organiser', 'telephone_event_organiser'
-    ] 
+    ]  
   }).eachPage((records, fetchNextPage) => {
     allRecords = [...allRecords, ...records];
-    
-    // allRecords.forEach( (record) => 
-    // {
-    //   console.log(record.fields.event_date_time);
-    // });
 
     allRecords = allRecords.map ( record => {
       // console.log(record.fields);
@@ -28,7 +21,6 @@ exports.get = (request, response) => {
       record.fields.event_date_time = reqdDate + ' ' + finalTime; 
       return record;
     })
-    
     fetchNextPage();
   }, (err) => {
     if (err) {
