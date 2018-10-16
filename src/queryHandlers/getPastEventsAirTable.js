@@ -11,7 +11,16 @@ exports.get = (request, response) => {
     ]  
   }).eachPage((records, fetchNextPage) => {
     allRecords = [...allRecords, ...records];
-    // allRecords.forEach( (record) => console.log(record.fields));
+
+    allRecords = allRecords.map ( record => {
+      // console.log(record.fields);
+      let reqdDate = record.fields.event_date_time.split('T')[0];
+      let reqdTime = record.fields.event_date_time.split('T')[1];
+      reqdTime = reqdTime.split(':');
+      let finalTime = reqdTime[0] + ':' + reqdTime[1];
+      record.fields.event_date_time = reqdDate + ' ' + finalTime; 
+      return record;
+    })
     fetchNextPage();
   }, (err) => {
     if (err) {
