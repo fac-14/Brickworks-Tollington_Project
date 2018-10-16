@@ -1,14 +1,17 @@
 import React from 'react';
 
 class ContactUs extends React.Component {
-  state = {
-    name: '',
-    email: '',
-    phone: '',
-    description: '',
-    cntWithCommunityAdviser: false,
-    trainCommunityAdviser: false,
+  component(props){
+    super(props)
+    this.state = {
+     name: '',
+     email: '',
+     phone: '',
+     description: '',
+     cntWithCommunityAdviser: false,
+     trainCommunityAdviser: false,
     // startSocialAction: true
+   }
   }
   handleChange = event => {
     // this.setState({ [event.target.name]: event.target.value });
@@ -36,7 +39,7 @@ class ContactUs extends React.Component {
       .then(res => console.log(res))
       .catch(err => {
         console.log('ERROR IS', err);
-        throw new Error(`fetch /api/contactUs failed ${err}`);
+        this.props.history.push('/500error');
       });
     this.setState({ name: '', email: '', description: '', number: '' });
   }

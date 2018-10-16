@@ -7,6 +7,7 @@ import Nav from './mainPageComponents/header';
 import SocialActions from './pages/social-actions';
 import EventDetailed from './pages/event_detailed';
 import {Error} from './pages/error';
+import {Error500} from './pages/error500';
 import {Faq} from './pages/faq';
 import {Resources} from './pages/resources';
 import {Inspiration} from './pages/inspirations';
@@ -31,8 +32,10 @@ const App = () => {
         {/* <Route path ='/things-to-think-about' component = {TopTen} /> */}
         <Route path ='/contactUs' component = {ContactUs} />
         <Route path ='/topten' component = {TopTen} />
+        <Route path ='/error500' component = {Error500} />
         <Route component= { Error } />
       </Switch>
+
     </div>
   );
 };
