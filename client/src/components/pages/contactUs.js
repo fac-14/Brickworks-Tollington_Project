@@ -10,12 +10,12 @@ class ContactUs extends React.Component {
     trainCommunityAdviser: false,
     // startSocialAction: true
   }
+
   handleChange = event => {
     // this.setState({ [event.target.name]: event.target.value });
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({ [target.name]: value });
- 
   };
 
   handleSubmit = event => {
@@ -56,9 +56,9 @@ class ContactUs extends React.Component {
         <label htmlFor="description">Description of social action:</label>
         <textarea name="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
-        <h3>please check the options applicable to you</h3>
+        <h3>Please check the options applicable to you</h3>
         <label htmlFor="cntWithCommunityAdviser">I want to connect with a local Community Organiser</label>
-        <input
+        <input className='checkbox'
           type="checkbox"
           id="cntWithCommunityAdviser"
           name="cntWithCommunityAdviser"
@@ -67,17 +67,15 @@ class ContactUs extends React.Component {
         />
 
         <label htmlFor="trainCommunityAdviser">I am interested in Community Organisers training</label>
-        <input
+        <input className='checkbox'
           type="checkbox"
           id="trainCommunityAdviser"
           name="trainCommunityAdviser"
           checked={this.state.trainCommunityAdviser}
           onChange={this.handleChange}
         />
-
-
-
-        <button type="submit">Submit</button>
+        
+        <button className='form-button-two' type="submit">Submit</button>
       </form>
     </main>
     </div>
