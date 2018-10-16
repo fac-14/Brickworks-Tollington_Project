@@ -27,7 +27,6 @@ const Resources = () => (
                 9. Share the impact of your action in creative and imaginative ways to capture attention
                 <br></br>
                 10. Don't give up, have patience and be committed
-                {/* </p> */}
                 <br></br>
                 <h2>Helpful links for further information</h2>
                 <br></br>
