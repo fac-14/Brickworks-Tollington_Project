@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-// import {GPASS} from '../../config.env';
 require("env2")("./config.env");
 
 const GPASS = process.env.GPASS;
@@ -15,13 +14,14 @@ exports.post = (req, res) => {
     // secure: true,
     service: 'Gmail',
     auth: {
-      user: `sangitasunuwar@gmail.com`,
+      user: EMAIL,
       pass: GPASS
     }
   });
   mailOpts = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    to: `sangitasunuwar@gmail.com`,
+    // to: `sangitasunuwar@gmail.com`,
+    to: EMAIL,
     subject: 'New message from contact form at Start a social action at Brickworks app',
     text: `${req.body.name} (${req.body.email}) says: ${req.body.description}`
     // text:`hello how are you`
@@ -40,13 +40,3 @@ exports.post = (req, res) => {
     }
   });
 };
-//////////////
-// transporter.sendMail(mailOptions, function(error, info){
-//   if(error){
-//       console.log(error);
-//       res.json({yo: 'error'});
-//   }else{
-//       console.log('Message sent: ' + info.response);
-//       res.json({yo: info.response});
-//   };
-// });
