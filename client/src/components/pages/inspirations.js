@@ -39,9 +39,7 @@ class Inspiration extends React.Component {
              </li>
         </ul>
     </main>
-    {/* <footer>
-        &copy; Brickworks Social Action Community 2018. 
-    </footer> */}
+   
        </div>
        </div>
         )}
