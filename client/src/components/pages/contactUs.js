@@ -38,15 +38,18 @@ class ContactUs extends React.Component {
         console.log('ERROR IS', err);
         throw new Error(`fetch /api/contactUs failed ${err}`);
       });
-    this.setState({ name: '', email: '', description: '' });
+    this.setState({ name: '', email: '', description: '', number: '' });
   }
 
   render() {
     return (
+    <div className='wrapper'>
+    <h1>Contact Us</h1>
+    <main>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
-        <label htmlFor="email">'Email':</label>
+        <label htmlFor="email">Email:</label>
         <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
         <label htmlFor="phone">'Contact number':</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
@@ -76,9 +79,10 @@ class ContactUs extends React.Component {
 
         <button type="submit">Submit</button>
       </form>
+    </main>
+    </div>
     );
   }
-
 }
 
 export default ContactUs;
