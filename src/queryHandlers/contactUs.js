@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+// import {GPASS} from '../../config.env';
 require("env2")("./config.env");
 
 const GPASS = process.env.GPASS;
@@ -6,7 +7,7 @@ const EMAIL = process.env.EMAIL
 
 
 exports.post = (req, res) => {
-  console.log('REQ VALUES ARE', req.body)
+ 
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     // host: 'smtp.gmail.com',
@@ -48,6 +49,22 @@ exports.post = (req, res) => {
       res.send(response);
     }
   });
-}//end of if(req.body.startSocialAction)
+}
+    
+  
+  else if(req.body.eventProposal){
+    const data = req.body.eventProposal;
+  mailOpts = {
+    from: data.name + ' &lt;' + data.email + '&gt;',
+    to: `sangitasunuwar@gmail.com`,
+    subject: 'New message from contact form at Start a social action at Brickworks app',
+    text: `${data.name} (${data.email}) says: ${data.description}`
+  }
+    }
+    else if(req.body.contactSupport) {
 
-};
+    }
+    console.log('mailOpts',mailOpts);
+  }
+ 
+  

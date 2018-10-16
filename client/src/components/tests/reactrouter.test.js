@@ -27,7 +27,7 @@ import App from '../App';
     const {getByTestId, getByText} = renderWithRouter(<App />)
     //import necessary commands and components
     const menu = getByTestId('menu')
-    expect(getByTestId('home-page').textContent).toBe('Brickworks - Home')
+    expect(getByTestId('home-page').lastChild.textContent).toBe('Next')
    //open menu
     fireEvent.click(menu);
     //click about link
@@ -55,7 +55,7 @@ import App from '../App';
     fireEvent.click(menu);
     //click about link
     fireEvent.click(getByTestId('inspirations'))
-    expect(getByTestId('inspirations-page').firstChild.textContent).toBe('Local inspirational stories')
+    expect(getByTestId('inspirations-page').firstChild.textContent).toBe('Local Inspirational Stories')
   })
 
   test('able to reach faqs page', () => {
@@ -79,21 +79,21 @@ import App from '../App';
     fireEvent.click(menu);
     //click about link
     fireEvent.click(getByTestId('form'))
-    expect(getByTestId('topten-page').firstChild.textContent).toBe('Things to think about')
+    expect(getByTestId('topten-page').firstChild.textContent).toBe('Things To Think About')
   })
 
 
-  // test('able to reach social actions page', () => {
-  //   const {getByTestId, getByText} = renderWithRouter(<App />)
-  //   //import necessary commands and components
-  //   const menu = getByTestId('menu')
-  //   expect(getByTestId('home-page').firstChild.textContent).toBe('Brickworks - Home')
-  //  //open menu
-  //   fireEvent.click(menu);
-  //   //click about link
-  //   fireEvent.click(getByTestId('social-actions'))
-  //   expect(getByTestId('social-actions-page').firstChild.textContent).toBe('Social Actions')
-  // })
+  test('able to reach social actions page', () => {
+    const {getByTestId, getByText} = renderWithRouter(<App />)
+    //import necessary commands and components
+    const menu = getByTestId('menu')
+  
+   //open menu
+    fireEvent.click(menu);
+    //click about link
+    fireEvent.click(getByTestId('social-actions'))
+    expect(getByTestId('social-actions-page').firstChild.textContent).toBe('Social Actions')
+  })
   
   test('landing on a bad page', () => {
     const {getByTestId} = renderWithRouter(<App />, {

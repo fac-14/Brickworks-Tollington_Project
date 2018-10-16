@@ -18,22 +18,28 @@ class CreateEvent extends React.Component {
     newState[event.target.id] = event.target.value;
     this.setState(newState);
   }
-  handleSubmit = event => {
-    console.log(this.state);
-    event.preventDefault()
-    console.log(this.state.name)
 
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", "/api/create-event", true);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState=== 4 && xhr.status === 200){
-      console.log(this.responseText)
-    }
-  }
-    var string = JSON.stringify(this.state);
-    xhr.send(string);
-    this.props.history.push('/all-events');
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log('CONTACT US MA')
+    console.log(this.state)
+    const data = JSON.stringify({
+      eventProposal: this.state
+    })
+    console.log('data', data)
+    fetch('/api/event-proposal', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: data,
+    })
+      .then(res => console.log(res))
+      .catch(err => {
+        console.log('ERROR IS', err);
+        throw new Error(`fetch /api/contactUs failed ${err}`);
+      });
+    
   }
 
   render() {
