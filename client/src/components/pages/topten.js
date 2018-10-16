@@ -6,7 +6,7 @@ const TopTen= () => (
     <div data-testid="topten-page" className='wrapper'>
         <h1>Top ten tips</h1>
         <main>
-            <h2>Social Actions takes time, energy and passion.  Here are our top-ten tips to get you started</h2>
+            <h2>Engaging in social action takes time, energy and passion.  Here are our top-ten tips to get you started</h2>
            <ol>
                <li>
                Identify a problem, challenge or issue in your neighbourhood and be specific about what you want to tackle.
@@ -37,10 +37,9 @@ const TopTen= () => (
                 </li>
                 <li>Don't give up, have patience and be committed.</li>
            </ol>
-            
-            
+                        
             <label htmlFor="all-events">
-            <Link to='/contactUs'><h2 className='link'>Click here to register an interest to start a social action</h2></Link>
+            <span id='click-here' className='link'><Link to='/contactUs'>Click here</Link> to register an interest to start a social action.</span>
             </label>
         </main>
     </div>

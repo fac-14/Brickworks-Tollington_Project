@@ -101,6 +101,8 @@ main {
   grid-row: 2 / span 3;
   align-items: center;
   justify-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   }
 
 .sidebar {
@@ -120,6 +122,21 @@ main {
     color: #2a2a2a;
   }
 
+  /*EMPHASIS*/
+  #click-here {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #585858; 
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  }
+
+  /* LINKS */
+  .link {
+    color: #3343D7;
+  }
+
   /*LISTS*/
 
 ol {
@@ -128,9 +145,9 @@ ol {
   width: 70vw;
   padding: 1rem;
   margin: auto;
-  margin-top: 4rem;
-  list-style-type: decimal;
-}
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+ }
 
 
 ul {
@@ -303,7 +320,6 @@ footer {
 
 ol {
   display: flex;
-  list-style-type: disc;
   flex-direction: column;
   width: 70vw;
   padding: 0.5rem;
