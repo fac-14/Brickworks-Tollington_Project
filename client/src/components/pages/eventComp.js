@@ -39,4 +39,27 @@ const EventByThemeComp = ({ event_id, event_name, event_description, date_time, 
   )
 }
 
-export { EventComp, EventByThemeComp };
+const SingleEvent = ({ event_id, event_name, event_description, event_date_time, event_location, fullname_event_organiser, 
+  email_event_organiser, telephone_event_organiser}) => {
+  return (
+
+    //   <Link key={index} to={caseLink}>
+    //     <div key={index}>{element.title}</div>
+    //   </Link>
+    // );
+    // <Link to='/eventsByTheme'>Events By Theme</Link>
+
+    <div key={event_id} to={'/event-detailed/' + event_name} >
+      <li>
+        {event_name}
+        {event_description}
+        {event_date_time}
+        {event_location}
+        {fullname_event_organiser}
+        {email_event_organiser}
+        {telephone_event_organiser}
+      </li>
+    </div>
+  )
+}
+export { SingleEvent, EventComp, EventByThemeComp };

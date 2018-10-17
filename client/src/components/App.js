@@ -19,7 +19,12 @@ import {Footer} from './mainPageComponents/footer';
 
 class App extends React.Component {
   state = {
-    background: 'background-img'
+    background: 'background-img',
+    data: {},
+  }
+ extractData = (data) => {
+    this.setState({data: data})
+    console.log(data);
   }
   // setBackground = () => {
   //   if(process.env.NODE_ENV === 'test') {
@@ -36,10 +41,10 @@ class App extends React.Component {
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />
-        <Route exact path='/social-actions' component= { SocialActions} />
+        <Route path='/social-actions' render={(props) => <SocialActions {...props} extractData={this.extractData} />}/>
         <Route path='/create-event' component= { CreateEvent } />
         <Route path='/about' component = {About} /> 
-        <Route path='/event-detailed' component = {EventDetailed} />
+        <Route path='/event-detailed' render={(props) => <EventDetailed {...props} data={this.state.data} />}/>
         <Route path='/faq' component = {Faq} />
         <Route path='/resources' component = {Resources} />
         <Route path ='/inspirations' component = {Inspiration} />
