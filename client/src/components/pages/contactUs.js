@@ -1,14 +1,20 @@
 import React from 'react';
 
 class ContactUs extends React.Component {
-  state = {
-    name: '',
-    email: '',
-    phone: '',
-    description: '',
-    cntWithCommunityAdviser: false,
-    trainCommunityAdviser: false,
+  constructor(props){
+    super(props)
+    this.state = {
+      form: { 
+     name: '',
+     email: '',
+     phone: '',
+     description: '',
+     cntWithCommunityAdviser: false,
+     trainCommunityAdviser: false,
+      },
+     content: "post"
     // startSocialAction: true
+   }
   }
 
   handleChange = event => {
@@ -18,25 +24,27 @@ class ContactUs extends React.Component {
     this.setState({ [target.name]: value });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    console.log('CONTACT US MA')
-    console.log(this.state)
+   
+    
     const data = JSON.stringify({
-      startSocialAction: this.state
+      startSocialAction: this.state.form
     });
-    console.log('data', data)
+   
+   
     fetch('/api/contactUs', {
       method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        
+        "Content-Type": 'application/json'   
       },
       body: data,
     })
       .then(res => console.log(res))
       .catch(err => {
         console.log('ERROR IS', err);
-        throw new Error(`fetch /api/contactUs failed ${err}`);
+        this.props.history.push('/500error');
       });
     this.setState({ name: '', email: '', description: '', number: '' });
   }
@@ -75,7 +83,7 @@ class ContactUs extends React.Component {
           onChange={this.handleChange}
         />
         
-        <button className='form-button-two' type="submit">Submit</button>
+        <button data-testid="submit" className='form-button-two' type="submit">Submit</button>
       </form>
     </main>
     </div>
