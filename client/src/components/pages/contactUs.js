@@ -105,13 +105,14 @@ console.log('BEFORE SWITCH', this.state.nameValid);
     return (
     <div className='wrapper'>
     <h1>Register an interest to start a social action</h1>
+    <h3> Please note name, email and Description are required fields </h3>
     <main>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label htmlFor="phone">Contact number:</label>
+        <label htmlFor="phone">Phone:</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
         <label htmlFor="description">Description of social action:</label>
         <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
