@@ -101,6 +101,6 @@ import App from '../App';
     })
     const error = getByTestId('error');
     // normally I'd use a data-testid, but just wanted to show this is also possible
-    expect(error.firstChild.textContent).toMatch('App Destroyed')
+    expect(error.firstChild.textContent).toMatch('Error 404')
   })
  
