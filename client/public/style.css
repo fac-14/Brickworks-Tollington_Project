@@ -20,7 +20,7 @@
 }
 
 #bike-img {
-  width: 40rem;
+  /* width: 40rem; */
   height: 25rem;
   margin: 2rem;
 } 
@@ -214,7 +214,7 @@ ul {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 65vw;
 }
 
 li {
@@ -396,6 +396,14 @@ h4 {
 
 p {
   font-size: 1em;
+}
+
+ul {
+  width: 90vw;
+}
+
+.li-style1 {
+  font-size: 1.2em;
 }
 
 .hub-description-four {
