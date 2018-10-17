@@ -15,6 +15,7 @@ class ContactUs extends React.Component {
     descriptionValid: false,
     formValid: false
   }
+
   handleChange = event => {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -73,25 +74,27 @@ console.log('BEFORE SWITCH', this.state.nameValid);
   
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    console.log('CONTACT US MA')
-    console.log(this.state)
+   
+    
     const data = JSON.stringify({
-      startSocialAction: this.state
+      startSocialAction: this.state.form
     });
-    console.log('data', data)
+   
+   
     fetch('/api/contactUs', {
       method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        
+        "Content-Type": 'application/json'   
       },
       body: data,
     })
       .then(res => console.log(res))
       .catch(err => {
         console.log('ERROR IS', err);
-        throw new Error(`fetch /api/contactUs failed ${err}`);
+        this.props.history.push('/500error');
       });
     this.setState({ name: '', email: '', phone: '', description: '', cntWithCommunityAdviser: false,
     trainCommunityAdviser: false, formErrors: {name:'', email: '', description: ''}, nameValid: false,emailValid: false, descriptionValid: false, formValid: false });
@@ -113,9 +116,9 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <label htmlFor="description">Description of social action:</label>
         <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
-        <h3>please check the options applicable to you</h3>
+        <h3>Please check the options applicable to you</h3>
         <label htmlFor="cntWithCommunityAdviser">I want to connect with a local Community Organiser</label>
-        <input
+        <input className='checkbox'
           type="checkbox"
           id="cntWithCommunityAdviser"
           name="cntWithCommunityAdviser"
@@ -124,15 +127,13 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         />
 
         <label htmlFor="trainCommunityAdviser">I am interested in Community Organisers training</label>
-        <input
+        <input className='checkbox'
           type="checkbox"
           id="trainCommunityAdviser"
           name="trainCommunityAdviser"
           checked={this.state.trainCommunityAdviser}
           onChange={this.handleChange}
         />
-
-
 
         <button type="submit" disabled= { !this.state.formValid}>Submit</button>
       </form>

@@ -38,25 +38,16 @@ exports.post = (req, res) => {
   };
   console.log('mailOpts',mailOpts);
   
-  smtpTrans.sendMail(mailOpts, function (error, response) {
-    if (error) {
-      console.log(error)
-      res.send(error);
-    }
-    else {
-      // res.render('contact-success');
-      console.log(response)
-      res.send(response);
-    }
-  });
+  
 }
     
   
   else if(req.body.eventProposal){
     const data = req.body.eventProposal;
+    console.log(req.body.eventProposal);
   mailOpts = {
     from: data.name + ' &lt;' + data.email + '&gt;',
-    to: `sangitasunuwar@gmail.com`,
+    to: EMAIL,
     subject: 'New message from contact form at Start a social action at Brickworks app',
     text: `${data.name} (${data.email}) says: ${data.description}`
   }
@@ -64,6 +55,17 @@ exports.post = (req, res) => {
     else if(req.body.contactSupport) {
 
     }
+    smtpTrans.sendMail(mailOpts, function (error, response) {
+      if (error) {
+        console.log(error)
+        res.send(error);
+      }
+      else {
+        // res.render('contact-success');
+        console.log(response)
+        res.send(response);
+      }
+    });
     console.log('mailOpts',mailOpts);
   }
  

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const EventComp = ({ event_id, event_name, event_description, event_date_time, recurring_event_description,  event_location, fullname_event_organiser, 
+const EventComp = ({ event_id, event_name, event_description, event_date_time, event_location, fullname_event_organiser, 
   email_event_organiser, telephone_event_organiser}) => {
   return (
 
@@ -16,7 +16,6 @@ const EventComp = ({ event_id, event_name, event_description, event_date_time, r
         {event_name}
         {event_description}
         {event_date_time}
-        {recurring_event_description}
         {event_location}
         {fullname_event_organiser}
         {email_event_organiser}

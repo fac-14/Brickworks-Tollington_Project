@@ -44,8 +44,8 @@ toggleMenu = () => {
         {/* <Link data-testid="form" onClick={this.navBar} to='/contactUs'>Start a Social Action</Link> */}
         <Link data-testid="form" onClick={this.toggleMenu} to='/topten'>Start a Social Action</Link>
       </label>
-      <label htmlFor="about">
-        <Link data-testid="about" onClick={this.toggleMenu} to='/about'>About</Link>
+      <label htmlFor="projects">
+        <Link data-testid="projects-page" onClick={this.toggleMenu} to='/projects'>Projects</Link>
       </label>
       <label htmlFor="faq">
         <Link data-testid="faq" onClick={this.toggleMenu} to='/faq'>FAQ</Link>
