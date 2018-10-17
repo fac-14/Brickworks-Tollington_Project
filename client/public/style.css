@@ -117,7 +117,7 @@
   color: #fafafa;
   text-align: center;
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 3em;
   line-height: 5rem;
   /* margin-top: 0.5rem; */
   }
@@ -125,8 +125,8 @@
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
-  color: #585858;
+  font-size: 2.2em;
+  color: #4AAFE7;
   margin: 2rem 4rem;
   text-align: left;
   text-decoration: none; 
@@ -135,10 +135,23 @@ h2 {
 h3 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
-  font-size: 1.6rem;
-  color: #585858;
+  font-size: 1.75em;
+  color: #4AAFE7;
   text-align: center;
   margin: 1.5rem 0.5rem;
+}
+
+h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #4AAFE7;
+  text-align: left;
+  margin: 2rem 0.1rem;
+}
+
+p {
+  font-size: 1em;
 }
 
 /*MAIN CONTENT*/
@@ -154,14 +167,16 @@ main {
 
 .hub-description {
   margin: 1rem 6rem;
-  font-size: 1.6rem;
+  font-size: 1.2em;
+  line-height: 2rem;
   text-align: center;
   color: #2a2a2a;
 }
 
 .hub-description-two {
   margin: 2rem 5rem;
-  font-size: 1.6rem;
+  font-size: 1.2em;
+  line-height: 2rem;
   color: #2a2a2a;
 }
 
@@ -173,8 +188,9 @@ main {
 } */
 
 .hub-description-four {
-  margin: 1rem 7rem;
-  font-size: 1.6rem;
+  margin: 2rem 8rem;
+  font-size: 1.2em;
+  line-height: 2rem;
   text-align: center;
   color: #2a2a2a;
 }
@@ -196,7 +212,7 @@ a {
 
 li {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2em;
   color: #2a2a2a;
   padding: 1rem;
   margin-left: 2rem;
@@ -206,7 +222,7 @@ li {
 .link {
   color: #4AAFE7;
   padding: 1rem;
-  border: 2px solid #888888;
+  text-decoration: underline;
 }
 
 .resource-links {
@@ -216,23 +232,23 @@ li {
 }
 
 .question {
-  margin: 4rem 6rem;
-  line-height: 2rem;
-  font-size: 1.6rem;
+  margin: 3rem 6rem;
+  line-height: 1.5rem;
+  font-size: 1.2em;
 }
 
 .inspiration {
   margin: 1rem 3rem;
   line-height: 2rem;
-  font-size: 1.6rem;
+  font-size: 1.2em;
 }
 
 form {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2em;
   display: flex;
   flex-direction: column;
-  margin: 4rem 2rem;
+  margin: 4rem 8rem;
 }
 
 form > input {
@@ -252,6 +268,11 @@ textarea {
   border-radius: 5px;
 }
 
+.checkbox-div {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
 .checkbox {
   border-radius: 5%;
   width: 2rem;
@@ -260,16 +281,19 @@ textarea {
 /*BUTTONS*/
 
 .button-large {
-  margin: 30px auto;
+  display: flex;
+  margin: auto;
+  /* margin: 30px auto; */
   letter-spacing: 0.08rem;
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.5em;
   color: #2a2a2a;
   background-color: #4AAFE7;
   padding: 15px 40px;
+  border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 1px 1px 1px 1px #888888;
+  box-shadow: 2px 2px 2px 1px #888888;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
@@ -280,22 +304,6 @@ textarea {
 
 .button-large:active {
   background-color: #4AAFE7;
-}
-
-.add-event-button {
-  height: 70px;
-  width: 120px;
-  color: #2a2a2a;
-  border-radius: 5px;
-  margin-left: 2rem;
-  background-color: #4AAFE7;
-  font-size: 1.4rem;
-  font-weight: 600;
-  border: 2px solid #2a2a2a;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px 1px #888888;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
 }
 
 .add-event-button:hover {
@@ -309,22 +317,7 @@ textarea {
   width: 90px;
   color: #2a2a2a;
   background-color: #4AAFE7;
-  font-size: 1.4rem;
-  border: 2px solid #2a2a2a;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px 1px #888888;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-}
-
-.form-button-two {
-  margin: auto;
-  border-radius: 5px;
-  height: 50px;
-  width: 200px;
-  color: #2a2a2a;
-  background-color: #4AAFE7;
-  font-size: 1.4rem;
+  font-size: 1.2em;
   border: 2px solid #2a2a2a;
   cursor: pointer;
   box-shadow: 1px 1px 1px 1px #888888;
@@ -357,12 +350,28 @@ footer {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 footer {
   height: 3rem;
   width: 100%;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.375em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1em;
 }
 
 .hub-description-four {
@@ -393,10 +402,6 @@ footer {
     margin: 1.5rem 1.5rem; 
   }
 
-  h3 {
-
-  }
-
   .link {
     text-align: center;
   }
@@ -404,8 +409,7 @@ footer {
   .question {
     margin: 3rem 2rem;
     line-height: 2rem;
-    font-size: 1.6rem;
+    font-size: 1em;
   }
 
 }
-
