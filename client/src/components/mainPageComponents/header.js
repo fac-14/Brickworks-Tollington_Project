@@ -28,35 +28,30 @@ toggleMenu = () => {
   render() {
     return (
     <nav className="nav">
-    {/* <div id='navDiv' className={this.state.menu}> */}
+    <div className='menu-con'>
     <div id="menu" data-testid="actual-menu" className="menu menu-closed">
-     
-    <label htmlFor="home"> 
-        <Link data-testid="home" onClick={this.toggleMenu} to='/'>Home</Link>
+      <label className='' htmlFor="home"> 
+        <Link className='nav-link' data-testid="home" onClick={this.toggleMenu} to='/'>Home</Link>
       </label>
       <label htmlFor="social-actions">
-        <Link data-testid="social-actions" onClick={this.toggleMenu} to='/social-actions'>Social Actions</Link>
+        <Link className='nav-link' data-testid="social-actions" onClick={this.toggleMenu} to='/social-actions'>Social Actions</Link>
       </label>
-      {/* <label htmlFor="create-event">
-        <Link data-testid="create-event" onClick={this.toggleMenu} to='/create-event'>Create Event</Link>
-      </label> */}
       <label htmlFor="form">
-        {/* <Link data-testid="form" onClick={this.navBar} to='/contactUs'>Start a Social Action</Link> */}
-        <Link data-testid="form" onClick={this.toggleMenu} to='/topten'>Start a Social Action</Link>
+        <Link className='nav-link' data-testid="form" onClick={this.toggleMenu} to='/topten'>Start a Social Action</Link>
       </label>
       <label htmlFor="projects">
-        <Link data-testid="projects-page" onClick={this.toggleMenu} to='/projects'>Projects</Link>
+        <Link className='nav-link' data-testid="projects-page" onClick={this.toggleMenu} to='/projects'>Projects</Link>
       </label>
       <label htmlFor="faq">
-        <Link data-testid="faq" onClick={this.toggleMenu} to='/faq'>FAQ</Link>
+        <Link className='nav-link' data-testid="faq" onClick={this.toggleMenu} to='/faq'>FAQ</Link>
       </label>
       <label htmlFor="inspirations">
-        <Link data-testid="inspirations" onClick={this.toggleMenu} to='/inspirations'>Local Inspirational Stories</Link>
+        <Link className='nav-link' data-testid="inspirations" onClick={this.toggleMenu} to='/inspirations'>Local Inspirational Stories</Link>
       </label>
       <label htmlFor="resources">
-        <Link data-testid="resources" onClick={this.toggleMenu} to='/resources'>Resources & Tips</Link>
+        <Link className='nav-link' data-testid="resources" onClick={this.toggleMenu} to='/resources'>Resources & Tips</Link>
       </label>
-
+    </div>
     </div>
     
 
