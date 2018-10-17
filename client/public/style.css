@@ -133,6 +133,7 @@ h2 {
   font-size: 2.2em;
   color: #4AAFE7;
   margin: 2rem 4rem;
+  font-weight: bold;
   text-align: left;
   text-decoration: none; 
 }
@@ -142,6 +143,7 @@ h3 {
   font-weight: 600;
   font-size: 1.75em;
   color: #4AAFE7;
+  font-weight: bold;
   text-align: center;
   margin: 1.5rem 0.5rem;
 }
@@ -213,7 +215,6 @@ ul {
   display: flex;
   flex-direction: column;
   width: 50vw;
-  border: 1px solid #525252;
 }
 
 li {
@@ -227,6 +228,7 @@ li {
 .li-style1 {
   font-size: 1.5em;
   font-weight: bold;
+  color: #4AAFE7;
 }
 
 hr {
@@ -305,7 +307,7 @@ textarea {
 .button-large {
   display: flex;
   margin: auto;
-  /* margin: 30px auto; */
+  /* margin-bottom: 1rem; */
   letter-spacing: 0.08rem;
   font-weight: 600;
   font-size: 1.5em;

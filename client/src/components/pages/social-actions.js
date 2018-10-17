@@ -48,19 +48,19 @@ class SocialActions extends React.Component {
       <div className='wrapper'>
         <h1 data-testid="social-actions-page">Social Actions</h1>
       
-      <h3>Current Events</h3>
+      <h2>Current Events</h2>
+
       {allEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
       ))}
+
       
-      <h3>Past Events</h3>
-      
-        
-          {pastEvents.map( event => (
-          <EventComp key={event.fields.event_id} {...event.fields} /> 
-          ))}
-      
-      
+      <h2>Past Events</h2>
+
+      {pastEvents.map( event => (
+        <EventComp key={event.fields.event_id} {...event.fields} /> 
+      ))}
+          
     <button className='button-large' onClick={this.addEvent}>Express Interest</button>
     </div>
     )
