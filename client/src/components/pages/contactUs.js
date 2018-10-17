@@ -1,15 +1,18 @@
 import React from 'react';
 
 class ContactUs extends React.Component {
-  component(props){
+  constructor(props){
     super(props)
     this.state = {
+      form: { 
      name: '',
      email: '',
      phone: '',
      description: '',
      cntWithCommunityAdviser: false,
      trainCommunityAdviser: false,
+      },
+     content: "post"
     // startSocialAction: true
    }
   }
@@ -21,18 +24,20 @@ class ContactUs extends React.Component {
  
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    console.log('CONTACT US MA')
-    console.log(this.state)
+   
+    
     const data = JSON.stringify({
-      startSocialAction: this.state
+      startSocialAction: this.state.form
     });
-    console.log('data', data)
+   
+   
     fetch('/api/contactUs', {
       method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        
+        "Content-Type": 'application/json'   
       },
       body: data,
     })
@@ -47,14 +52,14 @@ class ContactUs extends React.Component {
   render() {
     return (
     <div className='wrapper'>
-    <h1>Contact Us</h1>
+    <h1>Register an interest to a social action</h1>
     <main>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
         <label htmlFor="email">Email:</label>
         <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label htmlFor="phone">'Contact number':</label>
+        <label htmlFor="phone">Contact number:</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
         <label htmlFor="description">Description of social action:</label>
         <textarea name="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
@@ -80,7 +85,7 @@ class ContactUs extends React.Component {
 
 
 
-        <button type="submit">Submit</button>
+        <button data-testid="submit" type="submit">Submit</button>
       </form>
     </main>
     </div>
