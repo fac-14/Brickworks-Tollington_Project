@@ -17,9 +17,21 @@ import ContactUs from './pages/contactUs';
 import {Projects} from './pages/projects';
 import {Footer} from './mainPageComponents/footer';
 
-const App = () => {
-
+class App extends React.Component {
+  state = {
+    background: 'background-img'
+  }
+  // setBackground = () => {
+  //   if(process.env.NODE_ENV === 'test') {
+  //     this.setState({background: ''});
+  //   }
+  //   else {
+      
+  //   }
+  // }
+  render () {
   return (
+    
     <div className='background-img'>
       <Nav />
       <Switch>
@@ -40,7 +52,7 @@ const App = () => {
       </Switch>
       <Footer />
     </div>
-  );
+    )}
 };
 
 export default App;
