@@ -104,7 +104,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
   render() {
     return (
     <div className='wrapper'>
-    <h1>Register An Interest To A Social Action</h1>
+    <h1>Contact Us</h1>
     <main>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>

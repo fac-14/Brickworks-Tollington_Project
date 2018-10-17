@@ -202,27 +202,31 @@ main {
 
   /*LISTS*/
 
-ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  width: 70vw;
-  padding: 1rem;
-  margin: auto;
-}
-
 a {
   color: #4AAFE7;
   text-decoration: none;
+}
+
+ul {
+  margin: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  border: 1px solid #525252;
 }
 
 li {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
   color: #2a2a2a;
-  padding: 1rem;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  padding: 0.2rem;
+  /* margin-bottom: 1rem; */
+}
+
+.li-style1 {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 hr {
