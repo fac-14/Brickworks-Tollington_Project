@@ -1,0 +1,419 @@
+<<<<<<< HEAD
+=======
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.background-img {
+  /* height: 100vh; */
+  background-image: url('./images/Brickworks-bacgkround.jpeg');
+  background-size: cover; 
+  /* background-color: #FAFAFA; */
+  padding: 0;
+}
+
+#logo {
+  margin: auto;
+  /* display: flex; */
+  background-color: #FAFAFA;
+}
+
+#logo-img {
+  margin: auto;
+}
+
+.wrapper {
+  width: 75%;
+  margin: auto;
+  background-color: #ffffff;
+  min-height: 94vh;
+}
+
+ /*NAVBAR*/
+.nav {
+  display: flex;
+  position: fixed;
+  background-color: #6cb7e2;
+  height: 50px;
+}
+.image {
+    position: absolute;
+    width: 6vw;
+    height: 6vh;
+    margin: 10px;
+}
+.image span {
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+}
+.image span:before, .image span:after {
+    position: absolute;
+    content: '';
+}
+.image span, .image span:before, .image span:after {
+    width: 30px;
+    height: 6px;
+    background-color: #000;
+    display: block;
+}
+.image span {
+  transition: transform 1s ease;
+}
+.image span:before {
+  margin-top: -12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
+}
+.image span:after {
+  margin-top: 12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
+}
+
+.image-closed span {
+
+}
+.image-open span {
+  transform: scaleX(1.5);
+  transform: scaleY(0.7);
+}
+.image-closed span:after {
+
+}
+.image-open span:after {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+.image-closed span:before {
+  
+}
+.image-open span:before {
+  transform: translateX(-2px) rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  height: 100vh;
+  width: 60vw;
+  background-color: aquamarine;
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
+  overflow-y: auto;
+  /* z-index: 200000000; */
+}
+
+.menu-closed {
+  transform: translate3d(-60vw, 0, 0);
+}
+
+.menu-open {
+  transform: translate3d(0vw, 0, 0)
+ } 
+
+ /*HEADINGS*/
+
+ h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 5rem;
+  background-color: #525252;
+  color: #fafafa;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 5rem;
+  /* margin-top: 0.5rem; */
+  }
+
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 2.2em;
+  color: #4AAFE7;
+  margin: 2rem 4rem;
+  text-align: left;
+  text-decoration: none; 
+}
+
+h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 1.75em;
+  color: #4AAFE7;
+  text-align: center;
+  margin: 1.5rem 0.5rem;
+}
+
+h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #4AAFE7;
+  text-align: left;
+  margin: 2rem 0.1rem;
+}
+
+p {
+  font-size: 1em;
+}
+
+/*MAIN CONTENT*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+  /*TEXT CONTAINERS*/
+
+.hub-description {
+  margin: 1rem 6rem;
+  font-size: 1.2em;
+  line-height: 2rem;
+  text-align: center;
+  color: #2a2a2a;
+}
+
+.hub-description-two {
+  margin: 2rem 5rem;
+  font-size: 1.2em;
+  line-height: 2rem;
+  color: #2a2a2a;
+}
+
+/* .hub-description-three {
+  margin: 1rem 6rem;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #2a2a2a;
+} */
+
+.hub-description-four {
+  margin: 2rem 8rem;
+  font-size: 1.2em;
+  line-height: 2rem;
+  text-align: center;
+  color: #2a2a2a;
+}
+
+  /*LISTS*/
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 70vw;
+  padding: 1rem;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2em;
+  color: #2a2a2a;
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: #4AAFE7;
+  padding: 1rem;
+  text-decoration: underline;
+}
+
+.resource-links {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #4AAFE7;
+}
+
+.question {
+  margin: 3rem 6rem;
+  line-height: 1.5rem;
+  font-size: 1.2em;
+}
+
+.inspiration {
+  margin: 1rem 3rem;
+  line-height: 2rem;
+  font-size: 1.2em;
+}
+
+form {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 8rem;
+}
+
+form > input {
+  height: 2rem;
+  width: 15rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background-color: #eeeeee;
+}
+
+label {
+  padding-bottom: 0.5rem;
+}
+
+textarea {
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+.checkbox-div {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.checkbox {
+  border-radius: 5%;
+  width: 2rem;
+}
+
+/*BUTTONS*/
+
+.button-large {
+  display: flex;
+  margin: auto;
+  /* margin: 30px auto; */
+  letter-spacing: 0.08rem;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #2a2a2a;
+  background-color: #4AAFE7;
+  padding: 15px 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px #888888;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.button-large:hover {
+  background-color: #84E1FF;
+}
+
+.button-large:active {
+  background-color: #4AAFE7;
+}
+
+.add-event-button:hover {
+  background-color: #84E1FF;
+}
+
+.form-button {
+  margin: auto;
+  border-radius: 5px;
+  height: 50px;
+  width: 90px;
+  color: #2a2a2a;
+  background-color: #4AAFE7;
+  font-size: 1.2em;
+  border: 2px solid #2a2a2a;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #888888;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+/* FOOTER */
+footer {
+  width: 75%;
+  margin: auto;
+  background-color: #525252;
+  color: white;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+/*----------------------------------------------*/
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 768px) {
+
+/*HEADINGS*/
+
+.wrapper {
+  width: 100%;
+  /* background-color: #eeeeee; */
+}
+
+h1 {
+  font-size: 2em;
+}
+
+footer {
+  height: 3rem;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.375em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+.hub-description-four {
+  display: none;
+}
+
+#logo {
+  margin-top: 3rem;
+}
+
+.button-large {
+  margin-top: 5rem;
+}
+
+}
+
+@media only screen and (max-width: 1070px) {
+  
+  .hub-description-four {
+    margin: 1rem 3rem;
+  }
+
+  .hub-description-two {
+    margin: 1rem 1.5rem;
+  }
+
+  h2 {
+    margin: 1.5rem 1.5rem; 
+  }
+
+  .link {
+    text-align: center;
+  }
+
+  .question {
+    margin: 3rem 2rem;
+    line-height: 2rem;
+    font-size: 1em;
+  }
+
+}
+
+>>>>>>> c131cd1755e5077b6134e0c63fed0851414b5633
