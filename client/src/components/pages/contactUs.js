@@ -105,7 +105,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
     <div className='wrapper'>
     <h1>Register an interest to start a social action</h1>
     <main>
-    <p className='top-message'> Please note that Name, Email and Description are required fields </p>
+    <p className='options-message'>Please note that Name, Email and Description are required fields</p>
       <form onSubmit={this.handleSubmit}>
         <label className='form-label' htmlFor="name">Name  <span className='red-asterisk'>*</span></label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
@@ -116,7 +116,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <label htmlFor="description">Description of social action  <span className='red-asterisk'>*</span></label>
         <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
-        <h3>Please click on the options that apply</h3>
+        <p className='options-message'>Please click on the options that apply</p>
 
         <div className="choices">
           <span className="choices-text">I want to connect with a local Community Organiser</span>

@@ -122,7 +122,7 @@
   color: #fafafa;
   text-align: center;
   font-weight: 600;
-  font-size: 3em;
+  font-size: 2rem;
   line-height: 5rem;
   /* margin-top: 0.5rem; */
   }
@@ -162,11 +162,11 @@ p {
   font-size: 1em;
 }
 
-.top-message {
+.options-message {
   font-size: 1.5rem;
-  /* color: #0178aa; */
- color: #2a2a2a;
+  color: #2a2a2a;
   padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 /*MAIN CONTENT*/
@@ -343,7 +343,7 @@ textarea {
   font-weight: 600;
   font-size: 1.5em;
   color: #2a2a2a;
-  background-color: #004c7b;
+  background-color: #4AAFE7;
   padding: 15px 40px;
   border: 1px solid black;
   border-radius: 5px;
@@ -358,14 +358,14 @@ textarea {
 }
 
 .button-large:active {
-  background-color: #004c7b;
+  background-color: #4AAFE7;
 }
 
 .add-event-button:hover {
   background-color: #84E1FF;
 }
 
-.form-button {
+/* .form-button {
   margin: auto;
   border-radius: 5px;
   height: 50px;
@@ -378,7 +378,7 @@ textarea {
   box-shadow: 1px 1px 1px 1px #888888;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
-}
+} */
 
 form > button:disabled {
   background-color: lightgray;

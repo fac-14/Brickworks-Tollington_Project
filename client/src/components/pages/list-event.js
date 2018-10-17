@@ -109,31 +109,35 @@ console.log('BEFORE SWITCH', this.state.nameValid);
     return ( 
       <div className='wrapper'>
     <h1>Register an interest to collaborate or post a social action</h1>
-    <h3> Please note name, email and Description are required fields </h3>
-    <main>
+      <main>
+      <p className='options-message'>Please note that Name, Email and Description are required fields</p>
       <form>
-        <label htmlFor="name">Name</label>
+      <label className='form-label' htmlFor="name">Name  <span className='red-asterisk'>*</span></label>
         <input type="text" id="name" name="name" value={this.state.name} onChange= {this.handleChange}/>
-        <label htmlFor="email">E-mail</label>
+        <label className='form-label' htmlFor="email">Email  <span className='red-asterisk'>*</span></label>
         <input type="text" id="email" name="email" value={this.state.email} onChange= {this.handleChange}/>
-        <label htmlFor="phone">Phone</label>
+        <label className='form-label' htmlFor="phone">Telephone number</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange= {this.handleChange}/>
-        <label htmlFor="eventTitle">Social action title </label>
+        <label className='form-label' htmlFor="eventTitle">
+        Title of social action</label>
         <input type="text" id="eventTitle" name="eventTitle" value={this.state.eventTitle} onChange= {this.handleChange}/>
         {/* <label htmlFor="description">Event Details</label>
         <input type="text" id="description" name="description" value={this.state.description} onChange= {this.handleChange}/> */}
-        <label htmlFor="description">Description of social action:</label>
+        <label className='form-label' htmlFor="description">Description of social action   <span className='red-asterisk'>*</span></label>
         <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
 
-        <label htmlFor="date">Date</label>
+        <label className='form-label' htmlFor="date">Date</label>
         <input type="text" id="date" name="date" value={this.state.date} onChange= {this.handleChange}/>
-        <label htmlFor="time">Time</label>
+        <label className='form-label' htmlFor="time">Time</label>
         <input type="text" id="time" name="time" value={this.state.time} onChange= {this.handleChange}/>
-        <label htmlFor="venue">Venue</label>
+        <label className='form-label' htmlFor="venue">Venue</label>
         <input type="text" id="venue" name="venue" value={this.state.venue} onChange= {this.handleChange}/>
 
-        <h3>Please check the options applicable to you</h3>
-        <label htmlFor="hireSpace">I want to hire a meeting space</label>
+        <p className='options-message'>Please check the options applicable to you</p>
+
+        <div className="choices">
+          <span className="choices-text">I would like to list this event</span>
+        <label className='form-label' htmlFor="hireSpace">
         <input className='checkbox'
           type="checkbox"
           id="hireSpace"
@@ -141,8 +145,11 @@ console.log('BEFORE SWITCH', this.state.nameValid);
           checked={this.state.hireSpace}
           onChange={this.handleChange}
         />
+        </label></div>
 
-        <label htmlFor="listEvent">I am interested to list this event </label>
+        <div className="choices">
+          <span className="choices-text">I would like to list this event</span>
+        <label htmlFor="listEvent">
         <input className='checkbox'
           type="checkbox"
           id="listEvent"
@@ -150,8 +157,9 @@ console.log('BEFORE SWITCH', this.state.nameValid);
           checked={this.state.listEvent}
           onChange={this.handleChange}
         />
-        
-        <button type="submit" onClick={this.handleSubmit} disabled= { !this.state.formValid} >Submit</button>
+        </label></div>
+
+        <button className="button-large" type="submit" onClick={this.handleSubmit} disabled= { !this.state.formValid} >Submit</button>
       </form>
       </main>
 
