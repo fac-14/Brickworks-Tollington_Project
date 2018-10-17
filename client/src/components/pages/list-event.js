@@ -1,5 +1,5 @@
 import React from 'react';
-class CreateEvent extends React.Component {
+class ListEvent extends React.Component {
     state = { 
       name: '',
       email: '',
@@ -11,6 +11,7 @@ class CreateEvent extends React.Component {
       venue: '',
       hireSpace: false,
       listEvent: false,
+      
       }
 
   handleChange = event => {
@@ -89,4 +90,4 @@ class CreateEvent extends React.Component {
   }
 }
 
-export default CreateEvent;
+export default ListEvent;
