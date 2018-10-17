@@ -44,20 +44,20 @@ class ContactUs extends React.Component {
   render() {
     return (
     <div className='wrapper'>
-    <h1>Register an interest to a social action</h1>
+    <h1>Register An Interest To A Social Action</h1>
     <main>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
         <label htmlFor="email">Email:</label>
         <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label htmlFor="phone">Contact number:</label>
+        <label htmlFor="phone">Contact Number:</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
-        <label htmlFor="description">Description of social action:</label>
+        <label htmlFor="description">Description Of Social Action:</label>
         <textarea name="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
-        <h3>Please check the options applicable to you</h3>
-        <label htmlFor="cntWithCommunityAdviser">I want to connect with a local Community Organiser</label>
+        <h4>Please check the options applicable to you</h4>
+        <div className='checkbox-div'>
         <input className='checkbox'
           type="checkbox"
           id="cntWithCommunityAdviser"
@@ -65,8 +65,8 @@ class ContactUs extends React.Component {
           checked={this.state.cntWithCommunityAdviser}
           onChange={this.handleChange}
         />
+        <label htmlFor="cntWithCommunityAdviser">I want to connect with a local Community Organiser</label>
 
-        <label htmlFor="trainCommunityAdviser">I am interested in Community Organisers training</label>
         <input className='checkbox'
           type="checkbox"
           id="trainCommunityAdviser"
@@ -74,8 +74,10 @@ class ContactUs extends React.Component {
           checked={this.state.trainCommunityAdviser}
           onChange={this.handleChange}
         />
+        <label htmlFor="trainCommunityAdviser">I am interested in Community Organisers training</label>
+        </div>
         
-        <button className='form-button-two' type="submit">Submit</button>
+        <button className='button-large' type="submit">Submit</button>
       </form>
     </main>
     </div>
