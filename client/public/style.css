@@ -268,9 +268,13 @@ textarea {
   border-radius: 5px;
 }
 
-.checkbox-div {
+.choices {
   display: flex;
-  margin-bottom: 2rem;
+}
+
+.label-checkbox {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .checkbox {
@@ -282,8 +286,7 @@ textarea {
 
 .button-large {
   display: flex;
-  margin: auto;
-  /* margin: 30px auto; */
+  margin: 30px auto;
   letter-spacing: 0.08rem;
   font-weight: 600;
   font-size: 1.5em;

@@ -62,7 +62,7 @@ class ContactUs extends React.Component {
         <h3>Please click on the options that apply</h3>
 
         <div className="choices">
-          <span className="choices-text">Would you like to connect with a local Community Organiser?</span>
+          <span className="choices-text">I want to connect with a local Community Organiser</span>
           <label className="label-checkbox" htmlFor="cntWithCommunityAdviser">
               <input
                 type="checkbox"
@@ -71,12 +71,11 @@ class ContactUs extends React.Component {
                 checked={this.state.cntWithCommunityAdviser}
                 onChange={this.handleChange}
               />
-              <button className="custom-checkbox">Yes</button>
             </label>
             </div>
 
       <div className="choices">
-        <span className="choices-text">Would you like to train as a Community Organiser?
+        <span className="choices-text">I want to train as a Community Organiser?
         </span>
           <label className="label-checkbox" htmlFor="trainCommunityAdviser">
             <input
@@ -86,7 +85,6 @@ class ContactUs extends React.Component {
               checked={this.state.trainCommunityAdviser}
               onChange={this.handleChange}
             />
-            <button className="custom-checkbox">Yes</button>
           </label>
        </div>
         
