@@ -4,7 +4,6 @@
 }
 
 .background-img {
-  /* height: 100vh; */
   background-image: url('./images/Brickworks-bacgkround.jpeg');
   background-size: cover; 
   /* background-color: #FAFAFA; */
@@ -21,7 +20,6 @@
 }
 
 #bike-img {
-  /* width: 40rem; */
   height: 25rem;
   margin: 2rem;
 } 
@@ -36,11 +34,9 @@
  /*NAVBAR*/
 
 .nav {
-  /* display: flex; */
   position: absolute;
   background-color: #6cb7e2;
   left: 11vw;
-  /* height: 50px; */
 }
 
 .nav-link {
@@ -60,29 +56,35 @@
     height: 6vh;
     margin: 10px;
 }
+
 .image span {
     margin: 0 auto;
     position: relative;
     top: 12px;
 }
+
 .image span:before, .image span:after {
     position: absolute;
     content: '';
 }
+
 .image span, .image span:before, .image span:after {
     width: 31px;
     height: 6px;
     background-color: #ffffff;
     display: block;
 }
+
 .image span {
   transition: transform 1s ease;
 }
+
 .image span:before {
   margin-top: -12px;
   transition: transform 1s ease;
   transform-origin: 50% 50%;
 }
+
 .image span:after {
   margin-top: 12px;
   transition: transform 1s ease;
@@ -92,13 +94,16 @@
 .image-closed span {
 
 }
+
 .image-open span {
   transform: scaleX(1.5);
   transform: scaleY(0.7);
 }
+
 .image-closed span:after {
 
 }
+
 .image-open span:after {
   transform: translateX(-2px) rotate(45deg);
 }
@@ -106,6 +111,7 @@
 .image-closed span:before {
   
 }
+
 .image-open span:before {
   transform: translateX(-2px) rotate(-45deg);
 }
@@ -118,7 +124,6 @@
   transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
   overflow-y: auto;
   padding-top: 3rem;
-  /* z-index: 200000000; */
 }
 
 .menu-con {
@@ -154,7 +159,7 @@ h2 {
   font-family: 'Oswald', sans-serif;  
   font-weight: 600;
   font-size: 2.2em;
-  color: #4AAFE7;
+  color: #004c7b;
   margin: 2rem 4rem;
   font-weight: bold;
   text-align: left;
@@ -165,7 +170,7 @@ h3 {
   font-family: 'Oswald', sans-serif;  
   font-weight: 600;
   font-size: 1.75em;
-  color: #4AAFE7;
+  color: #004c7b;
   font-weight: bold;
   text-align: center;
   margin: 1.5rem 0.5rem;
@@ -175,7 +180,7 @@ h4 {
   font-family: 'Oswald', sans-serif;  
   font-weight: 600;
   font-size: 1.5em;
-  color: #4AAFE7;
+  color: #004c7b;
   text-align: left;
   margin: 1rem 0.1rem;
 }
@@ -184,7 +189,7 @@ h5 {
   font-family: 'Oswald', sans-serif;  
   font-weight: 600;
   font-size: 1.3em;
-  color: #4AAFE7;
+  color: #004c7b;
   text-align: left;
   padding-top: 1rem;
 }
@@ -192,6 +197,13 @@ h5 {
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
+}
+
+.options-message {
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 /*MAIN CONTENT*/
@@ -236,7 +248,7 @@ main {
   /*LISTS*/
 
 a {
-  color: #4AAFE7;
+  color: #004c7b;
   text-decoration: none;
 }
 
@@ -254,13 +266,12 @@ li {
   font-size: 1.2em;
   color: #2a2a2a;
   padding: 0.2rem;
-  /* margin-bottom: 1rem; */
 }
 
 .li-style1 {
   font-size: 1.5em;
   font-weight: bold;
-  color: #4AAFE7;
+  color: #004c7b;
 }
 
 hr {
@@ -268,17 +279,11 @@ hr {
 	border-top: 2px dashed #8c8b8b;
 }
 
-
 .link {
-  color: #4AAFE7;
+  color: #004c7b;
+  padding: 1rem;
   text-decoration: underline;
 }
-/* 
-.resource-links {
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
-  color: #4AAFE7;
-} */
 
 .resource-link {
   font-size: 1.3rem;
@@ -313,7 +318,13 @@ form > input {
   background-color: #eeeeee;
 }
 
+.red-asterisk {
+  color: red;
+  font-size: 1.5rem;
+  }
+
 label {
+  font-weight: bold;
   padding-bottom: 0.5rem;
 }
 
@@ -322,14 +333,32 @@ textarea {
   border-radius: 5px;
 }
 
-.checkbox-div {
+.choices {
   display: flex;
-  margin-bottom: 2rem;
+}
+
+.label-checkbox {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .checkbox {
   border-radius: 5%;
   width: 2rem;
+}
+
+.error-container {
+  padding: 8px;
+}
+
+.formErrors {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: red;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 0 auto;
 }
 
 /*BUTTONS*/
@@ -341,7 +370,7 @@ textarea {
   font-weight: 600;
   font-size: 1.5em;
   color: #2a2a2a;
-  background-color: #4AAFE7;
+  background-color: rgb(101, 196, 247);
   padding: 15px 40px;
   border: 1px solid black;
   border-radius: 5px;
@@ -352,33 +381,23 @@ textarea {
 }
 
 .button-large:hover {
-  background-color: #84E1FF;
+  background-color: rgb(168, 226, 245);
 }
 
 .button-large:active {
-  background-color: #4AAFE7;
+  background-color: rgb(101, 196, 247);
 }
 
 .add-event-button:hover {
-  background-color: #84E1FF;
+  background-color: rgb(168, 226, 245);
 }
 
-.form-button {
-  margin: auto;
-  border-radius: 5px;
-  height: 50px;
-  width: 90px;
-  color: #2a2a2a;
-  background-color: #4AAFE7;
-  font-size: 1.2em;
-  border: 2px solid #2a2a2a;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px 1px #888888;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+form > button:disabled {
+  background-color: lightgray;
 }
 
 /* FOOTER */
+
 footer {
   width: 75%;
   margin: auto;
@@ -389,64 +408,72 @@ footer {
   line-height: 3rem;
 }
 
+.error-h1 {
+  font-family: Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-color: white;
+  color: slategray;
+}
+
 /*----------------------------------------------*/
 
 /*MEDIA QUERIES*/
 
 @media only screen and (max-width: 768px) {
 
-/*HEADINGS*/
+  .wrapper {
+    width: 100%;
+  }
 
-.wrapper {
-  width: 100%;
-  /* background-color: #eeeeee; */
-}
+  h1 {
+    font-size: 2em;
+  }
 
-h1 {
-  font-size: 2em;
-}
+  footer {
+    height: 3rem;
+    width: 100%;
+  }
 
-footer {
-  height: 3rem;
-  width: 100%;
-}
+  h2 {
+    font-size: 1.6em;
+  }
 
-h2 {
-  font-size: 1.6em;
-}
+  h3 {
+    font-size: 1.375em;
+  }
 
-h3 {
-  font-size: 1.375em;
-}
+  h4 {
+    font-size: 1.2em;
+  }
 
-h4 {
-  font-size: 1.2em;
-}
+  p {
+    font-size: 1em;
+  }
 
-p {
-  font-size: 1em;
-}
+  ul {
+    width: 90vw;
+  }
 
-ul {
-  width: 90vw;
-}
+  .li-style1 {
+    font-size: 1.2em;
+  }
 
-.li-style1 {
-  font-size: 1.2em;
-}
+  .hub-description-four {
+    display: none;
+  }
 
-.hub-description-four {
-  display: none;
-}
+  #logo {
+    margin-top: 3rem;
+  }
 
-#logo {
-  margin-top: 3rem;
-}
-
-.button-large {
-  margin-top: 5rem;
-}
-
+  .button-large {
+    margin-top: 5rem;
+  }
 }
 
 @media only screen and (max-width: 1070px) {
@@ -472,5 +499,4 @@ ul {
     line-height: 2rem;
     font-size: 1em;
   }
-
 }

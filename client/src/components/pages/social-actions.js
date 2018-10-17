@@ -14,23 +14,26 @@ class SocialActions extends React.Component {
     }
   }
 
+
   componentDidMount() {
-    //make api request and get all events
+    
     getAllEvents()
     .then(response => {
-      console.log('current & future events');
-      console.log(response)
+      //set allEvents state
       this.setState( { allEvents: response});
-      console.log('this.state.allEvents', this.state.allEvents);
+      //pass data to parent
+      this.props.extractData(this.state.allEvents);
     })
+    
     .catch(err => console.log(err));
 
     getPastEvents()
     .then(response => {
-
+   
     this.setState( { pastEvents : response});
-
-    })
+    this.props.extractData(this.state.pastEvents);
+    
+  })
 
   .catch(err => console.log(err));
   }
