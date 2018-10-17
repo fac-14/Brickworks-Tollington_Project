@@ -77,7 +77,6 @@ console.log('BEFORE SWITCH', this.state.nameValid);
   handleSubmit = (event) => {
     event.preventDefault();
    
-    
     const data = JSON.stringify({
       startSocialAction: this.state.form
     });
@@ -96,6 +95,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         console.log('ERROR IS', err);
         this.props.history.push('/500error');
       });
+      
     this.setState({ name: '', email: '', phone: '', description: '', cntWithCommunityAdviser: false,
     trainCommunityAdviser: false, formErrors: {name:'', email: '', description: ''}, nameValid: false,emailValid: false, descriptionValid: false, formValid: false });
     
@@ -104,7 +104,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
   render() {
     return (
     <div className='wrapper'>
-    <h1>Register an interest to a social action</h1>
+    <h1>Register an interest to start a social action</h1>
     <main>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
