@@ -27,8 +27,8 @@ const Resources = () => (
                 9. Share the impact of your action in creative and imaginative ways to capture attention
                 <br></br>
                 10. Don't give up, have patience and be committed
-                {/* </p> */}
                 <br></br>
+                </p>
                 <h2>Helpful links for further information</h2>
                 <br></br>
                 <div className='resource-links'>
@@ -38,7 +38,6 @@ const Resources = () => (
                     <br></br>
                     <a className='resource-link' href='https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/591805/Enabling_social_action_methodology.pdf'>Methodology</a>
                 </div>
-                </p>
             </main>
     </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const EventComp = ({ event_id, event_name, event_description, event_date_time, recurring_event_description,  event_location, fullname_event_organiser, 
+const EventComp = ({ event_id, event_name, event_description, event_date_time, event_location, fullname_event_organiser, 
   email_event_organiser, telephone_event_organiser}) => {
   return (
 
@@ -10,13 +10,12 @@ const EventComp = ({ event_id, event_name, event_description, event_date_time, r
     //   </Link>
     // );
     // <Link to='/eventsByTheme'>Events By Theme</Link>
-
+    // if(formErrors[fieldName].length > 0){
     <Link key={event_id} to={'/event-detailed/' + event_name} >
       <li>
         {event_name}
         {event_description}
         {event_date_time}
-        {recurring_event_description}
         {event_location}
         {fullname_event_organiser}
         {email_event_organiser}
@@ -40,4 +39,23 @@ const EventByThemeComp = ({ event_id, event_name, event_description, date_time, 
   )
 }
 
-export { EventComp, EventByThemeComp };
+const FormErrors = ({formErrors}) =>
+<div className='formErrors'>
+{Object.keys(formErrors).map((fieldName, i) => {
+  if(formErrors[fieldName].length > 0){
+    return (
+      <p key={i}>{fieldName} {formErrors[fieldName]}</p>
+    )        
+  } else {
+    return '';
+  }
+})}
+
+</div>
+    
+  
+
+
+
+
+export { EventComp, EventByThemeComp, FormErrors  };
