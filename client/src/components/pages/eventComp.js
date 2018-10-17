@@ -10,7 +10,7 @@ const EventComp = ({ event_id, event_name, event_description, event_date_time, r
     //   </Link>
     // );
     // <Link to='/eventsByTheme'>Events By Theme</Link>
-
+    // if(formErrors[fieldName].length > 0){
     <Link key={event_id} to={'/event-detailed/' + event_name} >
       <li>
         {event_name}
@@ -40,21 +40,23 @@ const EventByThemeComp = ({ event_id, event_name, event_description, date_time, 
   )
 }
 
-  const FormErrors = ({formErrors}) => {
-    
-      {Object.keys(formErrors).map( (fieldName, i) => {
-        if(formErrors[fieldName].length > 0) {
-          return (
-            <p key={i} > {fieldName} {formErrors[fieldName]} </p>
-          )
-        } else {
-          return '';
-        }
-      })}
-    
+const FormErrors = ({formErrors}) =>
+<div className='formErrors'>
+{Object.keys(formErrors).map((fieldName, i) => {
+  if(formErrors[fieldName].length > 0){
+    return (
+      <p key={i}>{fieldName} {formErrors[fieldName]}</p>
+    )        
+  } else {
+    return '';
   }
+})}
+
+</div>
+    
+  
 
 
 
 
-export { EventComp, EventByThemeComp };
+export { EventComp, EventByThemeComp, FormErrors  };
