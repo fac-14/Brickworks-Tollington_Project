@@ -35,7 +35,7 @@ class ContactUs extends React.Component {
       .then(res => console.log(res))
       .catch(err => {
         console.log('ERROR IS', err);
-        throw new Error(`fetch /api/contactUs failed ${err}`);
+        this.props.history.push('/500error');
       });
       
     this.setState({ name: '', email: '', phone: '', description: '', cntWithCommunityAdviser: false,

@@ -100,7 +100,9 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         console.log('ERROR IS', err);
         this.props.history.push('/500error');
       });
-    
+
+      this.setState({ name: '', email: '', phone: '', description: '', eventTitle: '', date: '', time: '', venue: '', hireSpace: false, listEvent: false, formErrors: {name: '', email: '', description: ''}, nameValid: false, emailValid: false, descriptionValid: false, formValid: false });
+  
   }
 
   render() {
@@ -120,7 +122,8 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <input type="text" id="eventTitle" name="eventTitle" value={this.state.eventTitle} onChange= {this.handleChange}/>
         {/* <label htmlFor="description">Event Details</label>
         <input type="text" id="description" name="description" value={this.state.description} onChange= {this.handleChange}/> */}
-        <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}>Description of social action</textarea>
+        <label htmlFor="description">Description of social action:</label>
+        <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
 
         <label htmlFor="date">Date</label>
         <input type="text" id="date" name="date" value={this.state.date} onChange= {this.handleChange}/>
