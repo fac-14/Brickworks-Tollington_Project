@@ -38,8 +38,6 @@ class SocialActions extends React.Component {
   .catch(err => console.log(err));
   }
   
-
-  
   addEvent = () => {
     this.props.history.push('/topten');
   }
@@ -51,36 +49,23 @@ class SocialActions extends React.Component {
     return (
       
       <div className='wrapper'>
-        <h1 data-testid="social-actions-page">Social Action In Your Community</h1>
-      <ul>
+        <h1 data-testid="social-actions-page">Social Actions</h1>
+      
+      <h2>Current Events</h2>
+
       {allEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
-      )
-        
-          )}
+      ))}
 
-        </ul>
+      
+      <h2>Past Events</h2>
 
-        {/* populate pastEvents if there are entries in past events*/}
-       
-  {/* if (pastEvents !== undefined || pastEvents.length != 0)
-        {
-          return ( */}
-            <ul>
-          <h3>past events</h3>
-        {pastEvents.map( event => (
-          <EventComp key={event.fields.event_id} {...event.fields} /> 
-        )
-        
-          )}
-
-        </ul>
-          {/* ) */}
-        
-        }
-        
-      <button className='add-event-button' onClick={this.addEvent}>Express Interest</button>
-      </div>
+      {pastEvents.map( event => (
+        <EventComp key={event.fields.event_id} {...event.fields} /> 
+      ))}
+          
+    <button className='button-large' onClick={this.addEvent}>Express Interest</button>
+    </div>
     )
   }
 }

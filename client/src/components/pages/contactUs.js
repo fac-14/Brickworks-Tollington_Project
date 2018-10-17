@@ -1,43 +1,34 @@
 import React from 'react';
 
 class ContactUs extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      form: { 
-     name: '',
-     email: '',
-     phone: '',
-     description: '',
-     cntWithCommunityAdviser: false,
-     trainCommunityAdviser: false,
-      },
-     content: "post"
+  state = {
+    name: '',
+    email: '',
+    phone: '',
+    description: '',
+    cntWithCommunityAdviser: false,
+    trainCommunityAdviser: false,
     // startSocialAction: true
-   }
   }
-
   handleChange = event => {
     // this.setState({ [event.target.name]: event.target.value });
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({ [target.name]: value });
+ 
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
    
-    
     const data = JSON.stringify({
-      startSocialAction: this.state.form
+      startSocialAction: this.state
     });
-   
-   
+    console.log('data', data)
     fetch('/api/contactUs', {
       method: 'POST',
       headers: {
-        
-        "Content-Type": 'application/json'   
+        "Content-Type": "application/json"
       },
       body: data,
     })
@@ -46,44 +37,60 @@ class ContactUs extends React.Component {
         console.log('ERROR IS', err);
         this.props.history.push('/500error');
       });
-    this.setState({ name: '', email: '', description: '', number: '' });
+      
+    this.setState({ name: '', email: '', phone: '', description: '', cntWithCommunityAdviser: false,
+    trainCommunityAdviser: false, formErrors: {name:'', email: '', description: ''}, nameValid: false,emailValid: false, descriptionValid: false, formValid: false });
+    
   }
 
   render() {
     return (
     <div className='wrapper'>
-    <h1>Register an interest to a social action</h1>
+    <h1>Register interest for social action</h1>
     <main>
+    <h3> Please note Name, Email and Description are required fields </h3>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
         <label htmlFor="email">Email:</label>
-        <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label htmlFor="phone">Contact number:</label>
+        <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
+        <label htmlFor="phone">Phone:</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
         <label htmlFor="description">Description of social action:</label>
-        <textarea name="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
+        <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
-        <h3>Please check the options applicable to you</h3>
-        <label htmlFor="cntWithCommunityAdviser">I want to connect with a local Community Organiser</label>
-        <input className='checkbox'
-          type="checkbox"
-          id="cntWithCommunityAdviser"
-          name="cntWithCommunityAdviser"
-          checked={this.state.cntWithCommunityAdviser}
-          onChange={this.handleChange}
-        />
+        <h3>Please click on the options that apply</h3>
 
-        <label htmlFor="trainCommunityAdviser">I am interested in Community Organisers training</label>
-        <input className='checkbox'
-          type="checkbox"
-          id="trainCommunityAdviser"
-          name="trainCommunityAdviser"
-          checked={this.state.trainCommunityAdviser}
-          onChange={this.handleChange}
-        />
+        <div className="choices">
+          <span className="choices-text">Would you like to connect with a local Community Organiser?</span>
+          <label className="label-checkbox" htmlFor="cntWithCommunityAdviser">
+              <input
+                type="checkbox"
+                id="cntWithCommunityAdviser"
+                name="cntWithCommunityAdviser"
+                checked={this.state.cntWithCommunityAdviser}
+                onChange={this.handleChange}
+              />
+              <button className="custom-checkbox">Yes</button>
+            </label>
+            </div>
+
+      <div className="choices">
+        <span className="choices-text">Would you like to train as a Community Organiser?
+        </span>
+          <label className="label-checkbox" htmlFor="trainCommunityAdviser">
+            <input
+              type="checkbox"
+              id="trainCommunityAdviser"
+              name="trainCommunityAdviser"
+              checked={this.state.trainCommunityAdviser}
+              onChange={this.handleChange}
+            />
+            <button className="custom-checkbox">Yes</button>
+          </label>
+       </div>
         
-        <button data-testid="submit" className='form-button-two' type="submit">Submit</button>
+       <button id="form-button" class="button-large" type="submit">Submit</button>
       </form>
     </main>
     </div>

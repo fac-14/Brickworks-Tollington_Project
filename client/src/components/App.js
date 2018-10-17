@@ -2,7 +2,7 @@ import React from 'react';
 // import { render } from 'react-dom';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/home';
-import CreateEvent from './pages/create-event';
+import ListEvent from './pages/list-event';
 import Nav from './mainPageComponents/header';
 import SocialActions from './pages/social-actions';
 import EventDetailed from './pages/event_detailed';
@@ -42,7 +42,7 @@ class App extends React.Component {
       <Switch>
         <Route exact path='/' component= { Home } />
         <Route path='/social-actions' render={(props) => <SocialActions {...props} extractData={this.extractData} />}/>
-        <Route path='/create-event' component= { CreateEvent } />
+        <Route path='/list-event' component= { ListEvent } />
         <Route path='/about' component = {About} /> 
         <Route path='/event-detailed' render={(props) => <EventDetailed {...props} data={this.state.data} />}/>
         <Route path='/faq' component = {Faq} />

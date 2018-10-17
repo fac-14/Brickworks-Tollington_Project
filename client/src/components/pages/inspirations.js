@@ -27,6 +27,7 @@ class Inspiration extends React.Component {
                 <br/>
                 The first phase of 'Locality' has focused on Insights and Data Gathering, which has revealed some interesting facts and statistics and this combined with the engagement of local organisations, businesses and residents has identified some key areas of concerns linked to poverty, isolation and health and well-being, which are now the key focus for collective social action with Brickworks being developed, supported and promoted as the heart of the community.
             </p>
+            <br></br>
     </main>
     </div>
     )}
