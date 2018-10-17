@@ -57,7 +57,7 @@ class ContactUs extends React.Component {
         <label className="form-label" htmlFor="description">Description of social action</label>
         <textarea name="form-description" id="form-description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
-        <h3>Please select the options that interest you</h3>
+        <h3 id="form-h3">Please click on the options that apply</h3>
 
         <div className="choices">
           <span className="choices-text">I want to connect with a local Community Organiser</span>
@@ -74,7 +74,7 @@ class ContactUs extends React.Component {
             </div>
 
       <div className="choices">
-        <span className="choices-text"> I am interested in training as a Community Organiser
+        <span className="choices-text">I want to train as a Community Organiser
         </span>
           <label className="label-checkbox" htmlFor="trainCommunityAdviser">
             <input
