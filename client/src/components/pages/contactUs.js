@@ -49,35 +49,21 @@ console.log('BEFORE SWITCH', this.state.nameValid);
       break;
     }
     console.log('NAME', name);
-    // console.log('AFTER SWITCH NAMEVALID', nameValid);
-    // console.log('AFTER SWITCH EMAILVALID', emailValid);
-    // console.log('AFTER SWITCH DESCRIPTIONVALID', descriptionValid);
     this.setState( {formErrors: fieldValidationErrors,
                     nameValid : nameValid,
                     emailValid : emailValid,
                     descriptionValid: descriptionValid
                   }, this.validateForm );
                   
-    // console.log('BEFORE this.state.formValid', this.state.formValid)
-
   }
 
   validateForm() {
-    console.log('VALIDATEFORM')
     this.setState( {formValid: this.state.nameValid && this.state.descriptionValid && this.state.emailValid });
-    // console.log('this.state.nameValid', this.state.nameValid);
-    // console.log('this.state.emailValid', this.state.emailValid);
-
-    // console.log('this.state.descriptionValid', this.state.descriptionValid);
-    console.log('AFTER this.state.formValid', this.state.formValid)
-    console.log('this.state.formErrors', this.state.formErrors);
-  
   }
 
 
   handleSubmit = event => {
     event.preventDefault();
-   
     const data = JSON.stringify({
       startSocialAction: this.state
     });
