@@ -1,13 +1,12 @@
 const express = require('express');
-
 var path = require('path');
-
 var bodyParser = require('body-parser');
-
-const app = express();
 var getAllEventsAirTable = require('./queryHandlers/getAllEventsAirTable');
 var contactUs = require('./queryHandlers/contactUs');
 var getPastEventsAirTable = require('./queryHandlers/getPastEventsAirTable');
+
+const app = express();
+
 
 app.use(bodyParser.urlencoded({
     extended: true,

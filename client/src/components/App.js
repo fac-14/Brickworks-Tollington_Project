@@ -17,17 +17,34 @@ import ContactUs from './pages/contactUs';
 import {Projects} from './pages/projects';
 import {Footer} from './mainPageComponents/footer';
 
-const App = () => {
-
+class App extends React.Component {
+  state = {
+    background: 'background-img',
+    data: {},
+  }
+ extractData = (data) => {
+    this.setState({data: data})
+    console.log(data);
+  }
+  // setBackground = () => {
+  //   if(process.env.NODE_ENV === 'test') {
+  //     this.setState({background: ''});
+  //   }
+  //   else {
+      
+  //   }
+  // }
+  render () {
   return (
+    
     <div className='background-img'>
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />
-        <Route exact path='/social-actions' component= { SocialActions} />
+        <Route path='/social-actions' render={(props) => <SocialActions {...props} extractData={this.extractData} />}/>
         <Route path='/list-event' component= { ListEvent } />
         <Route path='/about' component = {About} /> 
-        <Route path='/event-detailed' component = {EventDetailed} />
+        <Route path='/event-detailed' render={(props) => <EventDetailed {...props} data={this.state.data} />}/>
         <Route path='/faq' component = {Faq} />
         <Route path='/resources' component = {Resources} />
         <Route path ='/inspirations' component = {Inspiration} />
@@ -40,7 +57,7 @@ const App = () => {
       </Switch>
       <Footer />
     </div>
-  );
+    )}
 };
 
 export default App;
