@@ -14,29 +14,29 @@ class SocialActions extends React.Component {
     }
   }
 
+
   componentDidMount() {
-    //make api request and get all events
+    
     getAllEvents()
     .then(response => {
-      console.log('current & future events');
-      console.log(response)
+      //set allEvents state
       this.setState( { allEvents: response});
-console.log('this.state.allEvents', this.state.allEvents);
+      //pass data to parent
+      this.props.extractData(this.state.allEvents);
     })
+    
     .catch(err => console.log(err));
 
     getPastEvents()
     .then(response => {
-    // console.log('PAST EVENTS');
-    // console.log(response);
+   
     this.setState( { pastEvents : response});
-
+    this.props.extractData(this.state.pastEvents);
+    
   })
 
   .catch(err => console.log(err));
   }
-  
-
   
   addEvent = () => {
     this.props.history.push('/topten');
@@ -49,20 +49,21 @@ console.log('this.state.allEvents', this.state.allEvents);
     return (
       
       <div className='wrapper'>
-        <h1 data-testid="social-actions-page">Social Action In Your Community</h1>
-      <ul>
+        <h1 data-testid="social-actions-page">Social Actions</h1>
+      
+      <h2>Current Events</h2>
+
       {allEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
       ))}
-      </ul>
-      {
-          <ul>
-          <h3>Past Events</h3>
-          {pastEvents.map( event => (
-          <EventComp key={event.fields.event_id} {...event.fields} /> 
-          ))}
-      </ul>
-    }
+
+      
+      <h2>Past Events</h2>
+
+      {pastEvents.map( event => (
+        <EventComp key={event.fields.event_id} {...event.fields} /> 
+      ))}
+          
     <button className='button-large' onClick={this.addEvent}>Express Interest</button>
     </div>
     )
