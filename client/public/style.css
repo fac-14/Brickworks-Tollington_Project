@@ -131,7 +131,7 @@ h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 2.2em;
-  color: #4AAFE7;
+  color: #004c7b;
   margin: 2rem 4rem;
   font-weight: bold;
   text-align: left;
@@ -142,7 +142,7 @@ h3 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 1.75em;
-  color: #4AAFE7;
+  color: #004c7b;
   font-weight: bold;
   text-align: center;
   margin: 1.5rem 0.5rem;
@@ -152,13 +152,21 @@ h4 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 1.5em;
-  color: #4AAFE7;
+  /* color: #4AAFE7; Fails accessibility tests*/
+  color: #004c7b;
   text-align: left;
   margin: 2rem 0.1rem;
 }
 
 p {
   font-size: 1em;
+}
+
+.top-message {
+  font-size: 1.5rem;
+  /* color: #0178aa; */
+ color: #2a2a2a;
+  padding-top: 40px;
 }
 
 /*MAIN CONTENT*/
@@ -205,7 +213,7 @@ main {
   /*LISTS*/
 
 a {
-  color: #4AAFE7;
+  color: #004c7b;
   text-decoration: none;
 }
 
@@ -228,7 +236,7 @@ li {
 .li-style1 {
   font-size: 1.5em;
   font-weight: bold;
-  color: #4AAFE7;
+  color: #004c7b;
 }
 
 hr {
@@ -238,7 +246,7 @@ hr {
 
 
 .link {
-  color: #4AAFE7;
+  color: #004c7b;
   padding: 1rem;
   text-decoration: underline;
 }
@@ -246,7 +254,7 @@ hr {
 .resource-links {
   font-size: 1.5rem;
   margin-bottom: 3rem;
-  color: #4AAFE7;
+  color: #004c7b;
 }
 
 .resource-link {
@@ -283,7 +291,13 @@ form > input {
   background-color: #eeeeee;
 }
 
+.red-asterisk {
+  color: red;
+  font-size: 1.5rem;
+  }
+
 label {
+  font-weight: bold;
   padding-bottom: 0.5rem;
 }
 
@@ -306,6 +320,20 @@ textarea {
   width: 2rem;
 }
 
+.error-container {
+  padding: 8px;
+}
+
+.formErrors {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: red;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
 /*BUTTONS*/
 
 .button-large {
@@ -315,7 +343,7 @@ textarea {
   font-weight: 600;
   font-size: 1.5em;
   color: #2a2a2a;
-  background-color: #4AAFE7;
+  background-color: #004c7b;
   padding: 15px 40px;
   border: 1px solid black;
   border-radius: 5px;
@@ -330,7 +358,7 @@ textarea {
 }
 
 .button-large:active {
-  background-color: #4AAFE7;
+  background-color: #004c7b;
 }
 
 .add-event-button:hover {
@@ -350,6 +378,10 @@ textarea {
   box-shadow: 1px 1px 1px 1px #888888;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
+}
+
+form > button:disabled {
+  background-color: lightgray;
 }
 
 /* FOOTER */
@@ -374,6 +406,7 @@ footer {
   background-color: white;
   color: slategray;
 }
+
 
 /*----------------------------------------------*/
 

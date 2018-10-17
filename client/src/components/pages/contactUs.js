@@ -105,15 +105,15 @@ console.log('BEFORE SWITCH', this.state.nameValid);
     <div className='wrapper'>
     <h1>Register an interest to start a social action</h1>
     <main>
-    <h3> Please note Name, Email and Description are required fields </h3>
+    <p className='top-message'> Please note that Name, Email and Description are required fields </p>
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">Name:</label>
+        <label className='form-label' htmlFor="name">Name  <span className='red-asterisk'>*</span></label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email">Email  <span className='red-asterisk'>*</span></label>
         <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label htmlFor="phone">Phone:</label>
+        <label htmlFor="phone">Telephone number</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
-        <label htmlFor="description">Description of social action:</label>
+        <label htmlFor="description">Description of social action  <span className='red-asterisk'>*</span></label>
         <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
         <h3>Please click on the options that apply</h3>
