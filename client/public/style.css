@@ -339,6 +339,16 @@ footer {
   line-height: 3rem;
 }
 
+.error-h2 {
+  font-family: Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+}
+
 /*----------------------------------------------*/
 
 /*MEDIA QUERIES*/

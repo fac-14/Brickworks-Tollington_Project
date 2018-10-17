@@ -5,7 +5,7 @@ import React from 'react';
 
 const Error500 = () => (
     <div data-testid="error500">
-    <h2>Internal error - app slightly destroyed</h2>
+    <h2 className='error-h2'>Server error</h2>
     </div>
 
 )
