@@ -44,7 +44,7 @@ class ContactUs extends React.Component {
   render() {
     return (
     <div className='wrapper'>
-    <h1 className='pageHeadings'>Register an interest to a social action</h1>
+    <h1 className='pageHeadings'>Register your interest in a social action</h1>
     <div className='sidebar'></div>
     <main>
       <form id='main-form' onSubmit={this.handleSubmit}>
@@ -55,7 +55,7 @@ class ContactUs extends React.Component {
         <label className="form-label"  htmlFor="phone">Contact number</label>
         <input type="text" className="form-input" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
         <label className="form-label" htmlFor="description">Description of social action</label>
-        <textarea name="form-description" id="form-desccription" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
+        <textarea name="form-description" id="form-description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
         <h3>Please select the options that interest you</h3>
 
@@ -69,7 +69,7 @@ class ContactUs extends React.Component {
                 checked={this.state.cntWithCommunityAdviser}
                 onChange={this.handleChange}
               />
-              <span className="custom-checkbox"></span>
+              <button className="custom-checkbox"></button>
             </label>
             </div>
 
@@ -84,7 +84,7 @@ class ContactUs extends React.Component {
               checked={this.state.trainCommunityAdviser}
               onChange={this.handleChange}
             />
-            <div className="custom-checkbox"></div>
+            <button className="custom-checkbox"></button>
           </label>
        </div>
         

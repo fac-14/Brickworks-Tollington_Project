@@ -291,11 +291,11 @@ acc-h3 {
   }
 
 .button-large:hover {
-  background-color: #FF9F67;
+  background-color: #ffc882;
 }
 
 .button-large:active {
-  background-color: #ff6f1b;
+  background-color: #ffc882;
 }
 
 #form-button {
@@ -324,15 +324,19 @@ acc-h3 {
   border-color: #a9b7b9;
   padding: 6px;
   border-radius: 5px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+
 }
 
+/* Currently it does not seem possible to type into the textarea? */
 textarea {
   border-style: solid;
   border-width: 2px;
   border-color: #a9b7b9;
   border-radius: 5px;
-}
 
+}
 
 .choices {
   display: flex;
@@ -348,29 +352,49 @@ textarea {
   color: #2a2a2a;
 }
 
-  input[type=checkbox] {
-    visibility: hidden;
-}
-  
-.custom-checkbox {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
-  font-size: 1.4rem;
-  color: #585858; 
-} 
+/* This hides the default checkbox, which cannot be styled. However, the default checkbox remains accessible to screen readers */
 
+  input[type=checkbox] {
+  z-index: -9999;
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
 
 .label-checkbox {
-  height: 20px;
-  width: 20px;
-  padding: 0.5rem;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #7E7E7E;
-  background-color: blue;
-  cursor: pointer;
   margin-left: auto;
 }
+
+/* This creates a custom checkbox. The custom checkboxes are buttons, so can submit data. However, I'm not sure how to make the tick persist. If you can't work with this, uncomment all .custom-checkbox entries and I'll try a different technique. */
+
+.custom-checkbox {
+  height: 45px;
+  width: 45px;
+  padding: 2px;
+  border-color: slategray;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.custom-checkbox:hover {
+  background-color: #d6dfdc;
+
+}
+
+.custom-checkbox:active {
+  background-image: url('./images/checkmark.png');
+  background-size: cover;
+  background-color: #dbd9da;
+}
+
+.custom-checkbox:focus {
+  background-image: url('./images/checkmark.png');
+  background-size: cover;
+}
+
 
 
 /* FOOTER */
