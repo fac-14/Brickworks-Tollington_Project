@@ -7,6 +7,7 @@ import Nav from './mainPageComponents/header';
 import SocialActions from './pages/social-actions';
 import EventDetailed from './pages/event_detailed';
 import {Error} from './pages/error';
+import {Error500} from './pages/500error';
 import {Faq} from './pages/faq';
 import {Resources} from './pages/resources';
 import {Inspiration} from './pages/inspirations';
@@ -34,6 +35,7 @@ const App = () => {
         <Route path ='/contactUs' component = {ContactUs} />
         <Route path ='/topten' component = {TopTen} />
         <Route path ='/projects' component = {Projects} />
+        <Route path ='/error500' component = {Error500} />
         <Route component= { Error } />
       </Switch>
       <Footer />
