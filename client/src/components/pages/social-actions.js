@@ -53,32 +53,18 @@ console.log('this.state.allEvents', this.state.allEvents);
       <ul>
       {allEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
-      )
-        
-          )}
-
-        </ul>
-
-        {/* populate pastEvents if there are entries in past events*/}
-       
-  {/* if (pastEvents !== undefined || pastEvents.length != 0)
-        {
-          return ( */}
-            <ul>
-          <h3>past events</h3>
-        {pastEvents.map( event => (
+      ))}
+      </ul>
+      {
+          <ul>
+          <h3>Past Events</h3>
+          {pastEvents.map( event => (
           <EventComp key={event.fields.event_id} {...event.fields} /> 
-        )
-        
-          )}
-
-        </ul>
-          {/* ) */}
-        
-        }
-        
-      <button className='add-event-button' onClick={this.addEvent}>Express Interest</button>
-      </div>
+          ))}
+      </ul>
+    }
+    <button className='button-large' onClick={this.addEvent}>Express Interest</button>
+    </div>
     )
   }
 }

@@ -17,8 +17,12 @@ console.log('ID IS',this.props.location.pathname);
   render() {
 console.log('Detailed event'); console.log(this.state.event);
     return (
-      <div>
-      <h2> this is a detailed events page </h2>
+      <div className='wrapper'>
+        <h1>Event</h1>
+        <main>
+
+        </main>
+
       </div>
     )
   }
