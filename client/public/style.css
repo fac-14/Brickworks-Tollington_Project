@@ -4,21 +4,26 @@
 
 .background-img {
   /* height: 100vh; */
-  /* background-image: url('./images/Brickworks-bacgkround.jpeg'); */
-  /* background-size: cover;  */
+  background-image: url('./images/Brickworks-bacgkround.jpeg');
+  background-size: cover; 
   /* background-color: #FAFAFA; */
   padding: 0;
 }
 
 #logo {
   margin: auto;
-  /* display: flex; */
   background-color: #FAFAFA;
 }
 
 #logo-img {
   margin: auto;
 }
+
+#bike-img {
+  /* width: 40rem; */
+  height: 25rem;
+  margin: 2rem;
+} 
 
 .wrapper {
   width: 75%;
@@ -128,6 +133,7 @@ h2 {
   font-size: 2.2em;
   color: #4AAFE7;
   margin: 2rem 4rem;
+  font-weight: bold;
   text-align: left;
   text-decoration: none; 
 }
@@ -137,6 +143,7 @@ h3 {
   font-weight: 600;
   font-size: 1.75em;
   color: #4AAFE7;
+  font-weight: bold;
   text-align: center;
   margin: 1.5rem 0.5rem;
 }
@@ -174,7 +181,7 @@ main {
 }
 
 .hub-description-two {
-  margin: 2rem 5rem;
+  margin: 0rem 5rem;
   font-size: 1.2em;
   line-height: 2rem;
   color: #2a2a2a;
@@ -197,27 +204,38 @@ main {
 
   /*LISTS*/
 
-ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  width: 70vw;
-  padding: 1rem;
-  margin: auto;
+a {
+  color: #4AAFE7;
+  text-decoration: none;
 }
 
-a {
-  text-decoration: none;
+ul {
+  margin: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
 }
 
 li {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
   color: #2a2a2a;
-  padding: 1rem;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  padding: 0.2rem;
+  /* margin-bottom: 1rem; */
 }
+
+.li-style1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4AAFE7;
+}
+
+hr {
+  background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+}
+
 
 .link {
   color: #4AAFE7;
@@ -227,12 +245,18 @@ li {
 
 .resource-links {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: #4AAFE7;
 }
 
+.resource-link {
+  display: flex;
+  flex-direction: column;
+  line-height: 1rem;
+}
+
 .question {
-  margin: 3rem 6rem;
+  margin: 3rem 4rem;
   line-height: 1.5rem;
   font-size: 1.2em;
 }
@@ -283,7 +307,7 @@ textarea {
 .button-large {
   display: flex;
   margin: auto;
-  /* margin: 30px auto; */
+  /* margin-bottom: 1rem; */
   letter-spacing: 0.08rem;
   font-weight: 600;
   font-size: 1.5em;
@@ -372,6 +396,14 @@ h4 {
 
 p {
   font-size: 1em;
+}
+
+ul {
+  width: 90vw;
+}
+
+.li-style1 {
+  font-size: 1.2em;
 }
 
 .hub-description-four {

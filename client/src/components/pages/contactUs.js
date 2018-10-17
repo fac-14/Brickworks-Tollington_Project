@@ -46,9 +46,9 @@ class ContactUs extends React.Component {
   render() {
     return (
     <div className='wrapper'>
-    <h1>Register an interest to start a social action</h1>
-    <h3> Please note name, email and Description are required fields </h3>
+    <h1>Register interest for social action</h1>
     <main>
+    <h3> Please note Name, Email and Description are required fields </h3>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
