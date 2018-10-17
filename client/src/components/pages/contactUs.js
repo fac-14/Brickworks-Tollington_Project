@@ -20,8 +20,7 @@ class ContactUs extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('CONTACT US MA')
-    console.log(this.state)
+   
     const data = JSON.stringify({
       startSocialAction: this.state
     });
@@ -36,26 +35,29 @@ class ContactUs extends React.Component {
       .then(res => console.log(res))
       .catch(err => {
         console.log('ERROR IS', err);
-        throw new Error(`fetch /api/contactUs failed ${err}`);
+        this.props.history.push('/500error');
       });
-    this.setState({ name: '', email: '', description: '', number: '' });
+      
+    this.setState({ name: '', email: '', phone: '', description: '', cntWithCommunityAdviser: false,
+    trainCommunityAdviser: false, formErrors: {name:'', email: '', description: ''}, nameValid: false,emailValid: false, descriptionValid: false, formValid: false });
+    
   }
 
   render() {
     return (
     <div className='wrapper'>
-    <h1 className='pageHeadings'>Register your interest in a social action</h1>
-    <div className='sidebar'></div>
+    <h1>Register an interest to start a social action</h1>
+    <h3> Please note name, email and Description are required fields </h3>
     <main>
-      <form id='main-form' onSubmit={this.handleSubmit}>
-        <label className="form-label" htmlFor="name">Name</label>
-        <input type="text" className="form-input" id="name"  name="name" value={this.state.name} onChange={this.handleChange} />
-        <label className="form-label"  htmlFor="email">Email</label>
-        <input type="text" className="form-input" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label className="form-label"  htmlFor="phone">Contact number</label>
-        <input type="text" className="form-input" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
-        <label className="form-label" htmlFor="description">Description of social action</label>
-        <textarea name="form-description" id="form-description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="name">Name:</label>
+        <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
+        <label htmlFor="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
+        <label htmlFor="description">Description of social action:</label>
+        <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
         <h3>Please click on the options that apply</h3>
 

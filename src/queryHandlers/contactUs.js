@@ -19,6 +19,7 @@ exports.post = (req, res) => {
       pass: GPASS
     }
   });
+
   if(req.body.startSocialAction)
   {
   const formData = req.body.startSocialAction;
@@ -36,25 +37,34 @@ exports.post = (req, res) => {
            `
     // text:`hello how are you`
   };
-  console.log('mailOpts',mailOpts);
-  
-  
+  console.log('mailOpts',mailOpts);  
 }
     
   
   else if(req.body.eventProposal){
-    const data = req.body.eventProposal;
+    const formData = req.body.eventProposal;
     console.log(req.body.eventProposal);
   mailOpts = {
-    from: data.name + ' &lt;' + data.email + '&gt;',
+    from: formData.name + ' &lt;' + formData.email + '&gt;',
     to: EMAIL,
-    subject: 'New message from contact form at Start a social action at Brickworks app',
-    text: `${data.name} (${data.email}) says: ${data.description}`
+    subject: 'New message from contact form at promote/collaborate my social action at Brickworks app',
+    // text: `${formData.name} (${formData.email}) says: ${formData.description}`
+    text: `name: ${formData.name} 
+           email: ${formData.email} 
+           phone: ${formData.phone} 
+           event title: ${formData.eventTitle} 
+           description of social action: ${formData.description}
+           date: ${formData.date} 
+           time: ${formData.time} 
+           venue: ${formData.venue} 
+           hire space: ${formData.hireSpace} 
+           list event: ${formData.listEvent} 
+           `
   }
     }
-    else if(req.body.contactSupport) {
+  
 
-    }
+
     smtpTrans.sendMail(mailOpts, function (error, response) {
       if (error) {
         console.log(error)
