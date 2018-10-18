@@ -4,6 +4,7 @@
 }
 
 .background-img {
+  height: 100%;
   background-image: url('./images/Brickworks-bacgkround.jpeg');
   background-size: cover; 
   /* background-color: #FAFAFA; */
@@ -28,7 +29,7 @@
   width: 75%;
   margin: auto;
   background-color: #ffffff;
-  min-height: 94vh;
+  min-height: 100vh;
 }
 
  /*NAVBAR*/
@@ -55,6 +56,7 @@
     width: 6vw;
     height: 6vh;
     margin: 10px;
+    cursor: pointer;
 }
 
 .image span {
@@ -126,13 +128,13 @@
   padding-top: 3rem;
 }
 
-.menu-con {
+/* .menu-con {
   position: absolute;
   left: 1vw;
   width: 30vw;
   height: 100vh;
   overflow: hidden;
-}
+} */
 
 .menu-closed {
   transform: translate3d(-42.5vw, 0, 0);
@@ -254,18 +256,19 @@ a {
 
 ul {
   font-family: 'Source Sans Pro', sans-serif;
-  margin: auto;
-  margin-bottom: 1rem;
-  display: flex;
+  width: 20vw;
+  margin: 1.5rem;
+  display: inline-flex;
   flex-direction: column;
-  width: 65vw;
+  border: 0.5px solid #888888;
+  box-shadow: 2px 2px 2px 1px #888888;
 }
 
 li {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
   color: #2a2a2a;
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 
 .li-style1 {
@@ -281,7 +284,6 @@ hr {
 
 .link {
   color: #004c7b;
-  padding: 1rem;
   text-decoration: underline;
 }
 
@@ -456,7 +458,10 @@ footer {
   }
 
   ul {
-    width: 90vw;
+    width: 80vw;
+    margin: auto;
+    display: block;
+    padding: 0.5rem;
   }
 
   .li-style1 {
@@ -472,7 +477,7 @@ footer {
   }
 
   .button-large {
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -487,7 +492,14 @@ footer {
   }
 
   h2 {
-    margin: 1.5rem 1.5rem; 
+    margin: 1.5rem; 
+  }
+
+  ul {
+    width: 70vw;
+    margin: auto;
+    display: block;
+    padding: 0.5rem;
   }
 
   .link {

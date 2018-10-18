@@ -103,7 +103,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
   render() {
     return (
     <div className='wrapper'>
-    <h1>Register an interest to start a social action</h1>
+    <h1>Contact Us</h1>
     <main>
     <p className='options-message'>Please note that Name, Email and Description are required fields</p>
       <form onSubmit={this.handleSubmit}>

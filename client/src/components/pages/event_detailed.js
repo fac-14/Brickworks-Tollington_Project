@@ -12,21 +12,12 @@ class EventDetailed extends React.Component {
     }
   }
 
-
-// if(this.props.data !== {}){
-  
-// }
-  
-
-
   render()  {
   
-
     return (
       <div data-testid="event-detailed" className='wrapper'>
       <h2> this is a detailed events page </h2>
-      
-        <h1 data-testid="social-actions-page">Social Action In Your Community</h1>
+      <h1 data-testid="social-actions-page">Social Action In Your Community</h1>
       <ul>
       {this.props.data.filter(element => {
   const address = this.props.location.pathname.split('/');
