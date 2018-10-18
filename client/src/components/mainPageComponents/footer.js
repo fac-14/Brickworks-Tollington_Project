@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
   <footer>
-    &copy; Brickworks Social Action Community 2018 
+    &copy; Brickworks Social Action Hub 2018 
   </footer>
 
 )
