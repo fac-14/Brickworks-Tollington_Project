@@ -8,16 +8,14 @@ exports.get = (request, response) => {
   base('social_action_events').select({
     filterByFormula:' IS_AFTER({event_date_time}, TODAY())',
     sort:[{field:'event_date_time', direction:'asc'}],
-    fields: [
-      'event_id', 'event_name', 'event_description', 'event_location', 'event_date_time', 'recurring_event_description', 'categories', 'Photo', 'fullname_event_organiser', 'email_event_organiser', 'telephone_event_organiser'
-    ] 
+  
   }).eachPage((records, fetchNextPage) => {
     allRecords = [...allRecords, ...records];
     
-    // allRecords.forEach( (record) => 
-    // {
-    //   console.log(record.fields.event_date_time);
-    // });
+    allRecords.forEach( (record) => 
+    {
+      console.log(record.id);
+    });
 
     allRecords = allRecords.map ( record => {
       // console.log(record.fields);
@@ -25,9 +23,11 @@ exports.get = (request, response) => {
       let reqdTime = record.fields.event_date_time.split('T')[1];
       reqdTime = reqdTime.split(':');
       let finalTime = reqdTime[0] + ':' + reqdTime[1];
-      record.fields.event_date_time = reqdDate + ' ' + finalTime; 
+      record.fields.event_date_time = reqdDate + ' ' + finalTime;
+      record.fields.event_name = record.fields.event_name + record.id;
+      console.log('new name',record.fields.event_name);
       return record;
-    })
+      })
     
     fetchNextPage();
   }, (err) => {

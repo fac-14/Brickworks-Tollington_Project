@@ -4,9 +4,16 @@ const Resources = () => (
     <div className='wrapper'>
         <h1 data-testid="resources-page">Resources</h1> 
             <main>
+<<<<<<< HEAD
                 
             <p className='strong-txt'>Engaging in social action takes time, energy and passion.  Here are our top 10 tips to get you started</p>
            <ol className='num-list'>
+=======
+            <p className='strong-txt'>Engaging in social action takes time, energy and passion.
+            <br/>
+            Here are our top 10 tips to get you started.</p>
+           <ol>
+>>>>>>> 59c734d64d8f8fd1cf3d2e52a967bd1205e5fbb9
                <li>
                Identify a problem, challenge or issue in your neighbourhood and be specific about what you want to tackle.
                </li>
@@ -36,17 +43,28 @@ const Resources = () => (
                 </li>
                 <li>Don't give up, have patience and be committed.</li>
            </ol>
+<<<<<<< HEAD
             
                 <p className='strong-txt'>Helpful links for further information</p>
                 <br/>
                 <div>
+=======
+           
+          <p className='options-message'>Here are some useful links to get you started:</p>
+
+                <div className='resource-links'> 
+>>>>>>> 59c734d64d8f8fd1cf3d2e52a967bd1205e5fbb9
                     <a className='resource-link' href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/591797/A_description_of_social_action.pdf">A description of social action</a>
                     <br/><br/>
                     <a className='resource-link' href='https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/591799/Leadership_and_culture_change_to_enable_social_action.pdf'>Leadership and culture change</a>
                     <br/><br/>
                     <a className='resource-link' href='https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/591805/Enabling_social_action_methodology.pdf'>Methodology</a>
                 </div>
+<<<<<<< HEAD
             
+=======
+        
+>>>>>>> 59c734d64d8f8fd1cf3d2e52a967bd1205e5fbb9
             </main>
 </div>
 

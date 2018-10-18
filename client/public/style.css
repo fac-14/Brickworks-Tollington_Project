@@ -30,13 +30,13 @@
   margin: auto;
   background-color: #ffffff;
   min-height: 100vh;
+  padding-bottom: 1rem;
 }
 
  /*NAVBAR*/
 
 .nav {
   position: absolute;
-  background-color: #6cb7e2;
   left: 11vw;
 }
 
@@ -98,6 +98,7 @@
 }
 
 .image-open span {
+  /* position: fixed; */
   transform: scaleX(1.5);
   transform: scaleY(0.7);
 }
@@ -121,19 +122,23 @@
 .menu {
   position: absolute;
   height: 100vh;
-  width: 30vw;
+  width: 23vw;
   background-color: #525252;
   transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
   overflow-y: auto;
-  padding-top: 3rem;
+  padding-top: 4rem;
 }
 
 /* .menu-con {
   position: absolute;
   left: 1vw;
-  width: 30vw;
+  width: 23vw;
   height: 100vh;
   overflow: hidden;
+} */
+
+/* .menu-con-closed {
+  display: hidden;
 } */
 
 .menu-closed {
@@ -141,18 +146,24 @@
 }
 
 .menu-open {
+  position: fixed;
   transform: translate3d(0vw, 0, 0);
- }
+}
 
  /*HEADINGS*/
-
  h1 {
+<<<<<<< HEAD
   font-family: 'Source Sans Pro', sans-serif;  
   height: 5rem;
   background-color: #525252;
+=======
+  background-color: #7e7e7e;
+>>>>>>> 59c734d64d8f8fd1cf3d2e52a967bd1205e5fbb9
   color: #fafafa;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
+<<<<<<< HEAD
   font-size: 3em;
   line-height: 5rem;
   margin-bottom: 3rem;
@@ -160,36 +171,51 @@
 
 h2 {
   font-family: 'Source Sans Pro', sans-serif; 
+=======
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  }
+
+h2 {
+  font-family: 'Nunito', sans-serif;
+>>>>>>> 59c734d64d8f8fd1cf3d2e52a967bd1205e5fbb9
   font-weight: 600;
-  font-size: 2.2em;
-  color: #004c7b;
-  margin: 2rem 4rem;
-  font-weight: bold;
-  text-align: left;
-  text-decoration: none; 
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #585858; 
 }
 
 h3 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 1.75em;
-  color: #004c7b;
-  font-weight: bold;
-  text-align: center;
-  margin: 1.5rem 0.5rem;
+  font-size: 1.2rem;
+  color: #585858; 
 }
 
 h4 {
+<<<<<<< HEAD
   font-family: 'Source Sans Pro', sans-serif;
+=======
+  font-family: 'Source Sans Pro', sans-serif;  
+>>>>>>> 59c734d64d8f8fd1cf3d2e52a967bd1205e5fbb9
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #004c7b;
   text-align: left;
   margin: 1rem 0.1rem;
 }
 
 h5 {
+<<<<<<< HEAD
   font-family: 'Source Sans Pro', sans-serif; 
+=======
+  font-family: 'Source Sans Pro', sans-serif;  
+>>>>>>> 59c734d64d8f8fd1cf3d2e52a967bd1205e5fbb9
   font-weight: 600;
   font-size: 1.3em;
   color: #004c7b;
@@ -200,6 +226,17 @@ h5 {
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
+}
+
+.strong-txt {
+  font-size: 1.8rem;
+  color: #2a2a2a;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .options-message {
@@ -234,7 +271,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
 }
 
   /*TEXT CONTAINERS*/
@@ -275,6 +312,7 @@ a {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 .num-list {
   margin: auto;
   display: flex;
@@ -336,6 +374,35 @@ li {
   font-size: 1.5em;
   font-weight: bold;
   color: #004c7b;
+=======
+
+ol {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  width: 70vw;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+ }
+
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 70vw;
+  padding: 1rem;
+}
+
+li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+>>>>>>> 59c734d64d8f8fd1cf3d2e52a967bd1205e5fbb9
 }
 
 .li-style1 {
@@ -344,10 +411,10 @@ li {
   color: #004c7b;
 }
 
-hr {
+/* hr {
   background-color: #fff;
 	border-top: 2px dashed #8c8b8b;
-}
+} */
 
 .link {
   color: #004c7b;
@@ -501,6 +568,37 @@ footer {
 
 @media only screen and (max-width: 768px) {
 
+  .nav {
+    position: inherit;
+    width: 100vw;
+  }
+
+  .nav-link {
+    margin: 2rem;
+    font-size: 1.6em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid white;
+  }
+
+  .menu-con {
+    left: 0vw;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu-closed {
+    transform: translate3d(-100vw, 0, 0);
+  }
+  
+  .menu-open {
+    transform: translate3d(0vw, 0, 0);
+   }
+
   .wrapper {
     width: 100%;
   }
@@ -556,6 +654,19 @@ footer {
 
 @media only screen and (max-width: 1070px) {
   
+
+  .nav {
+    width: 80%;
+  }
+
+  .menu-closed {
+    transform: translate3d(-150vw, 0, 0);
+  }
+
+  .menu {
+    width: 75vw;
+  }
+
   .hub-description-four {
     margin: 1rem 3rem;
   }

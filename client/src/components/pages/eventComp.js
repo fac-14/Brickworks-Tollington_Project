@@ -3,19 +3,24 @@ import { Link } from "react-router-dom";
 
 const EventComp = ({ event_id, event_name, event_description, event_date_time, event_location, fullname_event_organiser, 
   email_event_organiser, telephone_event_organiser}) => {
+  
+
   return (
 
-    <Link key={event_id} to={'/event-detailed/' + event_name} >
+    
       <ul>
-        <li className='li-style1'>{event_name}</li>
+        <Link key={event_id} to={'/event-detailed/' + event_name} >
+        <li className='li-style1'>{event_name.split('rec')[0]}</li>
+        
         <li>{event_description}</li>
         <li>{event_date_time}</li>
         <li>{event_location}</li>
         {/* <li>{fullname_event_organiser}</li>
         <li>{email_event_organiser}</li>
         <li>{telephone_event_organiser}</li> */}
+        </Link >
       </ul>
-    </Link >
+    
   )
 }
 
@@ -33,16 +38,10 @@ const EventByThemeComp = ({ event_id, event_name, event_description, date_time, 
 }
 
 const SingleEvent = ({ event_id, event_name, event_description, event_date_time, event_location, fullname_event_organiser, 
-  email_event_organiser, telephone_event_organiser}) => {
+  email_event_organiser, telephone_event_organiser, Photo}) => {
+    if(Photo){
   return (
-
-    //   <Link key={index} to={caseLink}>
-    //     <div key={index}>{element.title}</div>
-    //   </Link>
-    // );
-    // <Link to='/eventsByTheme'>Events By Theme</Link>
-
-    <div key={event_id} to={'/event-detailed/' + event_name} >
+    <div key={event_id} >
       <li>
         {event_name}
         {event_description}
@@ -52,9 +51,28 @@ const SingleEvent = ({ event_id, event_name, event_description, event_date_time,
         {email_event_organiser}
         {telephone_event_organiser}
       </li>
+      <img src={Photo[0].url}/>
     </div>
   )
 }
+else {
+  return(
+    <div key={event_id} >
+    <li>
+      {event_name}
+      {event_description}
+      {event_date_time}
+      {event_location}
+      {fullname_event_organiser}
+      {email_event_organiser}
+      {telephone_event_organiser}
+    </li>
+    
+  </div>
+
+  )
+}
+  }
 const FormErrors = ({formErrors}) =>
 <div className='formErrors'>
 {Object.keys(formErrors).map((fieldName, i) => {
@@ -66,6 +84,5 @@ const FormErrors = ({formErrors}) =>
     return '';
   }
 })}
-
 </div>
 export { SingleEvent, FormErrors, EventComp, EventByThemeComp };
