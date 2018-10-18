@@ -1,6 +1,6 @@
 * {
   font-family: 'Source Sans Pro', sans-serif;
-  /* font-family: 'Oswald', sans-serif;   */
+  
 }
 
 .background-img {
@@ -111,7 +111,7 @@
 }
 
 .image-closed span:before {
-  
+
 }
 
 .image-open span:before {
@@ -147,7 +147,7 @@
  /*HEADINGS*/
 
  h1 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Source Sans Pro', sans-serif;  
   height: 5rem;
   background-color: #525252;
   color: #fafafa;
@@ -155,10 +155,11 @@
   font-weight: 600;
   font-size: 3em;
   line-height: 5rem;
+  margin-bottom: 3rem;
   }
 
 h2 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Source Sans Pro', sans-serif; 
   font-weight: 600;
   font-size: 2.2em;
   color: #004c7b;
@@ -179,7 +180,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 1.5em;
   color: #004c7b;
@@ -188,7 +189,7 @@ h4 {
 }
 
 h5 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Source Sans Pro', sans-serif; 
   font-weight: 600;
   font-size: 1.3em;
   color: #004c7b;
@@ -216,6 +217,14 @@ p {
   font-weight: bold;
   text-align: center;
   padding-bottom: 1rem;
+}
+
+.strong-txt {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2a2a2a;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 /*MAIN CONTENT*/
@@ -266,21 +275,67 @@ a {
   text-decoration: none;
 }
 
-ul {
-  font-family: 'Source Sans Pro', sans-serif;
-  width: 20vw;
-  margin: 1.5rem;
-  display: inline-flex;
+.num-list {
+  margin: auto;
+  display: flex;
   flex-direction: column;
-  border: 0.5px solid #888888;
-  box-shadow: 2px 2px 2px 1px #888888;
+  width: 65vw;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+ol {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 li {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #2a2a2a;
-  padding: 0.4rem;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.li-content {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #2a2a2a;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.li-p-strong {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  color: #2a2a2a;
+  font-weight: bold;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.li-style1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #004c7b;
 }
 
 .li-style1 {
