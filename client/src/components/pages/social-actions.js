@@ -63,7 +63,8 @@ class SocialActions extends React.Component {
       {pastEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
       ))}
-          
+    <br></br>
+    <br></br>         
     <button className='button-large' onClick={this.addEvent}>Express Interest</button>
     </div>
     )
