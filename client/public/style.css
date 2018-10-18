@@ -1,6 +1,6 @@
 * {
   font-family: 'Source Sans Pro', sans-serif;
-  /* font-family: 'Oswald', sans-serif;   */
+  
 }
 
 .background-img {
@@ -151,50 +151,47 @@
 }
 
  /*HEADINGS*/
-
  h1 {
-  font-family: 'Oswald', sans-serif;  
-  height: 5rem;
-  background-color: #525252;
+  background-color: #7e7e7e;
   color: #fafafa;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 3em;
-  line-height: 5rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
   }
 
 h2 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 2.2em;
-  color: #004c7b;
-  margin: 2rem 4rem;
-  font-weight: bold;
-  text-align: left;
-  text-decoration: none; 
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #585858; 
 }
 
 h3 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 1.75em;
-  color: #004c7b;
-  font-weight: bold;
-  text-align: center;
-  margin: 1.5rem 0.5rem;
+  font-size: 1.2rem;
+  color: #585858; 
 }
 
 h4 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Source Sans Pro', sans-serif;  
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #004c7b;
   text-align: left;
   margin: 1rem 0.1rem;
 }
 
 h5 {
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Source Sans Pro', sans-serif;  
   font-weight: 600;
   font-size: 1.3em;
   color: #004c7b;
@@ -205,6 +202,17 @@ h5 {
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
+}
+
+.strong-txt {
+  font-size: 1.8rem;
+  color: #2a2a2a;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .options-message {
@@ -272,21 +280,33 @@ a {
   text-decoration: none;
 }
 
-ul {
-  font-family: 'Source Sans Pro', sans-serif;
-  width: 20vw;
-  margin: 1.5rem;
-  display: inline-flex;
+
+ol {
+  display: flex;
   flex-direction: column;
-  border: 0.5px solid #888888;
-  box-shadow: 2px 2px 2px 1px #888888;
+  list-style-type: disc;
+  width: 70vw;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+ }
+
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 70vw;
+  padding: 1rem;
 }
 
 li {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.2em;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
   color: #2a2a2a;
-  padding: 0.4rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
 }
 
 .li-style1 {
@@ -295,10 +315,10 @@ li {
   color: #004c7b;
 }
 
-hr {
+/* hr {
   background-color: #fff;
 	border-top: 2px dashed #8c8b8b;
-}
+} */
 
 .link {
   color: #004c7b;
