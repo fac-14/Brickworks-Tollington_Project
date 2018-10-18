@@ -1,7 +1,7 @@
 import React from 'react';
-if(process.env.NODE_ENV !=='test'){
+
 import BikeImg from '../../../public/images/bike.jpg';
-}
+
 
 const Projects = () => 
 // return(    
