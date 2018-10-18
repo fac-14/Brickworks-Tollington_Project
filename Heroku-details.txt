@@ -1,7 +1,7 @@
 ### URL
 Heroku.com 
 
-### Login
+### Login: e-mail as username
 miss.array42@gmail.com
 
 ### Temporary password
