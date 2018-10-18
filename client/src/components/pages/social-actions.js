@@ -22,7 +22,7 @@ class SocialActions extends React.Component {
       //set allEvents state
       this.setState( { allEvents: response});
       //pass data to parent
-     
+      this.props.extractData(this.state.allEvents);
     })
     
     .catch(err => console.log(err));
@@ -31,7 +31,7 @@ class SocialActions extends React.Component {
     .then(response => {
    
     this.setState( { pastEvents : response});
-    
+    this.props.extractData(this.state.pastEvents);
     
   })
 
@@ -51,8 +51,9 @@ class SocialActions extends React.Component {
       <div className='wrapper'>
         <h1 data-testid="social-actions-page">Social Actions</h1>
       
-      <h2>Upcoming Events</h2>
-
+      
+      <main>
+      <h2>Current Events</h2>
       {allEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
       ))}
@@ -63,10 +64,10 @@ class SocialActions extends React.Component {
       {pastEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
       ))}
-          
     <br></br>
     <br></br>         
-    <button className='button-large' onClick={this.addEvent}>Register an interest to start a social action</button>
+    <button className='button-large' onClick={this.addEvent}>Express Interest</button>
+    </main>
     </div>
     )
   }
