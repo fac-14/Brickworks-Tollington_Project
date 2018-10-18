@@ -1,0 +1,15 @@
+### URL
+Heroku.com 
+
+### Login
+miss.array42@gmail.com
+
+### Temporary password
+Tollington14
+
+### Run locally
+`$ heroku local web`
+
+### Run on web
+$ npm start
+

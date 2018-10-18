@@ -167,6 +167,16 @@ p {
   color: #2a2a2a;
   padding-top: 40px;
   padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.strong-txt {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2a2a2a;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 /*MAIN CONTENT*/
@@ -217,20 +227,30 @@ a {
   text-decoration: none;
 }
 
-ul {
+ol {
   margin: auto;
-  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   width: 65vw;
+  padding: 3 6rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+  margin-bottom: 1rem;
+  padding: 3 6rem;
 }
 
 li {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #2a2a2a;
   padding: 0.2rem;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 0.5rem;
 }
 
 .li-style1 {
