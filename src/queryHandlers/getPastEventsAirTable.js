@@ -19,6 +19,7 @@ exports.get = (request, response) => {
       reqdTime = reqdTime.split(':');
       let finalTime = reqdTime[0] + ':' + reqdTime[1];
       record.fields.event_date_time = reqdDate + ' ' + finalTime; 
+      record.fields.event_name = record.fields.event_name + record.id;
       return record;
     })
     fetchNextPage();

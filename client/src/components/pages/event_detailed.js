@@ -1,33 +1,63 @@
 import React from 'react';
-import {EventComp} from './eventComp';
-// import { satisfies } from 'semver';
+import {SingleEvent} from './eventComp';
+import getOneEvent from '../utils/utilsgetOneEvent'
 
 class EventDetailed extends React.Component {
 
   constructor(props){
     super(props)
     this.state = {
-      data:{}
+      sendData:'rec' + this.props.location.pathname.split('rec')[1],
+      recData: []
     }
   }
+
+  componentDidMount () {
+  
+    const sendData = JSON.stringify(this.state.sendData)
+    console.log('data', sendData)
+    fetch('/api/queryARecord', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: sendData,
+    })
+      .then(res => {
+       return res.json()
+       
+      })
+      .then(data => {
+        console.log(data);
+        this.setState({recData: [data]})
+      })
+      .catch(err => {
+        console.log('ERROR IS', err);
+        this.props.history.push('/500error');
+      })
+     
+    }
+// if(this.props.data !== {}){
+  
+// }
+  
+
 
   render()  {
   
     return (
       <div data-testid="event-detailed" className='wrapper'>
-      <h1 data-testid="social-actions-page">Social Action In Your Community</h1>
+        <h1 data-testid="social-actions-page">Social Action In Your Community</h1>
       <ul>
-      {this.props.data.filter(element => {
-      const address = this.props.location.pathname.split('/');
-      const index = address.length - 1;
-      return element.fields.event_name ===address[index]
-      }).map( event => (
-        <EventComp key={event.fields.event_id} {...event.fields} /> 
-      ))}
-      </ul>
+    {this.state.recData.map( event => (
+        <SingleEvent key={event.fields.event_id} {...event.fields} /> 
+      ))} 
+
+        </ul>
       </div>
     )
   }
 }
+
 
 export default EventDetailed;
