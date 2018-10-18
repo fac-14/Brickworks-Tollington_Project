@@ -210,6 +210,14 @@ p {
   padding-bottom: 2rem;
 }
 
+.options-message-two {
+  font-size: 1.4rem;
+  color: #2a2a2a;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
 /*MAIN CONTENT*/
 
 main {
@@ -324,6 +332,10 @@ form > input {
   background-color: #eeeeee;
 }
 
+textarea {
+  margin-bottom: 2rem;
+}
+
 .red-asterisk {
   color: red;
   font-size: 1.5rem;
@@ -400,6 +412,7 @@ textarea {
 }
 
 form > button:disabled {
+  margin-top: 2rem;
   background-color: lightgray;
 }
 
