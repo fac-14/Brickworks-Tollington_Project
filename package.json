@@ -64,5 +64,8 @@
     "react-testing-library": "^5.2.0",
     "supertest": "^3.3.0"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "engines": {
+    "node": "v10.6.0"
+  }
 }

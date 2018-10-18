@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var getAllEventsAirTable = require('./queryHandlers/getAllEventsAirTable');
 var contactUs = require('./queryHandlers/contactUs');
 var getPastEventsAirTable = require('./queryHandlers/getPastEventsAirTable');
+const path = require('path')
 
 const app = express();
 
@@ -15,6 +16,10 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '..', 'dist')));
+
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static(path.join(__dirname, ' ')))
+// }
 
 app.get('/api/getAllEventsAirTable', getAllEventsAirTable.get);
 app.get('/api/getPastEventsAirTable', getPastEventsAirTable.get)
