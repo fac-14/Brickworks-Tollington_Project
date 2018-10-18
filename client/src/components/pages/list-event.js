@@ -97,7 +97,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
   render() {
     return ( 
       <div className='wrapper'>
-    <h1>Register an interest to collaborate or post a social action</h1>
+      <h1>Contact Us</h1>
       <main>
       <p className='options-message'>Please note that Name, Email and Description are required fields</p>
       <form>
@@ -105,14 +105,12 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <input type="text" id="name" name="name" value={this.state.name} onChange= {this.handleChange}/>
         <label className='form-label' htmlFor="email">Email  <span className='red-asterisk'>*</span></label>
         <input type="text" id="email" name="email" value={this.state.email} onChange= {this.handleChange}/>
-        <label className='form-label' htmlFor="phone">Telephone number</label>
+        <label className='form-label' htmlFor="phone">Telephone Number</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange= {this.handleChange}/>
         <label className='form-label' htmlFor="eventTitle">
-        Title of social action</label>
+        Title of Social Action</label>
         <input type="text" id="eventTitle" name="eventTitle" value={this.state.eventTitle} onChange= {this.handleChange}/>
-        {/* <label htmlFor="description">Event Details</label>
-        <input type="text" id="description" name="description" value={this.state.description} onChange= {this.handleChange}/> */}
-        <label className='form-label' htmlFor="description">Description of social action   <span className='red-asterisk'>*</span></label>
+        <label className='form-label' htmlFor="description">Description of Social Action   <span className='red-asterisk'>*</span></label>
         <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
 
         <label className='form-label' htmlFor="date">Date</label>
@@ -122,7 +120,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <label className='form-label' htmlFor="venue">Venue</label>
         <input type="text" id="venue" name="venue" value={this.state.venue} onChange= {this.handleChange}/>
 
-        <p className='options-message'>Please check the options applicable to you</p>
+        <p className='options-message-two'>Please check the options applicable to you</p>
 
         <div className="choices">
           <span className="choices-text">I would like to hire space</span>
@@ -151,12 +149,10 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <button className="button-large" type="submit" onClick={this.handleSubmit} disabled= { !this.state.formValid} >Submit</button>
       </form>
       </main>
-
       <div>
       <FormErrors formErrors={this.state.formErrors} />
     </div>
-
-      </div>
+    </div>
     )
   }
 }

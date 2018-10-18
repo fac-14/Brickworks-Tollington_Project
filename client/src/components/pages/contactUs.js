@@ -89,7 +89,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
   render() {
     return (
     <div className='wrapper'>
-    <h1>Register an interest to start a social action</h1>
+    <h1>Contact Us</h1>
     <main>
     <p className='options-message'>Please note that Name, Email and Description are required fields</p>
       <form onSubmit={this.handleSubmit}>
@@ -97,9 +97,9 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
         <label htmlFor="email">Email  <span className='red-asterisk'>*</span></label>
         <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        <label htmlFor="phone">Telephone number</label>
+        <label htmlFor="phone">Telephone Number</label>
         <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange} />
-        <label htmlFor="description">Description of social action  <span className='red-asterisk'>*</span></label>
+        <label htmlFor="description">Description of Social Action  <span className='red-asterisk'>*</span></label>
         <textarea name="description" id="description" cols="40" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
         {/* <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} /> */}
         <p className='options-message'>Please click on the options that apply</p>
@@ -107,7 +107,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <div className="choices">
           <span className="choices-text">I want to connect with a local Community Organiser</span>
           <label className="label-checkbox" htmlFor="cntWithCommunityAdviser">
-              <input
+              <input className='checkbox'
                 type="checkbox"
                 id="cntWithCommunityAdviser"
                 name="cntWithCommunityAdviser"
@@ -121,7 +121,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <span className="choices-text">I want to train as a Community Organiser?
         </span>
           <label className="label-checkbox" htmlFor="trainCommunityAdviser">
-            <input
+            <input className='checkbox'
               type="checkbox"
               id="trainCommunityAdviser"
               name="trainCommunityAdviser"

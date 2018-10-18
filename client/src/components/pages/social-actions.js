@@ -64,6 +64,8 @@ class SocialActions extends React.Component {
         <EventComp key={event.fields.event_id} {...event.fields} /> 
       ))}
           
+    <br></br>
+    <br></br>         
     <button className='button-large' onClick={this.addEvent}>Register an interest to start a social action</button>
     </div>
     )
