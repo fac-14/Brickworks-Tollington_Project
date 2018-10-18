@@ -42,7 +42,7 @@ const TopTen= () => (
             </label>
             <p> I am already doing a social action, I want to collaborate with others to build my social action idea</p>
             <label htmlFor="list-event">
-            <Link to='/list-event'><h3 className='link'>Click here to register an interest to promote a social action</h3></Link>
+            <Link to='/list-event'><h3 className='link'>Click here to register an interest to collaborate or promote a social action</h3></Link>
             </label>
 
 

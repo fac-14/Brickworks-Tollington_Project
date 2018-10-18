@@ -125,7 +125,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <p className='options-message'>Please check the options applicable to you</p>
 
         <div className="choices">
-          <span className="choices-text">I would like to list this event</span>
+          <span className="choices-text">I would like to hire space</span>
         <label className='form-label' htmlFor="hireSpace">
         <input className='checkbox'
           type="checkbox"
