@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var getAllEventsAirTable = require('./queryHandlers/getAllEventsAirTable');
 var contactUs = require('./queryHandlers/contactUs');
 var getPastEventsAirTable = require('./queryHandlers/getPastEventsAirTable');
-
+var queryARecord = require('./queryHandlers/queryARecord');
 const app = express();
 
 
@@ -21,7 +21,21 @@ app.use(express.static(path.join(__dirname, '..', 'dist')));
 // }
 
 app.get('/api/getAllEventsAirTable', getAllEventsAirTable.get);
-app.get('/api/getPastEventsAirTable', getPastEventsAirTable.get)
+app.get('/api/getPastEventsAirTable', getPastEventsAirTable.get);
+app.post('/api/queryARecord', (req, res)=> {
+    // console.log(Object.keys(req.body)[0])
+    queryARecord('social_action_events', JSON.parse(Object.keys(req.body)[0]))
+    // .then(result => result.fields.json())
+        
+        .then((data)=> {
+            console.log(data)
+            res.send(data)
+        })
+        
+        .catch((err)=> {
+            console.log('erroooor',{err})
+        });
+})
 // POST route from contact form
 app.post('/api/contactUs', contactUs.post);
 app.post('/api/event-proposal', contactUs.post);
