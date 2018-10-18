@@ -39,6 +39,7 @@ const EventByThemeComp = ({ event_id, event_name, event_description, date_time, 
 
 const SingleEvent = ({ event_id, event_name, event_description, event_date_time, event_location, fullname_event_organiser, 
   email_event_organiser, telephone_event_organiser, Photo}) => {
+    if(Photo){
   return (
     <div key={event_id} >
       <li>
@@ -54,6 +55,24 @@ const SingleEvent = ({ event_id, event_name, event_description, event_date_time,
     </div>
   )
 }
+else {
+  return(
+    <div key={event_id} >
+    <li>
+      {event_name}
+      {event_description}
+      {event_date_time}
+      {event_location}
+      {fullname_event_organiser}
+      {email_event_organiser}
+      {telephone_event_organiser}
+    </li>
+    
+  </div>
+
+  )
+}
+  }
 const FormErrors = ({formErrors}) =>
 <div className='formErrors'>
 {Object.keys(formErrors).map((fieldName, i) => {
@@ -65,6 +84,5 @@ const FormErrors = ({formErrors}) =>
     return '';
   }
 })}
-
 </div>
 export { SingleEvent, FormErrors, EventComp, EventByThemeComp };

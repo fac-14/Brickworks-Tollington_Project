@@ -11,7 +11,7 @@ import {Error500} from './pages/500error';
 import {Faq} from './pages/faq';
 import {Resources} from './pages/resources';
 import {Inspiration} from './pages/inspirations';
-import {About} from './pages/about';
+
 import {TopTen} from './pages/topten';
 import ContactUs from './pages/contactUs';
 import {Projects} from './pages/projects';
@@ -43,7 +43,7 @@ class App extends React.Component {
         <Route exact path='/' component= { Home } />
         <Route path='/social-actions' render={(props) => <SocialActions {...props} extractData={this.extractData} />}/>
         <Route path='/list-event' component= { ListEvent } />
-        <Route path='/about' component = {About} /> 
+       
         <Route path='/event-detailed' render={(props) => <EventDetailed {...props} data={this.state.data} />}/>
         <Route path='/faq' component = {Faq} />
         <Route path='/resources' component = {Resources} />
