@@ -9,12 +9,16 @@ const app = express();
 
 
 app.use(bodyParser.urlencoded({
-    extended: true,
+    extended: false,
 }))
 
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '..', 'dist')));
+
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static(path.join(__dirname, ' ')))
+// }
 
 app.get('/api/getAllEventsAirTable', getAllEventsAirTable.get);
 app.get('/api/getPastEventsAirTable', getPastEventsAirTable.get);
@@ -35,8 +39,8 @@ app.post('/api/queryARecord', (req, res)=> {
 // POST route from contact form
 app.post('/api/contactUs', contactUs.post);
 app.post('/api/event-proposal', contactUs.post);
-if(process.env.NODE_ENV === 'test'){
-    app.get("/test500",(req, res, next) => {
+if (process.env.NODE_ENV === 'test') {
+    app.get("/test500", (req, res, next) => {
         try {
             throw new Error("example error")
         } catch (e) {
@@ -46,14 +50,14 @@ if(process.env.NODE_ENV === 'test'){
 }
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
-   });
+});
 // router.use((err,req,res,next)=>{
 //     res.status(404);
 //     res.render('404');
 //   });
-  //500 error express route
-  app.use((err,req,res,next)=>{
+//500 error express route
+app.use((err, req, res, next) => {
     res.status(500);
     res.render('500');
-  });
+});
 module.exports = app;
