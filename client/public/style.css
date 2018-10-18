@@ -141,8 +141,8 @@
 }
 
 .menu-open {
-  transform: translate3d(0vw, 0, 0)
- } 
+  transform: translate3d(0vw, 0, 0);
+ }
 
  /*HEADINGS*/
 
@@ -202,10 +202,12 @@ p {
 }
 
 .options-message {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #2a2a2a;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 /*MAIN CONTENT*/
@@ -215,7 +217,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
   /*TEXT CONTAINERS*/
@@ -236,6 +238,8 @@ main {
 }
 
 .hub-description-three {
+  font-size: 1.1em;
+  font-weight: bold;
   padding-top: 1rem;
 }
 
@@ -309,12 +313,12 @@ form {
   font-size: 1.2em;
   display: flex;
   flex-direction: column;
-  margin: 4rem 8rem;
+  margin: 2rem;
 }
 
 form > input {
   height: 2rem;
-  width: 15rem;
+  width: 27rem;
   margin-bottom: 2rem;
   border-radius: 5px;
   background-color: #eeeeee;
@@ -336,7 +340,7 @@ textarea {
 }
 
 .choices {
-  display: flex;
+  line-height: 2rem;
 }
 
 .label-checkbox {
@@ -347,6 +351,7 @@ textarea {
 .checkbox {
   border-radius: 5%;
   width: 2rem;
+  height: 1rem;
 }
 
 .error-container {
