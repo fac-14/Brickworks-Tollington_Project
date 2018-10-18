@@ -13,10 +13,10 @@ exports.post = (req, res) => {
     // host: 'smtp.gmail.com',
     // port: 465,
     // secure: true,
-    service: 'Gmail',
+    service: 'gmail',
     auth: {
-      user: EMAIL,
-      pass: GPASS
+      user: `brickworks.web.app@gmail.com`,
+      pass: `hanleycrouch1?`
     }
   });
 
@@ -26,7 +26,7 @@ exports.post = (req, res) => {
   mailOpts = {
     from: formData.name + ' &lt;' + formData.email + '&gt;',
     // to: `sangitasunuwar@gmail.com`,
-    to: EMAIL,
+    to: `sangitasunuwar@gmail.com`,
     // `${result['color 5'] ? 'color 5 exists!' : 'color 5 does not exist!'}`
     subject: 'New message from contact form at Start a social action at Brickworks app',
     text: `name: ${formData.name} 
@@ -46,7 +46,8 @@ exports.post = (req, res) => {
     console.log(req.body.eventProposal);
   mailOpts = {
     from: formData.name + ' &lt;' + formData.email + '&gt;',
-    to: EMAIL,
+    // to: EMAIL,
+    to: `sangitasunuwar@gmail.com`,
     subject: 'New message from contact form at promote/collaborate my social action at Brickworks app',
     // text: `${formData.name} (${formData.email}) says: ${formData.description}`
     text: `name: ${formData.name} 

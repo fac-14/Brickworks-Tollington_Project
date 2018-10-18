@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node src/server.js",
+    "start": " node src/server.js",
     "report-coverage": "codecov",
     "parcel:dev": "parcel client/public/index.html",
     "parcel:watch": "parcel watch client/public/index.html",
     "parcel:build": "parcel build client/public/index.html",
-    "dev": "concurrently --killall node \"npm run parcel:watch\" \"nodemon src/server.js\""
+    "dev": "concurrently --killall node \"npm run parcel:watch\" \"nodemon src/server.js\"",
+    "heroku-prebuild": "",
+    "heroku-postbuild": "",
+    "postinstall": "npm run parcel:build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
     "airtable": "^0.5.7",
     "ajv": "^6.5.4",
     "audit": "0.0.6",
+    "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
     "env2": "^2.2.2",
     "es6-promise": "^4.2.5",
@@ -51,7 +55,6 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "body-parser": "^1.18.3",
     "codecov": "^3.1.0",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
@@ -64,5 +67,8 @@
     "react-testing-library": "^5.2.0",
     "supertest": "^3.3.0"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "engines": {
+    "node": "v10.6.0"
+  }
 }

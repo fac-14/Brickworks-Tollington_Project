@@ -22,13 +22,12 @@ toggleMenu = () => {
       icon.className='image image-closed';
       menu.className='menu menu-closed';
     }
-
 }
   
   render() {
     return (
     <nav className="nav">
-    <div className='menu-con'>
+    <div id='menuDiv' className='menu-con-closed'>
     <div id="menu" data-testid="actual-menu" className="menu menu-closed">
       <label className='' htmlFor="home"> 
         <Link className='nav-link' data-testid="home" onClick={this.toggleMenu} to='/'>Home</Link>
