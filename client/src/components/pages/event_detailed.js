@@ -2,7 +2,6 @@ import React from 'react';
 import {SingleEvent} from './eventComp';
 import getOneEvent from '../utils/utilsgetOneEvent'
 
-
 class EventDetailed extends React.Component {
 
   constructor(props){
@@ -46,7 +45,6 @@ class EventDetailed extends React.Component {
 
   render()  {
   
-
     return (
       <div data-testid="event-detailed" className='wrapper'>
         <h1 data-testid="social-actions-page">Social Action In Your Community</h1>

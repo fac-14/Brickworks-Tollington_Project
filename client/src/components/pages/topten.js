@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const TopTen= () => (
     <div data-testid="topten-page" className='wrapper'>
-        <h1>Things To Think About</h1>
+        <h1>Top Ten Tips</h1>
         <main>
             <h2>Social actions takes time, energy and passion. Here's our 10 top tips to get you started:</h2>
             <div className='hub-description-two'>

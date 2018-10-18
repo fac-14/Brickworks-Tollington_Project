@@ -3,7 +3,11 @@
 }
 
 .background-img {
+<<<<<<< HEAD
   /* height: 100vh; */
+=======
+  height: 100%;
+>>>>>>> master
   background-image: url('./images/Brickworks-bacgkround.jpeg');
   background-size: cover; 
   /* background-color: #FAFAFA; */
@@ -29,7 +33,7 @@
   width: 75%;
   margin: auto;
   background-color: #ffffff;
-  min-height: 94vh;
+  min-height: 100vh;
 }
 
  /*NAVBAR*/
@@ -49,8 +53,12 @@
     width: 30px;
     height: 30px;
     margin: 10px;
+<<<<<<< HEAD
   
     overflow: hidden;
+=======
+    cursor: pointer;
+>>>>>>> master
 }
 .image span {
     margin: 0 auto;
@@ -117,16 +125,29 @@
   background-color: aquamarine;
   transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
   overflow-y: auto;
+<<<<<<< HEAD
   /* z-index: 200000000; */
 }
+=======
+  padding-top: 3rem;
+}
+
+/* .menu-con {
+  position: absolute;
+  left: 1vw;
+  width: 30vw;
+  height: 100vh;
+  overflow: hidden;
+} */
+>>>>>>> master
 
 .menu-closed {
   transform: translate3d(-60vw, 0, 0);
 }
 
 .menu-open {
-  transform: translate3d(0vw, 0, 0)
- } 
+  transform: translate3d(0vw, 0, 0);
+ }
 
  /*HEADINGS*/
 
@@ -176,6 +197,26 @@ p {
   font-size: 1em;
 }
 
+<<<<<<< HEAD
+=======
+.options-message {
+  font-size: 1.4rem;
+  color: #2a2a2a;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.options-message-two {
+  font-size: 1.4rem;
+  color: #2a2a2a;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+>>>>>>> master
 /*MAIN CONTENT*/
 
 main {
@@ -183,6 +224,10 @@ main {
   flex-direction: column;
   align-items: center;
   justify-items: center;
+<<<<<<< HEAD
+=======
+  padding-bottom: 2rem;
+>>>>>>> master
 }
 
   /*TEXT CONTAINERS*/
@@ -202,12 +247,20 @@ main {
   color: #2a2a2a;
 }
 
+<<<<<<< HEAD
 /* .hub-description-three {
   margin: 1rem 6rem;
   font-size: 1.6rem;
   text-align: center;
   color: #2a2a2a;
 } */
+=======
+.hub-description-three {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+>>>>>>> master
 
 .hub-description-four {
   margin: 2rem 8rem;
@@ -225,19 +278,31 @@ a {
 }
 
 ul {
+<<<<<<< HEAD
   margin: auto;
   margin-bottom: 1rem;
   display: flex;
+=======
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 20vw;
+  margin: 1.5rem;
+  display: inline-flex;
+>>>>>>> master
   flex-direction: column;
-  width: 65vw;
+  border: 0.5px solid #888888;
+  box-shadow: 2px 2px 2px 1px #888888;
 }
 
 li {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
   color: #2a2a2a;
+<<<<<<< HEAD
   padding: 0.2rem;
   /* margin-bottom: 1rem; */
+=======
+  padding: 0.4rem;
+>>>>>>> master
 }
 
 .li-style1 {
@@ -253,8 +318,12 @@ hr {
 
 
 .link {
+<<<<<<< HEAD
   color: #4AAFE7;
   padding: 1rem;
+=======
+  color: #004c7b;
+>>>>>>> master
   text-decoration: underline;
 }
 
@@ -287,17 +356,29 @@ form {
   font-size: 1.2em;
   display: flex;
   flex-direction: column;
-  margin: 4rem 8rem;
+  margin: 2rem;
 }
 
 form > input {
   height: 2rem;
-  width: 15rem;
+  width: 27rem;
   margin-bottom: 2rem;
   border-radius: 5px;
   background-color: #eeeeee;
 }
 
+<<<<<<< HEAD
+=======
+textarea {
+  margin-bottom: 2rem;
+}
+
+.red-asterisk {
+  color: red;
+  font-size: 1.5rem;
+  }
+
+>>>>>>> master
 label {
   padding-bottom: 0.5rem;
 }
@@ -307,14 +388,25 @@ textarea {
   border-radius: 5px;
 }
 
+<<<<<<< HEAD
 .checkbox-div {
   display: flex;
   margin-bottom: 2rem;
+=======
+.choices {
+  line-height: 2rem;
+}
+
+.label-checkbox {
+  margin-right: 0;
+  margin-left: auto;
+>>>>>>> master
 }
 
 .checkbox {
   border-radius: 5%;
   width: 2rem;
+  height: 1rem;
 }
 
 /*BUTTONS*/
@@ -349,6 +441,7 @@ textarea {
   background-color: #84E1FF;
 }
 
+<<<<<<< HEAD
 .form-button {
   margin: auto;
   border-radius: 5px;
@@ -362,6 +455,11 @@ textarea {
   box-shadow: 1px 1px 1px 1px #888888;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
+=======
+form > button:disabled {
+  margin-top: 2rem;
+  background-color: lightgray;
+>>>>>>> master
 }
 
 /* FOOTER */
@@ -409,9 +507,18 @@ h4 {
   font-size: 1.2em;
 }
 
+<<<<<<< HEAD
 p {
   font-size: 1em;
 }
+=======
+  ul {
+    width: 80vw;
+    margin: auto;
+    display: block;
+    padding: 0.5rem;
+  }
+>>>>>>> master
 
 ul {
   width: 90vw;
@@ -433,6 +540,12 @@ ul {
   margin-top: 5rem;
 }
 
+<<<<<<< HEAD
+=======
+  .button-large {
+    margin-top: 1rem;
+  }
+>>>>>>> master
 }
 
 @media only screen and (max-width: 1070px) {
@@ -446,7 +559,14 @@ ul {
   }
 
   h2 {
-    margin: 1.5rem 1.5rem; 
+    margin: 1.5rem; 
+  }
+
+  ul {
+    width: 70vw;
+    margin: auto;
+    display: block;
+    padding: 0.5rem;
   }
 
   .link {
