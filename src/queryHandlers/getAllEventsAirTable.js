@@ -25,9 +25,11 @@ exports.get = (request, response) => {
       let reqdTime = record.fields.event_date_time.split('T')[1];
       reqdTime = reqdTime.split(':');
       let finalTime = reqdTime[0] + ':' + reqdTime[1];
-      record.fields.event_date_time = reqdDate + ' ' + finalTime; 
+      record.fields.event_date_time = reqdDate + ' ' + finalTime;
+      record.fields.event_name = record.fields.event_name + record.id;
+      console.log('new name',record.fields.event_name);
       return record;
-    })
+      })
     
     fetchNextPage();
   }, (err) => {

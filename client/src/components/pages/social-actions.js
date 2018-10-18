@@ -22,7 +22,7 @@ class SocialActions extends React.Component {
       //set allEvents state
       this.setState( { allEvents: response});
       //pass data to parent
-      this.props.extractData(this.state.allEvents);
+     
     })
     
     .catch(err => console.log(err));
@@ -31,7 +31,7 @@ class SocialActions extends React.Component {
     .then(response => {
    
     this.setState( { pastEvents : response});
-    this.props.extractData(this.state.pastEvents);
+    
     
   })
 
