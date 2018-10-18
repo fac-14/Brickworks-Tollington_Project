@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var getAllEventsAirTable = require('./queryHandlers/getAllEventsAirTable');
 var contactUs = require('./queryHandlers/contactUs');
 var getPastEventsAirTable = require('./queryHandlers/getPastEventsAirTable');
-const path = require('path')
 
 const app = express();
 
