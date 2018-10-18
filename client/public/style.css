@@ -146,15 +146,16 @@
 
  /*HEADINGS*/
  h1 {
+  height: 3.5rem;
   background-color: #7e7e7e;
   color: #fafafa;
   text-align: center;
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -163,15 +164,15 @@
 h2 {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   color: #585858; 
 }
 
 h3 {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #585858; 
 }
 
@@ -195,7 +196,7 @@ h5 {
 
 p {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1em;
+  font-size: 1.2rem;
 }
 
 .strong-txt {
@@ -317,6 +318,8 @@ li {
 .link {
   color: #004c7b;
   text-decoration: underline;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .resource-link {

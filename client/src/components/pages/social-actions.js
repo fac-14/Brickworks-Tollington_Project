@@ -51,8 +51,9 @@ class SocialActions extends React.Component {
       <div className='wrapper'>
         <h1 data-testid="social-actions-page">Social Actions</h1>
       
+      
+      <main>
       <h2>Current Events</h2>
-
       {allEvents.map( event => (
         <EventComp key={event.fields.event_id} {...event.fields} /> 
       ))}
@@ -66,6 +67,7 @@ class SocialActions extends React.Component {
     <br></br>
     <br></br>         
     <button className='button-large' onClick={this.addEvent}>Express Interest</button>
+    </main>
     </div>
     )
   }
