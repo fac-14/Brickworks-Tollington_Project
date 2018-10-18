@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "parcel build client/public/index.html && node src/server.js",
+    "start": " node src/server.js",
     "report-coverage": "codecov",
     "parcel:dev": "parcel client/public/index.html",
     "parcel:watch": "parcel watch client/public/index.html",
     "parcel:build": "parcel build client/public/index.html",
     "dev": "concurrently --killall node \"npm run parcel:watch\" \"nodemon src/server.js\"",
     "heroku-prebuild": "",
-    "heroku-postbuild": ""
+    "heroku-postbuild": "",
+    "postinstall": "npm run parcel:build"
   },
   "repository": {
     "type": "git",
