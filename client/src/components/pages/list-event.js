@@ -124,8 +124,8 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         <p className='options-message-two'>Please check the options applicable to you</p>
 
         <div className="choices">
-          <span className="choices-text">I would like to hire space</span>
-        <label className='form-label' htmlFor="hireSpace">
+          <span className="choices-text">I would like to book space</span>
+        <label className='label-checkbox' htmlFor="hireSpace">
         <input className='checkbox'
           type="checkbox"
           id="hireSpace"
@@ -135,9 +135,10 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         />
         </label></div>
 
+       
         <div className="choices">
           <span className="choices-text">I would like to list this event</span>
-        <label htmlFor="listEvent">
+        <label className="label-checkbox" htmlFor="listEvent">
         <input className='checkbox'
           type="checkbox"
           id="listEvent"
