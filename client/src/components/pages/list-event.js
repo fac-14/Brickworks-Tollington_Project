@@ -91,13 +91,14 @@ console.log('BEFORE SWITCH', this.state.nameValid);
       });
 
       this.setState({ name: '', email: '', phone: '', description: '', eventTitle: '', date: '', time: '', venue: '', hireSpace: false, listEvent: false, formErrors: {name: '', email: '', description: ''}, nameValid: false, emailValid: false, descriptionValid: false, formValid: false });
-  
+      alert('your form has been submitted, we will get back to you soon');
+
   }
 
   render() {
     return ( 
       <div className='wrapper'>
-      <h1>Contact Us</h1>
+      <h1>Contact us</h1>
       <main>
       <p className='options-message'>Please note that Name, Email and Description are required fields</p>
       <form>
