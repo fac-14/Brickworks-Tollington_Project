@@ -334,6 +334,15 @@ li {
   margin-bottom: 1rem;
 }
 
+.li-p-strong {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2a2a2a;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
 .li-style1 {
   font-size: 1.5em;
   font-weight: bold;
