@@ -119,6 +119,14 @@
   transform: translateX(-2px) rotate(-45deg);
 }
 
+.single-event-img {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 4rem;
+  width: 40vw;
+}
+
 .menu {
   position: absolute;
   height: 100vh;
@@ -293,13 +301,29 @@ ol {
   margin-bottom: 1rem;
  }
 
+ .single-event-container {
+   display: flex;
+   flex-direction: column;
+   margin: 4rem;
+   padding: 2rem;
+   justify-content: center;
+ }
+
+ .ul-single-event {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+  width: 50vw;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
 
 ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   width: 70vw;
-  padding: 1rem;
 }
 
 li {

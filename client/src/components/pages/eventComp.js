@@ -52,7 +52,7 @@ const SingleEvent = ({ event_id, event_name, event_description, event_date_time,
         {email_event_organiser}
         {telephone_event_organiser}
       </li>
-      <img src={Photo[0].url}/>
+      <img className='single-event-img' src={Photo[0].url}/>
     </div>
   )
 }
