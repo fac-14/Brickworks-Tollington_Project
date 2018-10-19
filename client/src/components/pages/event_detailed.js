@@ -48,12 +48,16 @@ class EventDetailed extends React.Component {
     return (
       <div data-testid="event-detailed" className='wrapper'>
         <h1 data-testid="social-actions-page">{this.props.location.pathname.split('rec')[0].split('/event-detailed/')[1]}</h1>
-      <ul>
+        <main>
+        <div single-event-container>
+      <ul className='ul-single-event'>
     {this.state.recData.map( event => (
         <SingleEvent key={event.fields.event_id} {...event.fields} /> 
       ))} 
 
         </ul>
+        </div>
+        </main>
       </div>
     )
   }
