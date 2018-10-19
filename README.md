@@ -11,8 +11,8 @@ Harry Mead
 Artemis Gause
 
 ### Graphics credits
-Menu and back-arrow credits: https://www.flaticon.com/
-Brickworks logo: https://hanleycrouch.wordpress.com/
+* Menu and back-arrow credits: https://www.flaticon.com/
+* Brickworks logo: https://hanleycrouch.wordpress.com/
 
 
 ### Deployed on Heroku
@@ -31,10 +31,11 @@ API ID
 Created
     Today at 3:24 PM
 
-### Deploy settings
-
-#### Build command
-    npm run parcel:build
+#### Technical commands
+* npm run parcel:build
+* npm run parcel:watch
+* npm run dev
+  
 
 ### Publish directory
     dist
@@ -44,9 +45,3 @@ Created
 
 ### Branch deploys
     Deploy only the production branch and its deploy previews
-
-
-## Technical commands
-npm run parcel:watch
-npm run parcel: build
-npm run dev
