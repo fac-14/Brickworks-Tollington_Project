@@ -18,7 +18,7 @@ class Faq extends React.Component {
                      <li><p className='li-p-strong'>&#8226; &ensp; If I list my social action event, where does it appear?</p>
                 <span className='li-content'>Your event can be listed through this App, which means all that are using the App will see your event. We will also list it on our website and through our social media, for examples, we can promote it via Twitter @BrickworksN4.</span></li>
                      <li><p className='li-p-strong'>&#8226; &ensp; Will it cost me to hire a meeting space at Brickworks and am I limited to specific days or times?</p>
-                <span className='li-content'>As we are developing Brickworks as a Social Action Hub we want to encourage local people to use the facilities this community centre offers. Brickworks is open seven days a week and from 08:00am through to 21:00 most days. We intend to offer the meeting space for free. Get in touch with us at Brickworks to find out more.</span></li>       
+                <span className='li-content'>As we are developing Brickworks as a Social Action Hub we want to encourage local people to use the facilities this community centre offers. Brickworks is open seven days a week and from 08:00 through to 21:00 most days. We intend to offer the meeting space for free. Get in touch with us at Brickworks to find out more.</span></li>       
                      <li><p className='li-p-strong'>&#8226; &ensp; How are my personal details that I am entering being used?</p>
                 <span className='li-content'>You can read the Brickworks Social Action Hub privacy policy</span><a href='../../../public/assets/privacy-policy-hcca.pdf'> here</a>.</li>
             </ul>
