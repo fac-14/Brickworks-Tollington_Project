@@ -26,18 +26,16 @@ class App extends React.Component {
     this.setState({data: data})
     console.log(data);
   }
-  // setBackground = () => {
-  //   if(process.env.NODE_ENV === 'test') {
-  //     this.setState({background: ''});
-  //   }
-  //   else {
-      
-  //   }
-  // }
+  setBackground = () => {
+    if(process.env.NODE_ENV === 'test') {
+      const background = document.getElementById('background');
+      background.classList.remove('background-img');
+    }
+  }
   render () {
   return (
     
-    <div className='background-img'>
+    <div id="background" className='background-img'>
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />
