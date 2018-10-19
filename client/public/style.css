@@ -414,7 +414,9 @@ textarea {
 }
 
 .choices {
-  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem; 
 }
 
 .label-checkbox {
@@ -426,6 +428,8 @@ textarea {
   border-radius: 5%;
   width: 2rem;
   height: 1rem;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .error-container {
