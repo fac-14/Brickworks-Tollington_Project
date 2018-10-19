@@ -7,7 +7,7 @@ const Projects = () =>
 // return(    
     <div className='wrapper'>
     
-    <h1 data-testid="projects-page">Project</h1>
+    <h1 data-testid="projects-page">Projects</h1>
     <main>
 
         {/* {if(process.env.NODE_ENV!== 'test') && */}

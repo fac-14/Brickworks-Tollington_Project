@@ -85,4 +85,36 @@ const FormErrors = ({formErrors}) =>
   }
 })}
 </div>
-export { SingleEvent, FormErrors, EventComp, EventByThemeComp };
+
+const UpcomingEvents = ({ allEvents}) => {
+  if(allEvents.length !== 0){
+    return (
+      <React.Fragment>
+        <h2>Current Events</h2>
+        {allEvents.map( event => (
+            <EventComp key={event.fields.event_id} {...event.fields} /> 
+          ))} 
+      </React.Fragment>
+  )
+  } else {
+    return '';
+  }
+}
+
+const PastEvents = ({ pastEvents}) => {
+  if(pastEvents.length !== 0){
+    return (
+      <React.Fragment>
+        <h2>Past Events</h2>
+        {pastEvents.map( event => (
+              <EventComp key={event.fields.event_id} {...event.fields} /> 
+            ))} 
+
+      </React.Fragment>
+    )
+    }else {
+      return '';
+    }
+  }
+
+export { SingleEvent, FormErrors, EventComp, EventByThemeComp, UpcomingEvents, PastEvents };
