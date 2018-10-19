@@ -18,6 +18,13 @@ class ContactUs extends React.Component {
   handleChange = event => {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
+    // if(target.type === 'checkbox'){
+    // const value = (target.checked)? 'Yes': 'No';
+    // }
+    // else {
+    //   const value =  target.value;
+    // }
+   
     this.setState({ [target.name]: value }, () => {this.validateField(target.name, value)});
  
   };
@@ -83,7 +90,7 @@ console.log('BEFORE SWITCH', this.state.nameValid);
       
     this.setState({ name: '', email: '', phone: '', description: '', cntWithCommunityAdviser: false,
     trainCommunityAdviser: false, formErrors: {name:'', email: '', description: ''}, nameValid: false,emailValid: false, descriptionValid: false, formValid: false });
-    
+    alert('your form has been submitted, we will get back to you soon');
   }
 
   render() {

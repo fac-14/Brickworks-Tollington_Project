@@ -12,10 +12,11 @@ exports.get = (request, response) => {
   }).eachPage((records, fetchNextPage) => {
     allRecords = [...allRecords, ...records];
     
-    allRecords.forEach( (record) => 
-    {
-      console.log(record.id);
-    });
+    console.log('get all events airtable at queries length=', allRecords.length)
+    // allRecords.forEach( (record) => 
+    // {
+    //   console.log(record);
+    // });
 
     allRecords = allRecords.map ( record => {
       // console.log(record.fields);

@@ -10,9 +10,6 @@ exports.post = (req, res) => {
  
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
-    // host: 'smtp.gmail.com',
-    // port: 465,
-    // secure: true,
     service: 'gmail',
     auth: {
       user: `brickworks.web.app@gmail.com`,
@@ -23,6 +20,8 @@ exports.post = (req, res) => {
   if(req.body.startSocialAction)
   {
   const formData = req.body.startSocialAction;
+  // formData.cntWithCommunityAdviser = ($formData.cntWithCommunityAdviser)? 'Yes': 'No';
+
   mailOpts = {
     from: formData.name + ' &lt;' + formData.email + '&gt;',
     // to: `sangitasunuwar@gmail.com`,
@@ -30,11 +29,11 @@ exports.post = (req, res) => {
     // `${result['color 5'] ? 'color 5 exists!' : 'color 5 does not exist!'}`
     subject: 'New message from contact form at Start a social action at Brickworks app',
     text: `name: ${formData.name} 
-           email: ${formData.email} 
-           description of social action: ${formData.description}
-           connect with a local Community Organiser:  ${formData.cntWithCommunityAdviser} ? 'yes': 'no'
-           interested in Community Organisers training: ${formData.trainCommunityAdviser}
-           `
+          email: ${formData.email} 
+          description of social action: ${formData.description}
+          connect with a local Community Organiser:  ${formData.cntWithCommunityAdviser}
+          interested in Community Organisers training: ${formData.trainCommunityAdviser}
+          `
     // text:`hello how are you`
   };
   console.log('mailOpts',mailOpts);  

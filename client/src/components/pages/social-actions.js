@@ -2,25 +2,32 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import getAllEvents from '../utils/utilsgetAllEvent';
 import getPastEvents from '../utils/utilsgetPastEvent';
-import {EventComp} from './eventComp';
+import {EventComp, UpcomingEvents, PastEvents} from './eventComp';
 
 class SocialActions extends React.Component {
   
-  constructor(props){
-    super(props)
-    this.state = {
-      allEvents : [],
-      pastEvents : [],
-    }
-  }
-
+  // constructor(props){
+  //   super(props)
+  //   this.state = {
+  //     allEvents : [],
+  //     pastEvents : [],
+  //     allEvntLoading : true,
+  //     pastEvntLoading: true,
+  //   }
+  // }
+state = {
+  allEvents : [],
+  pastEvents : [],
+  allEvntLoading : true,
+  pastEvntLoading: true,
+}
 
   componentDidMount() {
     
     getAllEvents()
     .then(response => {
       //set allEvents state
-      this.setState( { allEvents: response});
+      this.setState( { allEvents: response, allEvntLoading: false});
       //pass data to parent
       this.props.extractData(this.state.allEvents);
     })
@@ -30,7 +37,7 @@ class SocialActions extends React.Component {
     getPastEvents()
     .then(response => {
    
-    this.setState( { pastEvents : response});
+    this.setState( { pastEvents : response, pastEvntLoading:false});
     this.props.extractData(this.state.pastEvents);
     
   })
@@ -43,34 +50,45 @@ class SocialActions extends React.Component {
   }
   
   render() {
+    if (this.state.allEvntLoading || this.state.pastEvntLoading) {
+      return (
+        <div className='wrapper'>
+        <h1 data-testid="social-actions-page">Social Actions</h1>
+        <main>
+        <h3>loading...</h3>
+        </main>
+        </div>
+      )
+      
+    } 
+   
     const {allEvents} = this.state;
     const {pastEvents} = this.state;
 
     return (
       
+      // <React.Fragment>
       <div className='wrapper'>
         <h1 data-testid="social-actions-page">Social Actions</h1>
       
       
       <main>
-      <h2>Current Events</h2>
-      {allEvents.map( event => (
-        <EventComp key={event.fields.event_id} {...event.fields} /> 
-      ))}
-
+        
       
-      <h2>Past Events</h2>
+    <UpcomingEvents allEvents={this.state.allEvents} />
 
-      {pastEvents.map( event => (
-        <EventComp key={event.fields.event_id} {...event.fields} /> 
-      ))}
+    <PastEvents pastEvents={this.state.pastEvents}/>    
+      
     <br></br>
     <br></br>         
     <button className='button-large' onClick={this.addEvent}>Express Interest</button>
     </main>
     </div>
+    // </React.Fragment>
     )
   }
-}
+  }
+  
+
 
 export default SocialActions;

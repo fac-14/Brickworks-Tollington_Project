@@ -11,6 +11,7 @@ exports.get = (request, response) => {
     ]  
   }).eachPage((records, fetchNextPage) => {
     allRecords = [...allRecords, ...records];
+    
 
     allRecords = allRecords.map ( record => {
       // console.log(record.fields);
