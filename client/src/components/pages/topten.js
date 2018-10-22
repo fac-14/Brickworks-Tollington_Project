@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 const TopTen= () => (
     <div data-testid="topten-page" className='wrapper'>
         <h1>Top Ten Tips</h1>
+        <div id='sidebar'></div>
         <main>
             
-        <p className='strong-txt'>Engaging in social action takes time, energy and passion.
+        <p className='strong-txt-L'>Engaging in social action takes time, energy and passion.
             <br/>
             Here are our top 10 tips to get you started.</p>
-           <ol>
+           <ol className='ol-num'>
                <li>
                Identify a problem, challenge or issue in your neighbourhood and be specific about what you want to tackle.
                </li>
@@ -41,15 +42,18 @@ const TopTen= () => (
                 <li>Don't give up, have patience and be committed.</li>
            </ol>
 
-        <div>
-            <label htmlFor="all-events">
-            <Link to='/contactUs'><p className='link'>Click here to register an interest to start a social action!</p></Link>
+        <div id='top-ten-options'>
+        <p><label className='strong-txt-L' htmlFor="all-events">
+                <Link to='/contactUs'><span className='link'>Click here</span></Link><span> to register an interest to start a social action</span>
             </label>
-            <p>I am already carrying out a social action, I want to collaborate with others to build it further</p>
-            <label htmlFor="list-event">
-            <Link to='/list-event'><p className='link'>Click here to register an interest to promote a social action</p></Link>
+        </p>
+        <p> 
+            <label className='strong-txt-L'htmlFor="list-event">
+            <Link to='/list-event'><span className='link'>Click here</span></Link> to register an interest to promote a social action
             </label>
+        </p>
          </div>
+    
         </main>
     </div>
 )

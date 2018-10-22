@@ -64,8 +64,10 @@ state = {
         <div id='sidebar'></div>    
       
       <main>
+        <div className='flush-left'>
         <UpcomingEvents allEvents={this.state.allEvents} />
-        <PastEvents pastEvents={this.state.pastEvents}/>    
+        <PastEvents pastEvents={this.state.pastEvents}/>  
+        </div>  
         <br></br>
         <br></br>         
       <button className='button-large' onClick={this.addEvent}>I'm interested!</button>

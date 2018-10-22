@@ -11,13 +11,13 @@ const EventComp = ({ event_id, event_name, event_description, event_date_time, e
       <ul>
         <Link className='link-txt' key={event_id} to={'/event-detailed/' + event_name} >
         <li className='strong-txt-L'>{event_name.split('rec')[0]}</li>
-        <li>{event_description}</li>
+        <li className='li-content'>{event_description}</li>
         <li className='strong-txt-L'>Date & Time</li>
-        <li>{event_date_time}</li>
+        <li className='li-content'>{event_date_time}</li>
         <li className='strong-txt-L'>Location</li>
-        <li>{event_location}</li>
+        <li className='li-content'>{event_location}</li>
         <li className='strong-txt-L'>Frequency</li>
-        <li>{recurring_event_description}</li>
+        <li className='li-content'>{recurring_event_description}</li>
         {/* <li>{fullname_event_organiser}</li>
         <li>{email_event_organiser}</li>
         <li>{telephone_event_organiser}</li> */}
@@ -93,7 +93,7 @@ const UpcomingEvents = ({ allEvents}) => {
   if(allEvents.length !== 0){
     return (
       <React.Fragment>
-        <h2>Current Events</h2>
+        <h2 className='h2-left'>Current Social Actions</h2>
         {allEvents.map( event => (
             <EventComp key={event.fields.event_id} {...event.fields} /> 
           ))} 
@@ -108,7 +108,7 @@ const PastEvents = ({ pastEvents}) => {
   if(pastEvents.length !== 0){
     return (
       <React.Fragment>
-        <h2>Past Events</h2>
+      <h2 className='h2-left'>Past Social Actions</h2>
         {pastEvents.map( event => (
               <EventComp key={event.fields.event_id} {...event.fields} /> 
             ))} 
