@@ -27,7 +27,7 @@ toggleMenu = () => {
   render() {
     return (
     <nav className="nav">
-    <div id='menuDiv' className='menu-con-closed'>
+    <div id='menu-div' className='menu-con-closed'>
     <div id="menu" data-testid="actual-menu" className="menu menu-closed">
       <label className='' htmlFor="home"> 
         <Link className='nav-link' data-testid="home" onClick={this.toggleMenu} to='/'>Home</Link>

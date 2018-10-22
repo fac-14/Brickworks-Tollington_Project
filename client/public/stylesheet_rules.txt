@@ -1,0 +1,15 @@
+## Colours
+
+### Wrapper
+* Background: #FAFAFA (grey98)
+
+### Sidebar
+* Background: #EFEFEF
+
+### Header & Footer
+* Background: #7E7E7E
+
+## Fonts
+
+* h1: 1.6rem
+* h2: 
