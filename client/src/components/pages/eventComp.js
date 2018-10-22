@@ -9,12 +9,14 @@ const EventComp = ({ event_id, event_name, event_description, event_date_time, e
 
     
       <ul>
-        <Link key={event_id} to={'/event-detailed/' + event_name} >
-        <li className='li-style1'>{event_name.split('rec')[0]}</li>
-        
+        <Link className='link-txt' key={event_id} to={'/event-detailed/' + event_name} >
+        <li className='strong-txt-L'>{event_name.split('rec')[0]}</li>
         <li>{event_description}</li>
+        <li className='strong-txt-L'>Date & Time</li>
         <li>{event_date_time}</li>
+        <li className='strong-txt-L'>Location</li>
         <li>{event_location}</li>
+        <li className='strong-txt-L'>Frequency</li>
         <li>{recurring_event_description}</li>
         {/* <li>{fullname_event_organiser}</li>
         <li>{email_event_organiser}</li>

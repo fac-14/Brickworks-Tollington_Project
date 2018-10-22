@@ -23,7 +23,9 @@ body {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: 4px;
+  grid-template-rows: 5rem auto;
+  grid-column-gap: 4px;
+  grid-row-gap: 8px;
   grid-column: col-start / span 12;
   margin-left: 0;
   margin-right: 0;
@@ -37,7 +39,6 @@ body {
 
 .nav {
   position: absolute;
-  top: 0.25em;
   margin: 0 25 0 5px;
 }
 
@@ -58,6 +59,7 @@ body {
     width: 6vw;
     height: 6vh;
     margin-right: 10px;
+    padding-top: 20px;
     cursor: pointer;
 }
 
@@ -95,9 +97,9 @@ body {
   transform-origin: 50% 50%;
 }
 
-.image-closed span {
+/* .image-closed span {
 
-}
+} */
 
 .image-open span {
   /* position: fixed; */
@@ -105,25 +107,25 @@ body {
   transform: scaleY(0.7);
 }
 
-.image-closed span:after {
+/* .image-closed span:after {
 
-}
+} */
 
 .image-open span:after {
   transform: translateX(-2px) rotate(45deg);
 }
 
-.image-closed span:before {
+/* .image-closed span:before {
   
-}
+} */
 
 .image-open span:before {
   transform: translateX(-2px) rotate(-45deg);
 }
 
-#menu-div {
-  padding-top: 22px;
-}
+/* #menu-div {
+  
+} */
 
 .menu {
   position: absolute;
@@ -185,15 +187,14 @@ main {
   grid-row: 2 / span 3;
   align-items: center;
   justify-items: center;
-  margin: 1rem;
+  padding: 1rem;
   }
 
 #sidebar {
   grid-column: col-start / span 1;
   grid-row: 2 / 7;
   width: 0.01vw;
-  background-color: #f5f5f5;
-  margin-top: 0.5rem;
+  background-color:#efefef;
 }
 
 
@@ -204,17 +205,29 @@ main {
     flex-direction: column;
     margin: 1rem auto;
     font-family: 'Nunito', sans-serif;
-    font-size: 1.38rem;
+    font-size: 1.4rem;
     color: #2a2a2a;
   }
   
 
   /* RUNNING TEXT */
-running-text {
+running-txt {
   margin-left: 0.2rem;
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   color: #2a2a2a;
+  font-weight: normal;
+}
+
+running-txt-L {
+  font-size: 1.5rem;
+}
+
+.strong-txt-L {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #585858; 
 }
 
   /*EMPHASIS*/
@@ -230,6 +243,10 @@ running-text {
   /* LINKS */
   .link {
     color: #3343D7;
+  }
+
+  .link-txt {
+    text-decoration: none;
   }
 
   /*LISTS*/
@@ -367,7 +384,7 @@ acc-h3 {
   font-weight: 600;
   font-size: 1.7rem;
   color: #2a2a2a;
-  background-color: #67bdec;
+  background-color: #92d8d8;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -452,12 +469,11 @@ textarea {
 footer {
   grid-column: col-start / -1;
   grid-row: 6 / span 2;
-  height: 2rem; 
   text-align: center;
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   line-height: 1rem;
-  padding: 20px;
+  padding: 16px;
   color: whitesmoke;
   background-color: #7e7e7e;
   }
@@ -468,6 +484,7 @@ footer {
 
 @media screen and (min-width: 500px) and (orientation: landscape) {
 
+ 
   .nav {
     position: absolute;
     top: 1.25em;
@@ -486,24 +503,30 @@ footer {
       grid-column: col-start / -1;
       grid-row: 1 / 2;
       height: 5rem;
-      font-size: 2.6rem;
+      font-size: 2.5rem;
       line-height: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 
   #sidebar {
     grid-column: col-start / span 1;
     grid-row: 2 / 7;
     width: 10vw;
-    background-color: #f5f5f5;
   }
 
-  #hub-description {
-    
+  #hub-description {    
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     margin-left: 15rem;
     margin-right: 15rem;
-   
+    font-size: 1.6rem;   
   }
 
 }

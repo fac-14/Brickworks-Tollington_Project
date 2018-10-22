@@ -26,11 +26,12 @@ class Home extends React.Component {
             <div id='logo'>
               <img id='logo-img' src={logoImg} alt='Brickworks logo'/>
             </div> 
-            <p id='hub-description'>Brickworks is a social-action hub rooted in Tollington that actively fosters grass-roots action. Brickworks supports local people to contribute to collective action, build the community and create a better, more democratic society.
-           <br/>
-           <br/>
-           <span>Click 'Next' to find out more and get involved!</span>
+            <div id='hub-description'>
+            <p>Brickworks is a social-action hub rooted in Tollington that actively fosters grass-roots action. Brickworks supports local people to contribute to collective action, build the community and create a better, more democratic society.
+            </p>        
+            <p>Click 'Next' to find out more and get involved!
             </p>
+            </div>
             <button className='button-large' onClick={this.addEvent}>Next</button>
           </main>
         
