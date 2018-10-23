@@ -6,7 +6,15 @@ import {EventComp, UpcomingEvents, PastEvents} from './eventComp';
 
 class SocialActions extends React.Component {
   
-  
+  // constructor(props){
+  //   super(props)
+  //   this.state = {
+  //     allEvents : [],
+  //     pastEvents : [],
+  //     allEvntLoading : true,
+  //     pastEvntLoading: true,
+  //   }
+  // }
 state = {
   allEvents : [],
   pastEvents : [],
@@ -59,18 +67,24 @@ state = {
 
     return (
       
-    <div className='wrapper'>
+      // <React.Fragment>
+      <div className='wrapper'>
         <h1 data-testid="social-actions-page">Social Actions</h1>
-        <div id='sidebar'></div>    
+      
       
       <main>
-        <UpcomingEvents allEvents={this.state.allEvents} />
-        <PastEvents pastEvents={this.state.pastEvents}/>    
-        <br></br>
-        <br></br>         
-      <button className='button-large' onClick={this.addEvent}>I'm interested!</button>
-      </main>
+        
+      
+    <UpcomingEvents allEvents={this.state.allEvents} />
+
+    <PastEvents pastEvents={this.state.pastEvents}/>    
+      
+    <br></br>
+    <br></br>         
+    <button className='button-large' onClick={this.addEvent}>Express Interest</button>
+    </main>
     </div>
+    // </React.Fragment>
     )
   }
   }
