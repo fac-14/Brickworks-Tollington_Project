@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../../../public/images/Brickworks-logo1.png'; 
+import logoImg from '../../../public/images/Brickworks-logo1.png';
 
 class Home extends React.Component {
   
@@ -13,31 +13,28 @@ class Home extends React.Component {
   addEvent = () => {
     this.props.history.push('/social-actions');
   }
- 
 
   render() {
     return( 
       <div>
-        
         <div className='wrapper'>
-          <h1>Brickworks - Home</h1>
-          <div id='sidebar'></div>
-          <main>
+          <h1 ></h1>
+          <main data-testid="home-page">
             <div id='logo'>
               <img id='logo-img' src={logoImg} alt='Brickworks logo'/>
             </div> 
-            <div id='hub-description'>
-            <p>Brickworks is a social-action hub rooted in Tollington that actively fosters grass-roots action. Brickworks supports local people to contribute to collective action, build the community and create a better, more democratic society.
-            </p>        
-            <p>Click 'Next' to find out more and get involved!
+                <p className='hub-description-four'>Brickworks is a social-action hub rooted in Tollington that actively fosters grass-roots action and supports local people to build the community and create a better society.
+            <br/>
+            <br/>
+            Find out more and get involved!
             </p>
-            </div>
+            {/* <p className='hub-description-three'>Brickworks supports local people to contribute to collective action to build the community and create a better society.</p> */}
             <button className='button-large' onClick={this.addEvent}>Next</button>
           </main>
-        
         </div>
       </div>
-  )}
+    )}
 }
 
 export default Home;
+
