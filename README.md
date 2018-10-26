@@ -5,10 +5,10 @@ Brickworks - Tollington project
 MIT https://opensource.org/licenses/MIT
 
 # Contributors
-Sangita Sunuwar
-Emily Rever
-Harry Mead
-Artemis Gause
+Sangita Sunuwar,
+Emily Rever,
+Harry Mead,
+Artemis Gause,
 
 # Description
 An MVP built for promoting Brickworks, in the Tollington area, London, as a social-action hub for the local community.
@@ -53,6 +53,6 @@ API ID
 * React.js
 
 ## Technical commands
-`npm run parcel:watch`
-`npm run parcel: build`
-`npm run dev`
+* `npm run parcel:watch`
+* `npm run parcel: build`
+* `npm run dev`
