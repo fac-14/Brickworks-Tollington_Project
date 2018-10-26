@@ -43,15 +43,12 @@ const SingleEvent = ({ event_id, event_name, event_description, event_date_time,
     if(Photo){
   return (
     <div key={event_id} >
-      <li>
-        {event_name}
-        {event_description}
-        {event_date_time}
-        {event_location}
-        {fullname_event_organiser}
-        {email_event_organiser}
-        {telephone_event_organiser}
-      </li>
+      <li> {event_description}</li>
+      <li> {event_date_time}</li>
+      <li> {event_location}</li>
+      <li> {fullname_event_organiser}</li>
+      <li> {email_event_organiser}</li>
+      <li> {telephone_event_organiser}</li>
       <img className='single-event-img' src={Photo[0].url}/>
     </div>
   )
@@ -59,15 +56,12 @@ const SingleEvent = ({ event_id, event_name, event_description, event_date_time,
 else {
   return(
     <div key={event_id} >
-    <li>
-      {event_name}
-      {event_description}
-      {event_date_time}
-      {event_location}
-      {fullname_event_organiser}
-      {email_event_organiser}
-      {telephone_event_organiser}
-    </li>
+    <li> {event_description}</li>
+    <li> {event_date_time}</li>
+    <li> {event_location}</li>
+    <li> {fullname_event_organiser}</li>
+    <li> {email_event_organiser}</li>
+    <li> {telephone_event_organiser}</li>
     
   </div>
 
