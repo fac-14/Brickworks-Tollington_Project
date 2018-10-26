@@ -8,13 +8,14 @@ MIT https://opensource.org/licenses/MIT
 Sangita Sunuwar,
 Emily Rever,
 Harry Mead,
-Artemis Gause,
+Artemis Gause
 
 # Description
 An MVP built for promoting Brickworks, in the Tollington area, London, as a social-action hub for the local community.
 
 ### Graphics credits
 Menu and back-arrow credits: https://www.flaticon.com/
+
 Brickworks logo: https://hanleycrouch.wordpress.com/
 
 
