@@ -19,13 +19,13 @@ Brickworks logo: https://hanleycrouch.wordpress.com/
 
 
 ### Deployed on Heroku
-https://shielded-caverns-39269.herokuapp.com/
+https://brickworks-social-action.herokuapp.com/
 
 
 ### Deployment settings
 
 #### Website
-shielded-caverns-39269    
+brickworks-social-action    
 
 #### Repository
     https://github.com/fac-14/Brickworks-Tollington_Project
