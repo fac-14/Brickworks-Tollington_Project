@@ -85,7 +85,7 @@ const UpcomingEvents = ({ allEvents}) => {
   if(allEvents.length !== 0){
     return (
       <React.Fragment>
-        <h2>Current Events</h2>
+        <h2>Upcoming Events</h2>
         {allEvents.map( event => (
             <EventComp key={event.fields.event_id} {...event.fields} /> 
           ))} 
