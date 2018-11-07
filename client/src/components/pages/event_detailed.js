@@ -1,6 +1,7 @@
 import React from 'react';
 import {SingleEvent} from './eventComp';
 import getOneEvent from '../utils/utilsgetOneEvent'
+import logoImg from '../../../public/images/Brickworks-logo-small.png';
 
 class EventDetailed extends React.Component {
 
@@ -47,17 +48,21 @@ class EventDetailed extends React.Component {
   
     return (
       <div data-testid="event-detailed" className='wrapper'>
-        <h1 data-testid="social-actions-page">{this.props.location.pathname.split('rec')[0].split('/event-detailed/')[1]}</h1>
-        <main>
+    <h1 id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
+      
+    <div className="page-div">
+        <h1 data-testid="social-actions-page" className="page-heading" id="detail-event-heading">{this.props.location.pathname.split('rec')[0].split('/event-detailed/')[1]}</h1>
+        {/* <main> */}
         <div single-event-container>
-      <ul className='ul-single-event'>
+      <ul className='social-action-ul'>
     {this.state.recData.map( event => (
         <SingleEvent key={event.fields.event_id} {...event.fields} /> 
       ))} 
 
         </ul>
         </div>
-        </main>
+        </div>
+        {/* </main> */}
       </div>
     )
   }

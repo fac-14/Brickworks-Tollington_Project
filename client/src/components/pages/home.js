@@ -27,9 +27,9 @@ class Home extends React.Component {
             <br/>
             <br/>
             Find out more and get involved!
-            </p>
+            </p> 
             {/* <p className='hub-description-three'>Brickworks supports local people to contribute to collective action to build the community and create a better society.</p> */}
-            <button className='button-large' onClick={this.addEvent}>Next</button>
+            <button className='button-large' style={{padding:'15px 40px'}} onClick={this.addEvent}>Next</button>
           </main>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import getAllEvents from '../utils/utilsgetAllEvent';
 import getPastEvents from '../utils/utilsgetPastEvent';
 import {EventComp, UpcomingEvents, PastEvents} from './eventComp';
+import logoImg from '../../../public/images/Brickworks-logo-small.png';
 
 class SocialActions extends React.Component {
   
@@ -69,20 +70,18 @@ state = {
       
       // <React.Fragment>
       <div className='wrapper'>
-        <h1 data-testid="social-actions-page">Social Actions</h1>
+        <h1 data-testid="social-actions-page"id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
       
       
-      <main>
-        
+      <div className="page-div">
+      <h1 className="page-heading">Social Actions</h1> 
       
     <UpcomingEvents allEvents={this.state.allEvents} />
 
     <PastEvents pastEvents={this.state.pastEvents}/>    
-      
-    <br></br>
-    <br></br>         
-    <button className='button-large' onClick={this.addEvent}>Express Interest</button>
-    </main>
+            
+    <button className='button-large' onClick={this.addEvent}>Start a social action</button>
+    </div>
     </div>
     // </React.Fragment>
     )
