@@ -5,7 +5,7 @@ import logoImg from '../../../public/images/Brickworks-logo-small.png';
 
 const TopTen= () => (
     <div data-testid="topten-page" className='wrapper'>
-        <h1 data-testid="social-actions-page"id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
+        <h1 data-testid="topten-page"id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
         <div className="page-div">
         <h1 className="page-heading">Start a Social Action</h1>
         <h2 className="page-hTwo">Top Ten Tips</h2>
