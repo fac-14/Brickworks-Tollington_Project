@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../../../public/images/Brickworks-logo-small.png';
 
 
 class Faq extends React.Component {
@@ -6,9 +7,10 @@ class Faq extends React.Component {
         return(
     <div>
         <div data-testid = "faq-page" className='wrapper'>
-        <h1 className='pageHeadings'>FAQs</h1>
+        <h1 id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
+        <h1 className='pageHeadings' id="centre-align">FAQs</h1>
         <main>
-            <ul>
+            <ul id="none-li-style">
                     <li><p className='li-p-strong'>&#8226; &ensp; How does Brickworks connect me with others who can help me develop my idea for a social action?</p>
                 <span className='li-content'>We have 20 trained Community Organisers who can help you develop your idea, build connections with local people, and find others who are interested in the same social action idea as you.</span></li>
                      <li><p className='li-p-strong'>&#8226; &ensp; I am really concerned about changes to benefits. What can I do?</p>

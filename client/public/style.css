@@ -188,6 +188,9 @@ h1.page-heading{
   text-align:center;
   font-size:2.5em;
 }
+#detail-event-heading{
+  font-size:2em;
+}
 .page-div {
   width:70%;
   /* border:1px solid green; */
@@ -213,6 +216,12 @@ h1.page-heading{
   line-height: 2.5rem;
   color: #585858; 
 } */
+#centre-align{
+  text-align:center;
+}
+#none-li-style{
+  list-style-type:none;
+}
 
 h3 {
   font-family: 'Nunito', sans-serif;
@@ -254,20 +263,23 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.strong-txt-two {
+/* .strong-txt-two {
   font-size: 1.8em;
   text-align: center;
   color: #2a2a2a;
   font-weight: 600;
-}
+} */
 
 .options-message {
-  font-size: 1.4rem;
+  font-size:1.2em;
+  text-align: center;
+  padding-bottom: 1em;
+  /* font-size: 1.4rem;
   color: #2a2a2a;
   font-weight: bold;
   text-align: center;
   padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2rem; */
 }
 
 .options-message-two {
@@ -374,7 +386,9 @@ ul {
   padding-inline-start: 1em;
 
 }
-    
+#detail-event-ul{
+  padding-inline-start:0;
+}   
 li {
   font-family: 'Nunito', sans-serif;
   /* font-size:1.3em; */
@@ -434,15 +448,27 @@ li {
 form {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
+  /*
+  margin: 2rem; */
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  width: 80%;
+  padding:5%;
+  margin:0 auto;
+  margin-top:1em;
+  border:1px solid grey;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1);
+  
 }
 
 form > input {
-  height: 2rem;
-  width: 27rem;
-  margin-bottom: 2rem;
+  /* height: 2rem;
+  margin-bottom: 2rem;*/
+  height: 3em;
+  margin-bottom: 3em;
+  /* width: 27rem; */
+  width:98%;
   border-radius: 5px;
   background-color: #eeeeee;
 }
@@ -570,16 +596,23 @@ footer {
   #detail-event-heading{
     margin-left: .5em;
     margin-right: .5em;
+    font-size:1.6em;
+  }
+  #contact-heading{
+    font-size:1.8em;
   }
   /* h2.page-hTwo { */
     .page-hTwo{
-    font-size:1.5em;
+    font-size:1.6em;
   }
   .top-ten-h2{
     font-size: 1.3em;
   }
   .page-div{
     width:90%;
+  }
+  #contact-page-div-small{
+    width:95%;
   }
   .social-action-ul{
     width: 100%;
@@ -590,6 +623,7 @@ footer {
   ul.social-action-ul{
     margin-block-end: 1.5em;
   }
+  
   .social-action-li{
     font-size:1.15em;
     margin-bottom: .5em;
@@ -598,6 +632,24 @@ footer {
   .li-style1{
     margin-bottom: .5em;
     margin-left:1em;
+  }
+  form{
+    width:90%;
+    margin-top:2em;
+    margin-left:0;
+    margin-right:0;
+  }
+  form > input {
+    margin-bottom:1.5em;
+    width:98%;
+  }
+  .options-message{
+    padding-bottom:0;
+  }
+  #error-container {
+    font-size:.8em;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
   }
 
   .nav {

@@ -51,10 +51,10 @@ class EventDetailed extends React.Component {
     <h1 id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
       
     <div className="page-div">
-        <h1 data-testid="social-actions-page" className="page-heading" id="detail-event-heading">{this.props.location.pathname.split('rec')[0].split('/event-detailed/')[1]}</h1>
+        <h1  className="page-heading" id="detail-event-heading">{this.props.location.pathname.split('rec')[0].split('/event-detailed/')[1]}</h1>
         {/* <main> */}
         <div single-event-container>
-      <ul className='social-action-ul'>
+      <ul className='social-action-ul' id="detail-event-ul">
     {this.state.recData.map( event => (
         <SingleEvent key={event.fields.event_id} {...event.fields} /> 
       ))} 
