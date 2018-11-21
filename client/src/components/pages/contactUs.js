@@ -1,5 +1,7 @@
 import React from 'react';
 import {FormErrors} from './eventComp';
+import logoImg from '../../../public/images/Brickworks-logo-small.png';
+
 
 class ContactUs extends React.Component {
   state = {
@@ -96,9 +98,12 @@ console.log('BEFORE SWITCH', this.state.nameValid);
   render() {
     return (
     <div className='wrapper'>
-    <h1>Contact Us</h1>
-    <main>
-    <p className='options-message'>Please note that Name, Email and Description are required fields</p>
+    <h1 id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
+    <div className="page-div" id="contact-page-div-small">
+    <h1 className="page-heading" id="contact-heading">Register an interest to start a social action</h1> 
+    {/* <h1>Contact Us</h1> */}
+    {/* <main> */}
+    <p className='options-message'><span className='red-asterisk'>*</span> Please note that Name, Email and Description are required fields</p>
       <form onSubmit={this.handleSubmit}>
         <label className='form-label' htmlFor="name">Name  <span className='red-asterisk'>*</span></label>
         <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} />
@@ -140,11 +145,12 @@ console.log('BEFORE SWITCH', this.state.nameValid);
         
        <button id="form-button" className="button-large" disabled= { !this.state.formValid} type="submit">Submit</button>
       </form>
-    </main>
+    {/* </main> */}
     <div>
       <FormErrors formErrors={this.state.formErrors} />
     </div>
 
+    </div>
     </div>
     );
   }

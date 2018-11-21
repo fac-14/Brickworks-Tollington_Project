@@ -18,7 +18,8 @@ class Home extends React.Component {
     return( 
       <div>
         <div className='wrapper'>
-          <h1 ></h1>
+
+          <h1 id="head-h1"></h1>
           <main data-testid="home-page">
             <div id='logo'>
               <img id='logo-img' src={logoImg} alt='Brickworks logo'/>
@@ -27,9 +28,9 @@ class Home extends React.Component {
             <br/>
             <br/>
             Find out more and get involved!
-            </p>
+            </p> 
             {/* <p className='hub-description-three'>Brickworks supports local people to contribute to collective action to build the community and create a better society.</p> */}
-            <button className='button-large' onClick={this.addEvent}>Next</button>
+            <button className='button-large' style={{padding:'15px 40px'}} onClick={this.addEvent}>Next</button>
           </main>
         </div>
       </div>

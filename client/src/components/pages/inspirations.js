@@ -1,10 +1,12 @@
 import React from 'react';
+import logoImg from '../../../public/images/Brickworks-logo-small.png';
 
 class Inspiration extends React.Component {
     render(){
         return(
     <div data-testid="inspirations-page" className='wrapper'>
-    <h1>Local Inspirational Stories</h1>
+    <h1 id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
+    <h1 id="centre-align">Local Inspirational Stories</h1>
     <main>
         <h3> Building a community: The story of Brickworks<span></span></h3>
             <p className='inspiration'>

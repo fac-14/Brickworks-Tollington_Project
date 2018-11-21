@@ -1,8 +1,10 @@
 import React from 'react';
- 
+import logoImg from '../../../public/images/Brickworks-logo-small.png'; 
+
 const Resources = () => (
     <div className='wrapper'>
-        <h1 data-testid="resources-page">Resources</h1> 
+    <h1 id="head-h1"><img id='logo-small' src={logoImg} alt='Brickworks logo'/></h1>
+        <h1 data-testid="resources-page" id="centre-align">Resources</h1> 
             <main>
             <p className='strong-txt'>Engaging in social action takes time, energy and passion.
             <br/>
