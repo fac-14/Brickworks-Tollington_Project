@@ -12,8 +12,8 @@ exports.post = (req, res) => {
   smtpTrans = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: `brickworks.web.app@gmail.com`,
-      pass: `hanleycrouch1?`
+      user: EMAIL,
+      pass: GPASS
     }
   });
 
