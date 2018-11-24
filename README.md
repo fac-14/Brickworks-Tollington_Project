@@ -20,7 +20,7 @@ Brickworks logo: https://hanleycrouch.wordpress.com/
 
 
 ### Deployed on Heroku
-https://brickworks-social-action.herokuapp.com/
+https://social-action.herokuapp.com/
 
 
 ### Deployment settings
