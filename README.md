@@ -33,7 +33,7 @@ brickworks-social-action
     
     forked from:
     https://github.com/fac14/Brickworks-Tollington_Project
-    (I am one of the original team)
+    (I am one of the original team member)
     
 API ID
     72cc8672-d693-4f74-8d82-71a1d9e8dcb6
