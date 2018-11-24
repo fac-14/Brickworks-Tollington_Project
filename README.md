@@ -57,6 +57,8 @@ API ID
 * Node.js
 * Express.js
 * React.js
+* Airtables
+* Jest (testing)
 
 ## Technical commands
 * `npm run dev`
