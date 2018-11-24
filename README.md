@@ -29,7 +29,12 @@ https://brickworks-social-action.herokuapp.com/
 brickworks-social-action    
 
 #### Repository
-    https://github.com/fac-14/Brickworks-Tollington_Project
+    https://github.com/sunuwars/Brickworks-Tollington_Project
+    
+    forked from:
+    https://github.com/fac14/Brickworks-Tollington_Project
+    (I am one of the original team)
+    
 API ID
     72cc8672-d693-4f74-8d82-71a1d9e8dcb6
 
@@ -54,6 +59,4 @@ API ID
 * React.js
 
 ## Technical commands
-* `npm run parcel:watch`
-* `npm run parcel: build`
 * `npm run dev`
