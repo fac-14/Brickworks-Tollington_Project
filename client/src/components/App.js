@@ -32,6 +32,14 @@ class App extends React.Component {
       background.classList.remove('background-img');
     }
   }
+  componentDidMount = () => {
+    const menuBtn = document.getElementById('icon');
+    const focusable = Array.from(document.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(element=> element.tabIndex ===0);
+    focusable[0].focus();
+    console.log(focusable);
+    document.addEventListener('keydown', (e)=>{
+    })
+  }
   render () {
   return (
     
