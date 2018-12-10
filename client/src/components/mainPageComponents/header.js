@@ -26,8 +26,7 @@ toggleMenu = () => {
   
   render() {
     return (
-    <header className="nav">
-    <div id='menuDiv' className='menu-con-closed'>
+    <header>
     <nav id="menu" data-testid="actual-menu" className="menu menu-closed">
       <label className='' htmlFor="home"> 
         <Link className='nav-link' data-testid="home" onClick={this.toggleMenu} to='/'>Home</Link>
@@ -51,7 +50,7 @@ toggleMenu = () => {
         <Link className='nav-link' data-testid="resources" onClick={this.toggleMenu} to='/resources'>Resources & Tips</Link>
       </label>
     </nav>
-    </div>
+
     
 
     <div id="icon" data-testid="menu" className="image image-closed" onClick={this.toggleMenu}><span></span></div>

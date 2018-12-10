@@ -5,10 +5,11 @@
  /*NAVBAR*/
 
 
-
-
-.menu-con {
-  left: 0vw;
+header {
+  height: 100px;
+  background: black;
+  width: 100%;
+  position: fixed;
 }
 
 .menu {
@@ -22,9 +23,14 @@
 .menu-open {
   transform: translate3d(0vw, 0, 0);
  }
-.nav {
+#nav {
   position: absolute;
   
+}
+
+#icon {
+  position: relative;
+  top: 50%
 }
 
 .image {
