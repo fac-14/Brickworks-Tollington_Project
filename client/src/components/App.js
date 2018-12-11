@@ -33,17 +33,80 @@ class App extends React.Component {
     }
   }
   componentDidMount = () => {
+    const menu = document.getElementById('menu');
     const menuBtn = document.getElementById('icon');
-    const focusable = Array.from(document.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(element=> element.tabIndex ===0);
+    const focusable = Array.from(document.querySelectorAll('#icon, button, a, input, select, textarea, [tabIndex]:not([tabIndex="-1"])')).filter(element=> element.tabIndex ===0);
     focusable[0].focus();
     console.log(focusable);
     document.addEventListener('keydown', (e)=>{
+      switch(e.key){
+        case 'Tab':
+        if(menu.className==="menu menu-open" && document.activeElement===menuBtn){
+          console.log(menu.firstElementChild.firstElementChild);
+
+          menu.firstElementChild.firstElementChild.focus();
+        }
+        else if(document.activeElement===menu.lastElementChild.firstElementChild){
+          console.log(menuBtn);
+          menuBtn.focus();
+        }
+        else if(e.shiftKey&&document.activeElement===menu.firstElementChild.firstElementChild){
+          menuBtn.focus()
+        }
+        else if(e.shiftKey && document.activeElement===menu && menu.className==="menu menu-open"){
+          menu.lastElementChild.firstElementChild.focus()
+        }
+        break;
+        case 'Enter':
+        if(document.activeElement===menuBtn){
+          menuBtn.click();
+        }
+        break;
+        case 'ArrowUp':
+        if(menu.className==="menu menu-open"&&document.activeElement===menuBtn){
+          menu.lastElementChild.firstElementChild.focus();
+        }
+        else if(document.activeElement === menu.firstElementChild.firstElementChild){
+          menuBtn.focus();
+        }
+        else if(menu.className==="menu menu-open"){
+          // console.log(document.activeElement.parentElement.prev);
+          document.activeElement.parentElement.previousElementSibling.firstElementChild.focus();
+        }
+        break;
+        case 'ArrowDown':
+        if(menu.className==="menu menu-open"&& document.activeElement===menuBtn){
+          console.log(menu.firstElementChild.firstElementChild)
+          menu.firstElementChild.firstElementChild.focus();
+        }
+        else if(document.activeElement === menu.lastElementChild.firstElementChild){
+          menuBtn.focus();
+        }
+        else if(menu.className==="menu menu-open"){
+          // console.log(document.activeElement.parentElement.prev);
+          document.activeElement.parentElement.nextSibling.firstElementChild.focus();
+        }
+        break;
+        case 'Escape':
+       if(menu.className==="menu menu-open"){
+        const menuLinks= document.querySelectorAll(".nav-link")
+        icon.className='image image-closed';
+        menu.className='menu menu-closed';
+        menu.setAttribute("aria-hidden", "true");
+        icon.setAttribute("aria-expanded", "false");
+        menuLinks.forEach(el => {
+          el.setAttribute('tabIndex',-1);
+        })
+        menu.focus();
+      }
+        break;
+      }
     })
   }
   render () {
   return (
     
-    <div id="background" className='background-img'>
+    <div id="container" className='background-img'>
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />

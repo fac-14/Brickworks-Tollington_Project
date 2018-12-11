@@ -4,18 +4,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Nav extends React.Component {
 
-  state = {
-    menuOpen: false,
-    
-  }
-
 toggleMenu = () => {
     const icon= document.getElementById('icon');
     const menu = document.getElementById('menu');
     const menuLinks = document.querySelectorAll('.nav-link');
-    this.setState((prevState) => ({
-        menuOpen: !prevState.menuOpen
-    }))
     if (menu.className === 'menu menu-closed') {
       icon.className='image image-open';
       menu.className='menu menu-open';
@@ -23,13 +15,16 @@ toggleMenu = () => {
       icon.setAttribute("aria-expanded", "true");
       menu.firstElementChild.focus();
       menuLinks.forEach(el => {
-        el.setAttribute('tabindex',0);
+        el.setAttribute('tabIndex',0);
       })
     } else if (menu.className === 'menu menu-open') {
       icon.className='image image-closed';
       menu.className='menu menu-closed';
       menu.setAttribute("aria-hidden", "true");
       icon.setAttribute("aria-expanded", "false");
+      menuLinks.forEach(el => {
+        el.setAttribute('tabIndex',-1);
+      })
       menu.focus();
     }
 }
@@ -38,7 +33,7 @@ toggleMenu = () => {
     return (
     <header id="menu-wrapper">
       <nav id="menu" aria-hidden="true" data-testid="actual-menu" className="menu menu-closed">
-        <label className='' htmlFor="home"> 
+        <label htmlFor="home">
           <Link className='nav-link' 
                 tabIndex='-1' 
                 data-testid="home" 
@@ -90,6 +85,7 @@ toggleMenu = () => {
       </nav>
     <div 
       id="icon" 
+      tabIndex="0"
       data-testid="menu"
       aria-controls="menu"
       aria-haspopup="true" 
