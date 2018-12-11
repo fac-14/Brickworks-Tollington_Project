@@ -38,56 +38,64 @@ class App extends React.Component {
     const focusable = Array.from(document.querySelectorAll('#icon, button, a, input, select, textarea, [tabIndex]:not([tabIndex="-1"])')).filter(element=> element.tabIndex ===0);
     focusable[0].focus();
     console.log(focusable);
-    document.addEventListener('keydown', (e)=>{
-      switch(e.key){
+    document.addEventListener('keydown', (event)=>{
+      switch(event.key){
         case 'Tab':
         if(menu.className==="menu menu-open" && document.activeElement===menuBtn){
-          console.log(menu.firstElementChild.firstElementChild);
+          
+         
 
-          menu.firstElementChild.firstElementChild.focus();
+          menu.firstElementChild.lastElementChild.focus();
         }
         else if(document.activeElement===menu.lastElementChild.firstElementChild){
           console.log(menuBtn);
-          menuBtn.focus();
+          focusable[0].focus();
         }
-        else if(e.shiftKey&&document.activeElement===menu.firstElementChild.firstElementChild){
+        else if(event.shiftKey&&document.activeElement===menu.firstElementChild.firstElementChild){
           menuBtn.focus()
         }
-        else if(e.shiftKey && document.activeElement===menu && menu.className==="menu menu-open"){
+        else if(event.shiftKey && document.activeElement===menu && menu.className==="menu menu-open"){
           menu.lastElementChild.firstElementChild.focus()
         }
         break;
         case 'Enter':
         if(document.activeElement===menuBtn){
           menuBtn.click();
-        }
-        break;
-        case 'ArrowUp':
-        if(menu.className==="menu menu-open"&&document.activeElement===menuBtn){
-          menu.lastElementChild.firstElementChild.focus();
-        }
-        else if(document.activeElement === menu.firstElementChild.firstElementChild){
           menuBtn.focus();
         }
-        else if(menu.className==="menu menu-open"){
+        break;
+        
+        case 'ArrowUp':
+        
+        if(menu.className==="menu menu-open"&&document.activeElement===menuBtn&&window.innerWidth<768){
+          menu.lastElementChild.firstElementChild.focus();
+        }
+        else if(document.activeElement === menu.firstElementChild.firstElementChild&&window.innerWidth<768){
+          menuBtn.focus();
+        }
+        else if(menu.className==="menu menu-open"&&window.innerWidth<768){
           // console.log(document.activeElement.parentElement.prev);
           document.activeElement.parentElement.previousElementSibling.firstElementChild.focus();
         }
+      
         break;
+        
         case 'ArrowDown':
-        if(menu.className==="menu menu-open"&& document.activeElement===menuBtn){
+        
+        if(menu.className==="menu menu-open"&& document.activeElement===menuBtn&&window.innerWidth<768){
           console.log(menu.firstElementChild.firstElementChild)
           menu.firstElementChild.firstElementChild.focus();
         }
-        else if(document.activeElement === menu.lastElementChild.firstElementChild){
+        else if(document.activeElement === menu.lastElementChild.firstElementChild&&window.innerWidth<768){
           menuBtn.focus();
         }
-        else if(menu.className==="menu menu-open"){
+        else if(menu.className==="menu menu-open"&&window.innerWidth<768){
           // console.log(document.activeElement.parentElement.prev);
           document.activeElement.parentElement.nextSibling.firstElementChild.focus();
         }
         break;
         case 'Escape':
+        if(window.innerWidth<768){
        if(menu.className==="menu menu-open"){
         const menuLinks= document.querySelectorAll(".nav-link")
         icon.className='image image-closed';
@@ -99,6 +107,7 @@ class App extends React.Component {
         })
         menu.focus();
       }
+    }
         break;
       }
     })
