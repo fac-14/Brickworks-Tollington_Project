@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../../../public/images/Brickworks-logo1.png';
+import logoImg from '../../../public/images/brickworks-logo.svg';
 
 class Home extends React.Component {
   
@@ -16,7 +16,6 @@ class Home extends React.Component {
 
   render() {
     return( 
-      <div>
         <div className='wrapper'>
           <h1 ></h1>
           <main data-testid="home-page">
@@ -32,7 +31,6 @@ class Home extends React.Component {
             <button className='button-large' onClick={this.addEvent}>Next</button>
           </main>
         </div>
-      </div>
     )}
 }
 

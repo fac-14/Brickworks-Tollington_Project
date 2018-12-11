@@ -2,183 +2,112 @@
   font-family: 'Source Sans Pro', sans-serif; 
 }
 
-@media only screen and (max-width: 768px) {
-
-  /* NAVBAR */
+/* NAVBAR */
   
-  header {
-    height: 3rem;
-    background: lightgrey;
-    width: 100%;
-    position: fixed;
-    top: 0;
-  }
+header {
+  height: 3rem;
+  background: lightgrey;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
 
-  #icon {
+.menu {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #525252;
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
+  overflow-y: auto;
+  padding-top: 4rem;
+}
+
+.menu-closed {
+  transform: translate3d(-100vw, 0, 0);
+}
+
+.menu-open {
+  transform: translate3d(0vw, 0, 0);
+}
+
+.nav-link {
+  margin: 1rem;
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* navbar icon and animation */
+
+.image {
+  position: absolute;
+  width: 6vw;
+  height: 6vh;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.image span {
+    margin: 0 auto;
     position: relative;
-  }
-
-  #nav {
-    position: absolute;
-  }
-
-  .nav {
-    position: inherit;
-    width: 100vw;
-  }
-
-  .nav-link {
-    margin: 2rem;
-    font-size: 1.6em;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid white;
-  }
-
-  .menu-con {
-    left: 0vw;
-  }
-
-  .menu {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: #525252;
-    transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
-    overflow-y: auto;
-    padding-top: 4rem;
-  }
-
-  .menu-closed {
-    transform: translate3d(-100vw, 0, 0);
-  }
-  
-  .menu-open {
-    transform: translate3d(0vw, 0, 0);
-  }
-
-  .image {
-    position: absolute;
-    width: 6vw;
-    height: 6vh;
-    margin: 10px;
-    cursor: pointer;
+    top: 12px;
+    transition: transform 1s ease;
 }
 
-  .menu {
-    width: 100%;
-  }
+.image span:before, .image span:after {
+    position: absolute;
+    content: '';
+}
 
-  .menu-closed {
-    transform: translate3d(-100vw, 0, 0);
-  }
-
-  .menu-open {
-    transform: translate3d(0vw, 0, 0);
-  }
-
-  .image span {
-      margin: 0 auto;
-      position: relative;
-      top: 12px;
-  }
-
-  .image span:before, .image span:after {
-      position: absolute;
-      content: '';
-  }
-
-  .image span, .image span:before, .image span:after {
-      width: 31px;
-      height: 6px;
-      background-color: #ffffff;
-      display: block;
-  }
-
-  .image span {
-    transition: transform 1s ease;
-  }
-
-  .image span:before {
-    margin-top: -12px;
-    transition: transform 1s ease;
-    transform-origin: 50% 50%;
-  }
-
-  .image span:after {
-    margin-top: 12px;
-    transition: transform 1s ease;
-    transform-origin: 50% 50%;
-  }
-
-  .image-open span {
-    transform: scaleX(1.5);
-    transform: scaleY(0.7);
-  }
-
-  .image-open span:after {
-    transform: translateX(-2px) rotate(45deg);
-  }
-
-  .image-open span:before {
-    transform: translateX(-2px) rotate(-45deg);
-  }
-
-  .menu-closed {
-    transform: translate3d(-42.5vw, 0, 0);
-  }
-
-  .menu-open {
-    position: fixed;
-    transform: translate3d(0vw, 0, 0);
-  }
-
-  .wrapper {
-    width: 100%;
-  }
-
-  /* h1 {
-    font-size: 2em;
-  }
-
-  footer {
-    height: 3rem;
-    width: 100%;
-  }
-  
-  h2 {
-    font-size: 1.6em;
-  }
-
-  h3 {
-    font-size: 1.375em;
-  }
-
-  h4 {
-    font-size: 1.2em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-
-  ul {
-    width: 80vw;
-    margin: auto;
+.image span, .image span:before, .image span:after {
+    width: 31px;
+    height: 6px;
+    background-color: #ffffff;
     display: block;
-    padding: 0.5rem;
-  } */
-
-  #logo {
-    margin-top: 3rem;
-  }
 }
 
-@media only screen and (max-width: 1070px) {
+.image span:before {
+  margin-top: -12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
+}
+
+.image span:after {
+  margin-top: 12px;
+  transition: transform 1s ease;
+  transform-origin: 50% 50%;
+}
+
+.image-open span {
+  transform: scaleX(1.5);
+  transform: scaleY(0.7);
+}
+
+.image-open span:after {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+.image-open span:before {
+  transform: translateX(-2px) rotate(-45deg);
+}
+
+.wrapper {
+
+}
+
+#logo {
+
+  /* margin-top: 3rem; */
+
+}
+
+#logo-img {
+
+}
+
+/* @media only screen and (min-width: 1070px) { */
   
-  .menu-closed {
-    transform: translate3d(-150vw, 0, 0);
-  }
-}
+ 
+/* } */

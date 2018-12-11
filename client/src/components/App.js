@@ -106,7 +106,7 @@ class App extends React.Component {
   render () {
   return (
     
-    <div id="container" className='background-img'>
+    <div>
       <Nav />
       <Switch>
         <Route exact path='/' component= { Home } />
