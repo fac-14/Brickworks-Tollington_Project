@@ -4,6 +4,32 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Nav extends React.Component {
 
+//   state = {
+//     screensize: 'small'
+  
+componentDidMount = () => {
+  window.addEventListener('resize', ()=>{
+    if(window.innerWidth<748){
+      const menuLinks = document.querySelectorAll('.nav-link')
+      
+      const menu = document.getElementById('menu');
+      menu.setAttribute("aria-hidden", "true");
+      icon.focus();
+      menuLinks.forEach(el => {
+        el.setAttribute('tabIndex',-1);
+      })
+    }
+    else {
+      const menuLinks = document.querySelectorAll('.nav-link')
+      menu.setAttribute("aria-hidden", "false");
+      
+      menuLinks.forEach(el => {
+        el.setAttribute('tabIndex',0);
+      })
+    }
+  })
+}
+
 toggleMenu = () => {
     const icon= document.getElementById('icon');
     const menu = document.getElementById('menu');
@@ -25,59 +51,62 @@ toggleMenu = () => {
       menuLinks.forEach(el => {
         el.setAttribute('tabIndex',-1);
       })
-      menu.focus();
+      icon.focus();
     }
 }
   
   render() {
     return (
     <header id="menu-wrapper">
-      <nav id="menu" aria-hidden="true" data-testid="actual-menu" className="menu menu-closed">
+      <nav id="menu" 
+           aria-hidden={window.innerWidth< 748 ? 'true': 'false'}  
+           data-testid="actual-menu" 
+           className="menu menu-closed">
         <label htmlFor="home">
           <Link className='nav-link' 
-                tabIndex='-1' 
+                tabIndex={window.innerWidth< 748 ? '-1': '0'} 
                 data-testid="home" 
                 onClick={this.toggleMenu} 
                 to='/'>Home</Link>
         </label>
         <label htmlFor="social-actions">
           <Link className='nav-link' 
-                tabIndex='-1' 
+                tabIndex={window.innerWidth< 748 ? '-1': '0'}  
                 data-testid="social-actions" 
                 onClick={this.toggleMenu} 
                 to='/social-actions'>Social Actions</Link>
         </label>
         <label htmlFor="form">
           <Link className='nav-link' 
-                tabIndex='-1' 
+                tabIndex={window.innerWidth< 748 ? '-1': '0'} 
                 data-testid="form" 
                 onClick={this.toggleMenu} 
                 to='/topten'>Start a Social Action</Link>
         </label>
         <label htmlFor="projects">
           <Link className='nav-link' 
-                tabIndex='-1' 
+                tabIndex={window.innerWidth< 748 ? '-1': '0'} 
                 data-testid="projects-page" 
                 onClick={this.toggleMenu} 
                 to='/projects'>Projects</Link>
         </label>
         <label htmlFor="faq">
           <Link className='nav-link' 
-                tabIndex='-1' 
+                tabIndex={window.innerWidth< 748 ? '-1': '0'}  
                 data-testid="faq" 
                 onClick={this.toggleMenu} 
                 to='/faq'>FAQ</Link>
         </label>
         <label htmlFor="inspirations">
           <Link className='nav-link' 
-                tabIndex='-1' 
+                tabIndex={window.innerWidth< 748 ? '-1': '0'}  
                 data-testid="inspirations" 
                 onClick={this.toggleMenu} 
                 to='/inspirations'>Local Inspirational Stories</Link>
         </label>
         <label htmlFor="resources">
           <Link className='nav-link'
-                tabIndex='-1' 
+                tabIndex={window.innerWidth< 748 ? '-1': '0'}  
                 data-testid="resources" 
                 onClick={this.toggleMenu} 
                 to='/resources'>Resources & Tips</Link>
@@ -88,8 +117,8 @@ toggleMenu = () => {
       tabIndex="0"
       data-testid="menu"
       aria-controls="menu"
-      aria-haspopup="true" 
-      aria-expanded="false"
+      aria-haspopup="true"  
+      aria-expanded='false' 
       className="image image-closed" 
       onClick={this.toggleMenu}>
       <span></span>
